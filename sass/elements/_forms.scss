@@ -4,17 +4,43 @@
 //*              descrizione - descrizione - descrizione
 //*                                                                     ******//
 //****************************************************************************//
+//****************************************************************************//
+//                     Tipografia
+//****************************************************************************//
+///
+// Etichette / Labels
+///
+.gform_wrapper .top_label .gfield_label {
+  font-size: font(h2, fs);
+  background: palette(porpora, bg)
+}
 
-//****************************************************************************//
-//                            SPECIFICI PER GRAVITY FORMS
-//****************************************************************************//
+#page input[type="text"],
+#page input[type="password"],
+#page input[type="email"],
+#page input[type="file"],
+#page input[type="datetime"],
+#page input[type="datetime-local"],
+#page input[type="date"],
+#page input[type="month"],
+#page input[type="time"],
+#page input[type="week"],
+#page input[type="number"],
+#page input[type="url"],
+#page input[type="search"],
+#page input[type="tel"],
+#page input[type="color"],
+#page textarea {
+  @include form-field(p, 4);
+  height: auto;
+}
 
 //****************************************************************************//
 //                     Colori FORM, LABEL e DESCRIZIONI CAMPI
 //                     di tutte le varie sezioni
 //****************************************************************************//
 @each $palette, $bg in $colors {
-  .#{$palette}_color .gform_wrapper {
+  .#{$palette} .gform_wrapper {
     background: palette($palette, form-bg); //BG del form
 
     a {
