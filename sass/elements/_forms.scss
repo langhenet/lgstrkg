@@ -5,36 +5,60 @@
 //*                                                                     ******//
 //****************************************************************************//
 //****************************************************************************//
+//                     Layout
+//****************************************************************************//
+///
+// Etichette / Labels
+///
+.gform_wrapper .gform_body {
+  padding: 0px 76px 76px 76px;
+}
+///
+// Descrizione modulo
+///
+.gform_wrapper span.gform_description {
+  padding: 76px 76px 0px 76px;
+}
+///
+// Pulsante invia
+///
+.gform_wrapper .gform_footer {
+  padding: 0px 76px 76px 76px;
+}
+
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper .gform_page_footer input[type=submit] {
+  width: 100%;
+  height: 76px;
+}
+
+//****************************************************************************//
 //                     Tipografia
 //****************************************************************************//
 ///
 // Etichette / Labels
 ///
-.gform_wrapper .top_label .gfield_label {
-  font-size: font(h2, fs);
-  background: palette(porpora, bg)
+.gform_wrapper label.gfield_label {
+  font-size: font(p, fs);
+  font-style: normal;
 }
 
-#page input[type="text"],
-#page input[type="password"],
-#page input[type="email"],
-#page input[type="file"],
-#page input[type="datetime"],
-#page input[type="datetime-local"],
-#page input[type="date"],
-#page input[type="month"],
-#page input[type="time"],
-#page input[type="week"],
-#page input[type="number"],
-#page input[type="url"],
-#page input[type="search"],
-#page input[type="tel"],
-#page input[type="color"],
-#page textarea {
-  @include form-field(p, 4);
-  height: auto;
+///
+// Pulsante invia
+///
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper .gform_page_footer input.button,
+.gform_wrapper .gform_page_footer input[type=submit] {
+  font-size: font(h3, fs);
+  background: palette(verde, button-bg)
 }
 
+.gform_wrapper textarea.medium {
+  background-color: white;
+}
 //****************************************************************************//
 //                     Colori FORM, LABEL e DESCRIZIONI CAMPI
 //                     di tutte le varie sezioni
