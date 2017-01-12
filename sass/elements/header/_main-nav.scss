@@ -27,7 +27,11 @@
 
  #navigation .menu > li {
   transition: all 250ms linear;
-  padding: 0 15px 0 13px;
+  padding: 0 ($line-height / 2);
+  border-bottom: 4px solid $nero;
+
+  @include font(p, $fm: secondary, $mb: 0);
+  text-transform: uppercase;
 }
 
 
@@ -36,7 +40,9 @@
  */
  #navigation .menu > li:hover {
   transition: all 250ms linear;
-  padding: 0 15px 0 13px;
+  padding: 0 ($line-height / 2);
+
+  border-bottom-color: main-colors(header, border);
  }
 
 //current
@@ -60,7 +66,7 @@
  #navigation .menu > li.current_page_ancestor,
  #navigation .menu > li.current-page-item,
  #navigation .menu > li.current-page-ancestor {
-  padding: 0 15px 0 13px;
+  padding: 0 ($line-height / 2);
  }
 
 /*
@@ -69,8 +75,12 @@
  */
  #navigation .menu > li > a,
  #navigation .menu > li > a:visited {
+  font-size: 1em;
+  line-height: $line-height;
   transition: all 250ms linear;
   padding: 0;
+  color: main-colors(header, link);
+  height: auto;
  }
 
 /*

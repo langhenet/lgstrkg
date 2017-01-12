@@ -5,8 +5,8 @@
 //*                                                                     *//
 //***********************************************************************//
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P e UL / OL
@@ -17,7 +17,7 @@
 body {
   font-size: $font-size;
   line-height: $line-height;
-  font-family: $serif;
+  font-family: $primary;
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
 }
@@ -290,7 +290,7 @@ a,
 #page h4 > a,
 #page h5 > a {
   text-decoration: none;
-  color: layout-colors(main, heading2);
+  color: main-colors(main, heading);
 
   &:link {
     text-decoration:none;
@@ -298,12 +298,12 @@ a,
 
   &:hover {
     text-decoration: none;
-    color: layout-colors(main, heading);
+    color: main-colors(main, heading);
   }
 
   &:visited {
     text-decoration: none;
-    color: layout-colors(main, heading2);
+    color: main-colors(main, heading);
   }
 }
 

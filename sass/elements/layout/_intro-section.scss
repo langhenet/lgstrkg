@@ -15,6 +15,7 @@
   background-size: cover !important;
   background-image: none;
   position: relative;
+  padding: $height-large 0;
 }
 
 
@@ -77,6 +78,7 @@
 #feature .inner {
   position: relative;
   z-index: 1;
+  padding: 0 0;
 
   @include breakpoint-max(sm) {
     padding-left: $line-height / 2;
