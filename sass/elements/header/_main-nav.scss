@@ -9,7 +9,12 @@
  * Contenitore Nav
  */
 #navigation {
-  bottom: 50%;
+//  bottom: 50%;
+  height: $line-height;
+  position: relative;
+  display: block;
+  text-align: right;
+  flex-grow: 1;
 }
 
 
@@ -27,11 +32,14 @@
 
  #navigation .menu > li {
   transition: all 250ms linear;
-  padding: 0 ($line-height / 2);
-  border-bottom: 4px solid $nero;
+  padding: 0 $line-height;
 
   @include font(p, $fm: secondary, $mb: 0);
   text-transform: uppercase;
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
 
@@ -40,9 +48,8 @@
  */
  #navigation .menu > li:hover {
   transition: all 250ms linear;
-  padding: 0 ($line-height / 2);
+  padding: 0 $line-height;
 
-  border-bottom-color: main-colors(header, border);
  }
 
 //current
@@ -66,7 +73,7 @@
  #navigation .menu > li.current_page_ancestor,
  #navigation .menu > li.current-page-item,
  #navigation .menu > li.current-page-ancestor {
-  padding: 0 ($line-height / 2);
+  padding: 0 $line-height;
  }
 
 /*
@@ -81,6 +88,7 @@
   padding: 0;
   color: main-colors(header, link);
   height: auto;
+  border-bottom: 4px solid $nero;
  }
 
 /*
@@ -104,6 +112,8 @@
 #navigation .menu > li.hover > a:visited,
 #navigation .menu > li.hover > a > i {
   transition: all 250ms linear;
+  border-bottom-color: main-colors(header, border);
+  color: main-colors(header, link);
 }
 
 
@@ -131,7 +141,8 @@
 #navigation .menu > li.current_page_ancestor > a > i,
 #navigation .menu > li.current-page-item > a > i,
 #navigation .menu > li.current-page-ancestor > a > i {
-
+  border-bottom-color: main-colors(header, border);
+  color: main-colors(header, link);
 }
 
 /******************************************************************************/

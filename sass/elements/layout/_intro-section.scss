@@ -67,7 +67,7 @@
 ///
 #feature::before,
 #intro::before {
-  @include color-overlay;
+  @include color-overlay($grade: 0.4);
 }
 
 
@@ -79,6 +79,8 @@
   position: relative;
   z-index: 1;
   padding: 0 0;
+  max-width: 670px;
+  margin: 0 auto;
 
   @include breakpoint-max(sm) {
     padding-left: $line-height / 2;
@@ -103,7 +105,7 @@
 /*                TITOLO del Featured HEADER
 *******************************************************************************/
 #feature h1 {
-  @include font(h1, $mt: 0);
+  @include font(h1, $mt: 0, $mb: size(h1, mb) / 2);
   padding: 0;
 }
 
@@ -114,7 +116,13 @@
 /*                TESTO
 *******************************************************************************/
 .feature-introduce {
+  @include font(h3, $fm: primary);
+  font-style: italic;
+}
 
+#feature h1,
+.feature-introduce {
+  text-align: center;
 }
 
 

@@ -143,6 +143,33 @@ $colors: (
     button-subtle: $nero,
     button-bg-subtle: $beige    //bg bottone
   ),
+  blu: (
+    body:       $bianco,      //Corpo - testo
+    body-sec:   $bianco,      //Secondario - blockquote o blog meta
+    heading:    $bianco,      //Titoli 1 e 2
+    link:       $bianco,      //Link
+    bg:         $blu,      //Sfondo principale
+    border:     $bianco,      //Bordi
+
+    accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
+
+    body-alt:   $nero,      //body alternativo - testo in un form o in un box
+    bg-alt:     $bianco,      //sfondo alt - il bg di un form o di un box
+    accent-alt: $blu,      //accento alt - il di un link nel form
+
+    form-body: $nero,
+    form-bg: $bianco,
+    form-link: $blu,
+    form-desc: $nero,
+
+    overlay:    $nero,      //Colore sfondo overlay
+
+    button:     $nero,      //colore bottone
+    button-bg:  $beige,
+
+    button-subtle: $nero,
+    button-bg-subtle: $beige    //bg bottone
+  ),
 );
 
 //****************************************************************************//                         //                                 BOTTONI

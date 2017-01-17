@@ -26,6 +26,11 @@
 #header {
   background-color: main-colors(header, bg);
   transition: all 250ms linear;
+  background-image: url(http://cascinavaleggia.it/files/2017/01/logo-bg.png);
+  background-position: 10% 10%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 ///
@@ -90,6 +95,11 @@
 #header .inner {
   height: $line-height * 5;
   transition: all 250ms linear;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /*
@@ -114,8 +124,10 @@
  */
 #logo,
 #logo_text {
-  bottom: $line-height / 2;
+  bottom: auto;
   transition: all 250ms linear;
+  display: block;
+  position: relative;
 
   @at-root .sticker_sticky #{&} {
     @include breakpoint-min(xl) { //quando l'header è sticcato - tolgo il bottom solo su desktop
