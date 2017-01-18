@@ -38,7 +38,10 @@
   //titolo
   .portfolio_title {
     @include font(h3);
-    @include m-size(h3);
+
+    @include breakpoint-max(md) {
+      @include m-size(h3);
+    }
   }
 
   //Descrizione

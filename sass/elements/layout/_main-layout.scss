@@ -37,6 +37,11 @@
 //****************************************************************************//
 #page {
   background-color: main-colors(main, bg);
+  overflow: visible; //breadcrumbs
+
+  @include breakpoint-max(lg) {
+    overflow: hidden;
+  }
 }
 
 
@@ -56,18 +61,51 @@
   padding-right: 0;
 }
 
-#main {
-  margin-top: -$line-height;
+#main,
+#sidebar {
+  box-sizing: border-box;
+  @include breakpoint-max(lg) {
+    padding-right: $line-height;
+    padding-left: $line-height;
+  }
+  @include breakpoint-max(xs) {
+    padding-right: $line-height / 2;
+    padding-left: $line-height / 2;
+  }
+}
+
+//padding del contenuto dal featured header
+#main,
+#sidebar {
+  padding-top: $line-height * 4;
+}
+//resetto padding nelle FW
+.page-template-template_fullwidth #main {
+  padding-top: 0;
 }
 
 //****************************************************************************//
 //                          BREAD CRUMBS
 //****************************************************************************//
 #breadcrumbs { //contenitore
-
+  padding: 0 0 ($line-height * 2) 0;
+  margin: (-$line-height * 4) 0 0 0;
+  font-size: 1em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
 
   .breadcrumbs {
     @include font(h5, $mt: 0);
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+
+    text {
+      font-weight: bold;
+    }
 
     .breadcrumbs-plus {
 

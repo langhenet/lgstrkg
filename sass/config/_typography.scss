@@ -43,7 +43,7 @@ $families: (
 
   secondary: (
     fm: $secondary,
-    thin: 400,
+    thin: 200,
     normal: 400,
     bold: 700,
     bolder: 700,
@@ -66,17 +66,17 @@ $decorations: (
 
   h1: (
     fm: secondary,
-    wt: light
+    wt: thin
   ),
 
   h2: (
     fm: secondary,
-    wt: light,
+    wt: thin,
   ),
 
   h3: (
     fm: secondary,
-    wt: light,
+    wt: thin,
   ),
 
   h4: (

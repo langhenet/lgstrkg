@@ -74,7 +74,15 @@
 //                          TITOLO e META
 //****************************************************************************//
 .entry_info .entry-title {
-  @include font(h3);
+  @include font(h2);
+
+  @include breakpoint-max(md) {
+    @include font(h3)
+  }
+
+  @include breakpoint-max(sm) {
+    @include m-size(h3)
+  }
 }
 
 #page .entry .entry_title a,
@@ -84,6 +92,7 @@
 
 .entry .entry_meta {
   @include font(h5);
+  display: none;
 
   @at-root #page #{&} a,
            #page #{&} a:visited {

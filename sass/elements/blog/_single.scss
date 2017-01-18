@@ -49,15 +49,21 @@
 //              Authro Box
 //****************************************************************************//
 #about_the_author {
-
+  background: palette(blu, bg);
+  padding: ($line-height * 2);
 
   h3 {
+    color: palette(blu, heading)
+  }
 
+  .author_name {
+    display: none;
   }
 
   .author_content {
     padding: 0;
     border: 0;
+
   }
 
   span.fn {
@@ -67,6 +73,7 @@
   }
 
   .author_desc {
+    color: palette(blu, body);
   }
 }
 
@@ -80,12 +87,17 @@
 
   }
 
-  .posts_list {
+  @at-root #page #{&} .posts_list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 
-    @at-root #page #{&} a {
+    a {
+      text-decoration: none;
     }
-
-    li {
+     li {
+      list-style: none;
+      margin-left: 0;
     }
 
     time {
@@ -114,4 +126,6 @@
   @extend %button;
   @include button(p);
   @include button-color(main);
+
+  height: auto;
 }
