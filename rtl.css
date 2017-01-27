@@ -137,10 +137,10 @@ blockquote::before {
   margin-right: 0;
   margin-left: 15px;
 }
-#navigation ul ul .has-children>a:after { 
+#navigation ul ul .has-children>a:after {
   float:left;
   border-right: 5px solid;
-  border-left: none; 
+  border-left: none;
 }
 #navigation > ul > li.has-children > a:after {
   margin-left: none;
@@ -188,7 +188,7 @@ a#back-to-top {
   margin-right: 0;
   margin-left: 5px;
 }
-#page .portfolios.sortable header a {
+.portfolios.sortable header a {
   float: right;
   margin-right: 0;
   margin-left: 10px;
@@ -401,7 +401,7 @@ a#back-to-top {
   float: right;
   margin-right: 0;
   margin-left: 5px;
-  
+
   -webkit-transform: scale(-1, 1);
   -moz-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
@@ -455,7 +455,7 @@ a#back-to-top {
 @-moz-document url-prefix() {
 .widget_categories ul ul {
 	margin-bottom:0px;
-}	
+}
 }
 #footer .widget_categories ul li a,
 .widget_categories ul li a{
@@ -499,7 +499,7 @@ a#back-to-top {
 .posts_list li a, #sidebar .posts_list li a, #footer .posts_list li a {
   padding:0;
   line-height: 20px;
-  background: none;	
+  background: none;
 }
 .widget_authors .gravatar {
   float: right;

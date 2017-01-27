@@ -45,7 +45,7 @@
   /*
    * Bottone Piccolo
    */
-  .et_pb_button.size-small,
+  .et_pb_button.size--small,
   .et_pb_module a.button.small {
     @extend %button;
     @include button(small, 1);
@@ -60,7 +60,7 @@
     }
     // HOVER
     &:hover {
-      @extend .et_pb_button.size-small;
+      @extend .et_pb_button.size--small;
     }
 
     //Bottone icona
@@ -78,7 +78,7 @@
   /*
    * Bottone Medio
    */
-  .et_pb_button.size-medium,
+  .et_pb_button.size--medium,
   body a.big-button,
   .et_pb_module a.button.medium { //TOCHK ultima dichiarazione per bottone merda nel blurb
     @extend %button;
@@ -91,7 +91,7 @@
     padding-right: $line-height / 2;
 
     &:hover {
-      @extend .et_pb_button.size-medium;
+      @extend .et_pb_button.size--medium;
     }
 
    &:after { //il padding viene usato per correggere l'icona di DIVI
@@ -115,7 +115,7 @@
   /*
    * Bottone Grande
    */
-  .et_pb_button.size-large,
+  .et_pb_button.size--large,
   .et_pb_module a.button.large {
     @extend %button;
     @include button(h3, 4)
@@ -128,7 +128,7 @@
 
 
     &:hover {
-      @extend .et_pb_button.size-large;
+      @extend .et_pb_button.size--large;
     }
     &:after { //il padding viene usato per correggere l'icona di DIVI
       display: none;
@@ -149,7 +149,7 @@
   /*
    * Bottone Xtra Grande
    */
-  .et_pb_button.size-x-large {
+  .et_pb_button.size--x-large {
     @extend %button;
     @include button(h2, 6, half);
 
@@ -160,7 +160,7 @@
     padding-right: $line-height / 2;
 
     &:hover {
-      @extend .et_pb_button.size-x-large;
+      @extend .et_pb_button.size--x-large;
     }
 
     &:after { //il padding viene usato per correggere l'icona di DIVI

@@ -22,7 +22,7 @@
   }
 
   //Reset font-size
-  @at-root #page #{&} a {
+  a {
     font-size: 1em;
   }
 }
@@ -43,16 +43,16 @@
 // Colori
 ///
 .portfolio_title,
-#page .portfolio_title a,
-#page .portfolio_title a:visited {
+.portfolio_title a,
+.portfolio_title a:visited {
   color: main-colors(main, link);
 }
 
 //Loop
 @each $palette, $sections in $colors {
   .#{$palette} .portfolio_title,
-  #page .#{$palette} .portfolio_title a,
-  #page .#{$palette} .portfolio_title a:visited {
+  .#{$palette} .portfolio_title a,
+  .#{$palette} .portfolio_title a:visited {
     color: palette($palette, link)
   }
 }

@@ -77,22 +77,22 @@
   @include font(h3);
 }
 
-#page .entry .entry_title a,
-#page .entry .entry_title a:visited {
+.entry .entry_title a,
+.entry .entry_title a:visited {
   color: main-colors(main, heading);
 }
 
 .entry .entry_meta {
   @include font(h5);
 
-  @at-root #page #{&} a,
-           #page #{&} a:visited {
+  a,
+  a:visited {
     color: main-colors(main, heading);
   }
 }
 
-#page .entry .entry_title a:hover,
-#page .entry .entry_title a:active {
+.entry .entry_title a:hover,
+.entry .entry_title a:active {
   color: inherit;
 }
 

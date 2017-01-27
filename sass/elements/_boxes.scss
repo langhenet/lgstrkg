@@ -40,16 +40,16 @@
   background-color: main-colors(main, bg-alt);
   color: main-colors(main, body-alt);
 
-  @at-root #{&} p,
-           #page #{&} h1,
-           #page #{&} h2,
-           #page #{&} h3,
-           #page #{&} h4,
-           #page #{&} h5 {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     color: main-colors(main, body-alt);
   }
 
-  @at-root #{&} a {
+  a {
     color: main-colors(main, accent-alt);
   }
 
@@ -69,37 +69,37 @@
 }
 
 
-//
-//
-// * Loop Colori Blurb
 
-//@each $palette, $bg in $colors {
-//  .#{$palette} .et_pb_blurb {
-//    background-color: palette($palette, bg-alt);
-//    color: palette($palette, body-alt);
+///
+// Loop Colori Blurb
+///
 
-////    border-bottom-color: darken(palette($palette, bg-alt), 50%);
-//    @at-root #page #{&} p,
-//             #page #{&} h1,
-//             #page #{&} h2,
-//             #page #{&} h3,
-//             #page #{&} h5 {
-               //             #page #{&} h4,
-//      color: palette($palette, body-alt);
-//    }
-//
-//    @at-root #page #{&} a {
-//      color: palette($palette, accent-alt);
-//    }
-//
-//  .et_pb_main_blurb_image .et-pb-icon { // colore icona
-//    color: palette($palette, body-alt) !important;
+@each $palette, $bg in $colors {
+  .#{$palette} .et_pb_blurb {
+    background-color: palette($palette, bg-alt);
+    color: palette($palette, body-alt);
 
-//    &.et-pb-icon-circle { // icona con il cerchio
-//      background: transparent !important;
-//      border: palette($palette, border) 2px solid;
-//    }
-//  }
-// }
-//}
-//*/
+    border-bottom-color: darken(palette($palette, bg-alt), 50%);
+    p,
+    h1,
+    h2,
+    h3,
+    h5,
+    h4 {
+      color: palette($palette, body-alt);
+    }
+
+    a {
+      color: palette($palette, accent-alt);
+    }
+
+  .et_pb_main_blurb_image .et-pb-icon { // colore icona
+    color: palette($palette, body-alt) !important;
+
+  &.et-pb-icon-circle { // icona con il cerchio
+      background: transparent !important;
+      border: palette($palette, border) 2px solid;
+    }
+  }
+ }
+}

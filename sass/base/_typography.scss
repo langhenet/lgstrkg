@@ -119,21 +119,21 @@ h5 {
 /*
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] h1 {
   @include respond-to(divi-2) {
-    @include font(h1);
+    @include size-m(h1);
   }
 
   @include respond-to(step-3) {
-    @include font(h1);
+    @include size-m(h1);
   }
 }
 
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] p {
   @include respond-to(divi-2) {
-    @include font(p);
+    @include size-m(p);
   }
 
   @include respond-to(step-3) {
-    @include font(p);
+    @include size-m(p);
   }
 }*/
 
@@ -204,7 +204,7 @@ blockquote {
 * Blockquote - citazione COLORI
 */
 @each $palette, $section in $colors  {
-  #page .#{$palette} blockquote { //TOCHK il #page è necessario?
+  .#{$palette} blockquote { //TOCHK il #page è necessario?
 
     &::before {
       color: palette($palette, accent);
@@ -223,11 +223,11 @@ blockquote {
 /*
  * Colori Tipografia
  */
-#page h1 {color: main-colors(main, heading);}
-#page h2 {color: main-colors(main, heading);}
-#page h3 {color: main-colors(main, heading);}
-#page h4 {color: main-colors(main, heading);}
-#page h5 {color: main-colors(main, heading);}
+h1 {color: main-colors(main, heading);}
+h2 {color: main-colors(main, heading);}
+h3 {color: main-colors(main, heading);}
+h4 {color: main-colors(main, heading);}
+h5 {color: main-colors(main, heading);}
 p, ul, ol {color: main-colors(main, body);}
 a,
 a:visited {color: main-colors(main, link);}
@@ -238,7 +238,7 @@ a:hover {color: darken(main-colors(main, link), 10%);}
  * Colori Tipografia nelle Varie sezioni
  */
 @each $palette, $sections in $colors {
-  #page .#{$palette} {
+  #et_builder_outer_content .#{$palette} {
     p, ul, ol {
       color: palette($palette, body)
     }
@@ -250,9 +250,9 @@ a:hover {color: darken(main-colors(main, link), 10%);}
     a,
     a:visited {
       color: palette($palette, link);
-    }
-    &:hover {
-      color: darken(palette($palette, link), 10%);
+      &:hover {
+        color: darken(palette($palette, link), 10%);
+      }
     }
   }
 }
@@ -284,11 +284,11 @@ a,
 ///
 // Link DENTRO titoli - Colori
 ///
-#page h1 > a,
-#page h2 > a,
-#page h3 > a,
-#page h4 > a,
-#page h5 > a {
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a {
   text-decoration: none;
   color: layout-colors(main, heading2);
 
@@ -311,11 +311,11 @@ a,
 // Link nei titoli - Colori nelle varie sezioni
 ///
 @each $palette, $bg in $colors {
-  #page .#{$palette} h1 > a,
-  #page .#{$palette} h2 > a,
-  #page .#{$palette} h3 > a,
-  #page .#{$palette} h4 > a,
-  #page .#{$palette} h5 > a {
+  .#{$palette} h1 > a,
+  .#{$palette} h2 > a,
+  .#{$palette} h3 > a,
+  .#{$palette} h4 > a,
+  .#{$palette} h5 > a {
     color: palette($palette, heading);
 
     &:link {

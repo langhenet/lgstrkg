@@ -317,12 +317,12 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
   }
 
   // campi HTML e SECTION
-  @at-root #page #{&} p {
+  @at-root #{&} p {
     color: main-colors(main, form-body);
   }
 
-  @at-root #page #{&} h2,
-           #page #{&} h3 {
+  @at-root #{&} h2,
+           #{&} h3 {
     color: main-colors(main, heading2); //TOCR
   }
 
@@ -383,11 +383,11 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
     }
 
     // campi HTML e SECTION
-    @at-root #page #{&} p {
+    @at-root #{&} p {
       color: palette($palette, form-body);
     }
-    @at-root #page #{&} h2,
-             #page #{&} h3 {
+    @at-root #{&} h2,
+             #{&} h3 {
       color: palette($palette, form-body); //TOCR
     }
 
