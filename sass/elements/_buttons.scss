@@ -18,10 +18,44 @@
 
 .button.small {
   @extend %button;
-  @include button(small, 1);
+  @include button(small, 1, half);
 
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.button.medium {
+  @extend %button;
+  @include button(p, 2);
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button.large {
+  @extend %button;
+  @include button(h3, 4);
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#page .button.primary {
+  color: #fff;
+
+  [class^="icon-"] {
+    color: #fff;
+  }
+}
+
+@each $palette, $bg in $colors {
+  #page .#{$palette} .button.primary {
+    color: palette($palette, button);
+  }
+
+  [class^="icon-"]{
+    color: palette($palette, button);
+  }
 }
 
 //***********************************************************************//

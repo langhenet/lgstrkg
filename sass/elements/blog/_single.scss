@@ -53,11 +53,14 @@
   padding: ($line-height * 2);
 
   h3 {
-    color: palette(blu, heading)
+    @include font(h3, $mt: 0);
+    color: palette(blu, heading);
   }
 
-  .author_name {
-    display: none;
+  @at-root #page #{&}  .author_name a {
+    color: palette(blu, body);
+    text-decoration: none;
+    font-family: $secondary;
   }
 
   .author_content {

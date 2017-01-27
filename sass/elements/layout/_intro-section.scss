@@ -67,7 +67,7 @@
 ///
 #feature::before,
 #intro::before {
-  @include color-overlay($grade: 0.4);
+  @include color-overlay($grade: 0.5);
 }
 
 

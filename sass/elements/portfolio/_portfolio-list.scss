@@ -27,28 +27,14 @@
   }
 }
 
-
-
-
 ///
-// Titolo & Descrizione: dimensioni per 3 colonne
+// Descrizione - Excerpt
 ///
-.portfolio_three_columns {
-
-  //titolo
-  .portfolio_title {
-    @include font(h3);
-
-    @include breakpoint-max(md) {
-      @include m-size(h3);
-    }
-  }
-
-  //Descrizione
-  .portfolio_desc {
-    @include font(h5, $fm: primary);
-  }
+.portfolio_desc {
+  margin-top: 0;
 }
+
+
 
 
 
@@ -103,7 +89,8 @@
 }
 
 //resetto margini contenitore su mobile
-.portfolios .portfolio_three_columns {
+.portfolios .portfolio_three_columns,
+.portfolios .portfolio_four_columns {
   margin-right: auto !important;
 }
 
@@ -155,5 +142,61 @@
   .portfolio_three_columns .portfolio_item {
     flex-basis: 95%;
     width: 95% !important;
+  }
+}
+
+
+///
+// Titolo & Descrizione: dimensioni per 3 colonne
+///
+.portfolio_three_columns {
+
+  //titolo
+  .portfolio_title {
+    @include font(h3, $mt: size(h3, lh) / 2, $mb: size(h3, lh) / 2);
+
+    @include breakpoint-max(md) {
+      @include m-size(h3);
+    }
+  }
+
+  //Descrizione
+  .portfolio_desc {
+    @include font(h5, $mt: 0, $fm: secondary);
+  }
+}
+
+
+
+//**************************************************************************************//
+//                      4 Colonne
+//**************************************************************************************//
+///
+//impostazioni di base
+///
+.portfolio_four_columns .portfolio_item {
+  flex-basis: 21%;
+  width: 21%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 0 !important;
+}
+
+
+
+///
+// Titolo & Descrizione: dimensioni per 4 colonne
+///
+.portfolio_four_columns {
+
+  //titolo
+  .portfolio_title {
+    @include font(h4, $mt: size(h4, lh) / 2, $mb: size(h4, lh) / 2);
+    text-transform: uppercase;
+  }
+
+  //Descrizione
+  .portfolio_desc {
+    @include font(h5, $mt: 0, $fm: secondary);
   }
 }
