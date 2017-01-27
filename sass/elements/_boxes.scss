@@ -32,13 +32,6 @@
   }
 }
 
-////
-//Loop Colori immagine
-///
-@each $palette, $bg in $colors {
-  .et_divi_builder #et_builder_outer_content  .#{$palette} .et_pb_main_blurb_image  img {
-  }
-}
 
 ////
 // Contenuto del Blurb
@@ -47,7 +40,7 @@
   background-color: main-colors(main, bg-alt);
   color: main-colors(main, body-alt);
 
-  @at-root #page #{&} p,
+  @at-root #{&} p,
            #page #{&} h1,
            #page #{&} h2,
            #page #{&} h3,
@@ -56,7 +49,7 @@
     color: main-colors(main, body-alt);
   }
 
-  @at-root #page #{&} a {
+  @at-root #{&} a {
     color: main-colors(main, accent-alt);
   }
 
@@ -76,35 +69,37 @@
 }
 
 
-/*
- * Loop Colori Blurb
- */
-@each $palette, $bg in $colors {
-  .#{$palette} .et_pb_blurb {
-    background-color: palette($palette, bg-alt);
-    color: palette($palette, body-alt);
-    border-bottom-color: darken(palette($palette, bg-alt), 50%);
+//
+//
+// * Loop Colori Blurb
 
-    @at-root #page #{&} p,
-             #page #{&} h1,
-             #page #{&} h2,
-             #page #{&} h3,
-             #page #{&} h4,
-             #page #{&} h5 {
-      color: palette($palette, body-alt);
-    }
+//@each $palette, $bg in $colors {
+//  .#{$palette} .et_pb_blurb {
+//    background-color: palette($palette, bg-alt);
+//    color: palette($palette, body-alt);
 
-    @at-root #page #{&} a {
-      color: palette($palette, accent-alt);
-    }
+////    border-bottom-color: darken(palette($palette, bg-alt), 50%);
+//    @at-root #page #{&} p,
+//             #page #{&} h1,
+//             #page #{&} h2,
+//             #page #{&} h3,
+//             #page #{&} h5 {
+               //             #page #{&} h4,
+//      color: palette($palette, body-alt);
+//    }
+//
+//    @at-root #page #{&} a {
+//      color: palette($palette, accent-alt);
+//    }
+//
+//  .et_pb_main_blurb_image .et-pb-icon { // colore icona
+//    color: palette($palette, body-alt) !important;
 
-  .et_pb_main_blurb_image .et-pb-icon { // colore icona
-    color: palette($palette, body-alt) !important;
-
-    &.et-pb-icon-circle { // icona con il cerchio
-      background: transparent !important;
-      border: palette($palette, border) 2px solid;
-    }
-  }
- }
-}
+//    &.et-pb-icon-circle { // icona con il cerchio
+//      background: transparent !important;
+//      border: palette($palette, border) 2px solid;
+//    }
+//  }
+// }
+//}
+//*/

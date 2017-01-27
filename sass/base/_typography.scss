@@ -228,10 +228,10 @@ blockquote {
 #page h3 {color: main-colors(main, heading);}
 #page h4 {color: main-colors(main, heading);}
 #page h5 {color: main-colors(main, heading);}
-#page p, ul, ol {color: main-colors(main, body);}
-#page a,
-#page a:visited {color: main-colors(main, link);}
-#page a:hover {color: darken(main-colors(main, link), 10%);}
+p, ul, ol {color: main-colors(main, body);}
+a,
+a:visited {color: main-colors(main, link);}
+a:hover {color: darken(main-colors(main, link), 10%);}
 
 //TOCHK
 /*

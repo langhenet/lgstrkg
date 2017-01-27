@@ -35,6 +35,7 @@
 }
 
 @each $palette, $sections in $colors {
+.#{$palette},
 .et_divi_builder #et_builder_outer_content .et_pb_section.#{$palette} {
     background-color: palette($palette, bg) !important;
   }

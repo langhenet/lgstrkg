@@ -14,7 +14,7 @@
 // BASE ELEMENTS
 @import 'base/resets';
 @import 'base/typography';
-@import 'base/images';
+//@import 'base/images';
 
 // HEADER
 @import 'elements/header/header-main';
@@ -39,13 +39,13 @@
 @import 'sass/elements/testimonial';
 
 // PORTFOLIO
-@import 'elements/portfolio/portfolio-list';
-@import 'elements/portfolio/portfolio-single';
+//@import 'elements/portfolio/portfolio-list';
+//@import 'elements/portfolio/portfolio-single';
 
 
 // BLOG SINGLE
-@import 'elements/blog/list-1col';
-@import 'elements/blog/single';
+//@import 'elements/blog/list-1col';
+//@import 'elements/blog/single';
 
 //WIDGET & SIDEBAR
 @import 'elements/layout/sidebar';
