@@ -40,13 +40,15 @@
   background-color: main-colors(main, bg-alt);
   color: main-colors(main, body-alt);
 
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: main-colors(main, body-alt);
+  @at-root #page #{&} {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: main-colors(main, body-alt);
+    }
   }
 
   a {

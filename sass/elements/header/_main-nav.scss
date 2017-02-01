@@ -9,8 +9,11 @@
  * Contenitore Nav
  */
 #navigation {
-  bottom: 50%;
-  height: $line-height;
+  height: $line-height * 2;
+  position: relative;
+  display: block;
+  text-align: right;
+  flex-grow: 1;
 }
 
 
@@ -29,6 +32,7 @@
  #navigation .menu > li {
   transition: all 250ms linear;
   padding: 0 15px 0 13px;
+  @include font(h3, $fm: sans, $wt: thin, $mt:0, $mb: 0);
 }
 
 
@@ -99,6 +103,8 @@
 #navigation .menu > li.hover > a:visited,
 #navigation .menu > li.hover > a > i {
   transition: all 250ms linear;
+  color: main-colors(header, link);
+  border-bottom: 1px solid;
 }
 
 
@@ -126,7 +132,9 @@
 #navigation .menu > li.current_page_ancestor > a > i,
 #navigation .menu > li.current-page-item > a > i,
 #navigation .menu > li.current-page-ancestor > a > i {
-
+  font-weight: 400;
+  color: main-colors(header, link);
+  border-bottom: 1px solid;
 }
 
 /******************************************************************************/

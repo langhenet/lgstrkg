@@ -10,21 +10,21 @@
 ///
   $base: 16;
   $font-size: 1.25em; //TODO
-  $line-height: 1.5em; //TODO
+  $line-height: 2em; //TODO
 
 
 ///
 // p and other standard elements
 ///
   $margin-top: 0em; //TODO
-  $margin-bottom: 1.5em; //TODO
+  $margin-bottom: 2em; //TODO
 
 
 ///
 // Families
 ///
-  $serif: 'PT Serif', serif; //TODO
-  $sans: 'Open Sans', sans-serif; //TODO
+  $serif: 'Ovo', serif; //TODO
+  $sans: 'Lato', sans-serif; //TODO
   $special: $serif; //TODO
   $ff-button: $sans;
 
@@ -35,18 +35,18 @@
 $families: (
   serif: (
     fm: $serif,
-    thin: 200,
+    thin: 400,
     normal: 400,
-    bold: 600,
-    bolder: 600,
+    bold: 400,
+    bolder: 400,
   ),
 
   sans: (
     fm: $sans,
     thin: 300,
     normal: 400,
-    bold: 700,
-    bolder: 900,
+    bold: 400,
+    bolder: 400,
   ),
 
   special: (
@@ -60,32 +60,32 @@ $families: (
 
 $decorations: (
   p: (
-    fm: serif,
+    fm: sans,
     wt: normal,
   ),
 
   h1: (
-    fm: sans,
+    fm: serif,
     wt: normal,
   ),
 
   h2: (
-    fm: sans,
+    fm: serif,
     wt: normal,
   ),
 
   h3: (
-    fm: sans,
+    fm: serif,
     wt: normal,
   ),
 
   h4: (
-    fm: sans,
+    fm: serif,
     wt: normal,
   ),
 
   h5: (
-    fm: sans,
+    fm: serif,
     wt: normal,
   ),
 
@@ -106,44 +106,44 @@ $decorations: (
     ),
 
     h1: (
-      fs: 3.375em,
-      lh: 1.33333333333em,
-      mt: 0.888888888888889em,
-      mb: 0.44444444444444em,
+      fs: 5.35em,
+      lh: 1.12149533em,
+      mt: 0.37383178em,
+      mb: 0.74766356em,
     ),
 
     h2: (
-      fs: 2.25em,
-      lh: 1.33333333333em,
-      mt: 1.33333333333em,
-      mb: 0.6666666666667em,
+      fs: 3.05em,
+      lh: 1.31147541em,
+      mt: 0.6557377em,
+      mb: 0.6557377em,
     ),
 
     h3: (
-      fs: 1.5em,
-      lh: 2em,
-      mt: 1.5em,
-      mb: 1em,
+      fs: 1.75em,
+      lh: 1.14285714em,
+      mt: 1.14285714em,
+      mb: 1.14285714em,
     ),
 
     h4: (
       fs: 1em,
-      lh: 1.5em,
-      mt: 1.5em,
-      mb: 1.5em,
+      lh: $line-height,
+      mt: $line-height,
+      mb: 0,
     ),
 
     h5: (
       fs: 0.75em,
-      lh: 2em,
-      mt: 2em,
+      lh: 1.33333333333333em,
+      mt: 1.33333333333333em,
       mb: 0em,
     ),
 
     small: (
       fs: 0.75em,
-      lh: 2em,
-      mt: 2em,
+      lh: 1.33333333333333em,
+      mt: 1.33333333333333em,
       mb: 0,
     ),
 );

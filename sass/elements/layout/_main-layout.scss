@@ -96,6 +96,7 @@
 //****************************************************************************//
 #breadcrumbs { //contenitore
   font-size: 1em;
+  display: none;
 
   .breadcrumbs {
     @include font(h5, $mt: 0);

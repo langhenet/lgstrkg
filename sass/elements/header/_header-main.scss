@@ -24,8 +24,10 @@
  * BG dell'header
  */
 #header {
-  background-color: main-colors(header, bg);
+  background-color: rgba(main-colors(header, bg), 0.3);
   transition: all 250ms linear;
+  position: absolute;
+  border-bottom: 1px solid rgba(main-colors(header, border), 0.3);
 }
 
 ///
@@ -90,6 +92,11 @@
 #header .inner {
   height: $line-height * 5;
   transition: all 250ms linear;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /*
@@ -116,6 +123,8 @@
 #logo_text {
   bottom: $line-height / 2;
   transition: all 250ms linear;
+  display: block;
+  position: relative;
 
   @at-root .sticker_sticky #{&} {
     @include breakpoint-min(xl) { //quando l'header è sticcato - tolgo il bottom solo su desktop

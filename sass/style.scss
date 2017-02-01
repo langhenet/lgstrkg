@@ -14,7 +14,7 @@
 // BASE ELEMENTS
 @import 'base/resets';
 @import 'base/typography';
-//@import 'base/images';
+@import 'base/images';
 
 // HEADER
 @import 'elements/header/header-main';
@@ -28,6 +28,7 @@
 @import 'elements/layout/sezioni-fw';
 @import 'elements/layout/footer';
 @import 'elements/layout/intro-section';
+@import 'elements/layout/divi-intro-section';
 @import 'elements/tables';
 @import 'elements/widgets';
 @import 'elements/buttons';

@@ -264,7 +264,11 @@
     ///
     .et_pb_text,
     .et_pb_module {
-      max-width: 780px; //TOCR - trovare una larghezza giusta da impostare per gli schermi normali
+      max-width: 570px; //TOCR - trovare una larghezza giusta da impostare per gli schermi normali
+    }
+
+    .et_pb_module.magic-image {
+      max-width: 100%;
     }
 
     &:first-child {

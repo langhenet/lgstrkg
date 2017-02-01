@@ -5,8 +5,8 @@
 //*                                                                     *//
 //***********************************************************************//
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ovo);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P e UL / OL
@@ -17,7 +17,7 @@
 body {
   font-size: $font-size;
   line-height: $line-height;
-  font-family: $serif;
+  font-family: $sans;
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
 }
@@ -223,11 +223,11 @@ blockquote {
 /*
  * Colori Tipografia
  */
-h1 {color: main-colors(main, heading);}
-h2 {color: main-colors(main, heading);}
-h3 {color: main-colors(main, heading);}
-h4 {color: main-colors(main, heading);}
-h5 {color: main-colors(main, heading);}
+#page h1 {color: main-colors(main, heading);}
+#page h2 {color: main-colors(main, heading);}
+#page h3 {color: main-colors(main, heading);}
+#page h4 {color: main-colors(main, heading);}
+#page h5 {color: main-colors(main, heading);}
 p, ul, ol {color: main-colors(main, body);}
 a,
 a:visited {color: main-colors(main, link);}
@@ -243,8 +243,10 @@ a:hover {color: darken(main-colors(main, link), 10%);}
       color: palette($palette, body)
     }
 
-    h1, h2, h3, h4, h5 {
-      color: palette($palette, heading);
+  @at-root #page #{&} {
+      h1, h2, h3, h4, h5 {
+        color: palette($palette, heading);
+      }
     }
 
     a,
