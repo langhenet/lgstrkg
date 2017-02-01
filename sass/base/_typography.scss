@@ -65,6 +65,11 @@ ul ul, ol ol, ul ol, ol ul {
 ///
 h1, h2, h3, h4, h5 {
   padding-bottom: 0;
+
+  &.alt-title {
+    font-family: $sans;
+    font-weight: 300;
+  }
 }
 
 
@@ -246,6 +251,10 @@ a:hover {color: darken(main-colors(main, link), 10%);}
   @at-root #page #{&} {
       h1, h2, h3, h4, h5 {
         color: palette($palette, heading);
+
+        &.alt-title {
+          color: main-colors(main, heading);
+        }
       }
     }
 
@@ -259,6 +268,13 @@ a:hover {color: darken(main-colors(main, link), 10%);}
   }
 }
 
+.et_divi_builder #et_builder_outer_content .et_pb_bg_layout_dark {
+  h1, h2, h3, h4, h5 {
+    &.alt-title {
+      color: main-colors(main, heading);
+    }
+  }
+}
 
 //****************************************************************************//
 //                         LINK
