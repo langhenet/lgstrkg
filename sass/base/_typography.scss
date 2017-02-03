@@ -116,26 +116,26 @@ h5 {
 //*     linee di codice
 //****************************************************************************//
 //TOFIX
-/*
+
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] h1 {
-  @include respond-to(divi-2) {
-    @include font(h1);
+  @include breakpoint-max(divi-lg) {
+    @include size(h1);
   }
 
-  @include respond-to(step-3) {
-    @include font(h1);
+  @include breakpoint-max(md) {
+    @include m-size(h1);
   }
 }
 
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] p {
-  @include respond-to(divi-2) {
-    @include font(p);
+  @include breakpoint-max(divi-lg) {
+    @include size(p);
   }
 
-  @include respond-to(step-3) {
-    @include font(p);
+  @include breakpoint-max(md) {
+    @include size(p);
   }
-}*/
+}
 
 
 
@@ -172,7 +172,7 @@ sub { bottom: $sub-bottom; }
 #main ul,
 .et_divi_builder #et_builder_outer_content .et_pb_module ol,
 .et_divi_builder #et_builder_outer_content .et_pb_module ul {
-  margin-left: $line-height * 2;
+  margin-left: $line-height;
   padding-bottom: 0;
   margin-bottom: $line-height;
 }
@@ -183,7 +183,7 @@ sub { bottom: $sub-bottom; }
 ///
 #main ul li,
 .et_divi_builder #et_builder_outer_content .et_pb_module ul li {
-  list-style: circle;
+  list-style: disc;
 }
 
 .et_divi_builder #et_builder_outer_content .et_pb_module ol li {

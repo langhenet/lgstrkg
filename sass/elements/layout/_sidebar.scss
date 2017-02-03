@@ -32,6 +32,7 @@
   &.widget_text,
   &.widget_text_icl {
     padding: 0;
+    background: transparent;
   }
 }
 
@@ -69,6 +70,7 @@
 #sidebar .widget a:visited {
 
   &:hover {
+    color: main-colors(main, link);
   }
 }
 

@@ -116,13 +116,14 @@ select {
 .gform_wrapper .gsection {
   margin: 0;
   border-bottom: 1px solid;
-  padding-bottom: bspad(1) - ($line-height / 2);
+  padding-bottom: 0;
   padding-top: $line-height / 2;
-  margin-bottom: $line-height * 2;
+  margin-bottom: $line-height;
 
   // Titolo Sezione
   h2 {
-    @include font(h3)
+    @include font(h3);
+    padding-bottom: size(h3, mt) !important;
     display: block;
     border: 0px;
   }
@@ -136,7 +137,8 @@ select {
   width: 100%;
 }
 // Tipografia
-.gform_wrapper .gsection_description {
+.gform_wrapper .gsection_description,
+.gform_wrapper .top_label .gsection_description {
   @include font(p, $mt: 0);
   padding: 0;
 }

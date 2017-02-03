@@ -98,11 +98,12 @@
   /*
    * Bottone Medio
    */
+  .et_pb_button,
   .et_pb_button.size--medium,
   body a.big-button,
   .et_pb_module a.button.medium { //TOCHK ultima dichiarazione per bottone merda nel blurb
     @extend %button;
-    @include button(p, 4, half);
+    @include button(p, 4);
 
     font-weight: inherit; //TODO
     text-transform: uppercase;
@@ -273,3 +274,17 @@ a.button.primary {
 //                  include anche i colori dei bottoni di gravity pare
 //                  ho cambiato la dichiarazione nel mixin dei bottoni per fare i bordi -
 //****************************************************************************//
+
+.et_divi_builder #et_builder_outer_content  .et_pb_bg_layout_light.et_pb_module.et_pb_button.skeleton--light,
+.et_divi_builder #et_builder_outer_content a.button.primary.skeleton--light {
+
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+
+  &:hover {
+    color: #111;
+    background-color: #fff;
+    border-color: #fff;
+  }
+}

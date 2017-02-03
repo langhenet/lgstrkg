@@ -108,7 +108,7 @@
   @include font(h1, $mt: 0);
   padding: 0;
 
-  @include breakpoint-max(md) {
+  @include breakpoint-max(sm) {
     @include m-size(h1);
   }
 }
@@ -121,6 +121,9 @@
 *******************************************************************************/
 .feature-introduce {
   @include font(h3, $fm: primary);
+  @include breakpoint-max(sm) {
+    @include m-size(h3);
+  }
   font-style: italic;
   padding: 0;
 }

@@ -44,6 +44,15 @@
  * Titoli
  */
 #footer h3.widgettitle {
+
+  @include font(h3);
+
+  @include breakpoint-max(sm) {
+    @include m-size(h3);
+  }
+
+  padding-bottom: size(h3, lh);
+  border-bottom: 1px solid;
   color: main-colors(footer, body);
 }
 
@@ -56,6 +65,9 @@
 
   &:visited {
     color: main-colors(footer, link);
+  }
+  &:hover {
+    color: darken(main-colors(footer, link), 10%);
   }
 }
 
@@ -76,11 +88,20 @@
  * Nav Menu
  */
 #footer .widget_nav_menu li {
+
+
+
+  &::before {
+    //display: none;
+  }
+
   a {
     padding-top: 0;
     padding-bottom: 0;
+    //padding-left: 0;
     background-image: none;
     text-decoration: none;
+    font-family: $secondary;
 
     &::after {
       background: none;
@@ -99,7 +120,7 @@
   text-decoration: underline;
 
   &:hover {
-    color: ligthen(main-colors(footer, link), 100%)
+    color: darken(main-colors(footer, link), 10%)
   }
 }
 

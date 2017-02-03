@@ -115,3 +115,32 @@
     margin-bottom: 0;
   }
 }
+
+//****************************************************************************//
+//                         PAGINAZIONE
+//****************************************************************************//
+.wp-pagenavi {
+  height: $line-height * 2;
+  margin-bottom: $line-height;
+}
+
+#main .wp-pagenavi a {
+  text-decoration: none;
+}
+.wp-pagenavi a,
+.wp-pagenavi a:link,
+.wp-pagenavi a:visited,
+.wp-pagenavi a:active,
+.wp-pagenavi span.extend,
+.wp-pagenavi span.current {
+  padding: ($line-height / 2) $line-height;
+  background: main-colors(main, bg-alt);
+  margin-right: $line-height / 2;
+  margin-left: 0;
+}
+
+.wp-pagenavi span.current,
+.wp-pagenavi a:hover {
+  font-size: 1em;
+  background: darken(main-colors(main, bg-alt), 10%)
+}
