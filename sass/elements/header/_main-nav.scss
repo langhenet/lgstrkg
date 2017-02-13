@@ -50,6 +50,9 @@
   transition: all 250ms linear;
   padding: 0 $line-height;
 
+  &:last-child {
+    padding-right: 0;
+  }
  }
 
 //current
@@ -152,12 +155,17 @@
 // Sottomenu - contenitore / UL
 ///
 #navigation ul li ul {
-
-    @at-root .sticker_sticky #{&} { //con header scrollato - il margin top ritorna a 0 - solo su desktop
-      @include breakpoint-min(xl) {
-        margin-top: 0;
-      }
+  background: $nero;
+  text-align: left;
+  border: 0;
+  @at-root .sticker_sticky #{&} { //con header scrollato - il margin top ritorna a 0 - solo su desktop
+    @include breakpoint-min(xl) {
     }
+  }
+
+  li:first-child {
+    padding-top: $line-height;
+  }
 }
 
 
@@ -176,8 +184,8 @@
 #navigation ul li.hover ul li a,
 #navigation ul ul li a,
 #navigation ul ul li a:visited {
-  @include font(p, $mt: 0);
-  padding: 0 1em;
+  @include font(h5, $mt: 0, $mb: 0);
+  padding: size(h5, lh) / 2 1em;
 }
 
 /******************************************************************************/

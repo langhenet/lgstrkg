@@ -16,8 +16,7 @@ section.widget {
 /*
  * Titoli - tipografia
  */
-#sidebar .widgettitle,
-#footer h3.widgettitle {
+#sidebar .widgettitle {
   @include font(h3, $mt: 0, $mb: 0);
 }
 
@@ -70,8 +69,11 @@ section.widget {
 
 //****************************************************************************//
 //                 LISTA ARTICOLI / PORTFOLI
-//                Di striking
+//                  Di striking
 //****************************************************************************//
+ul.post_list li {
+
+}
 /*
  * Elemento LI
  */
@@ -80,9 +82,7 @@ section.widget {
 #footer .posts_list li {
   padding: $line-height / 2 0;
   border-bottom: 0;
-
-
-
+    margin-left: 0;
 }
 
 ///
@@ -90,12 +90,26 @@ section.widget {
 ///
 .et_divi_builder #et_builder_outer_content .et_pb_module .posts_list {
   margin-left: 0;
+  padding-left: 0;
+
   li {
     list-style: none;
+
     p {
       display: none;
     }
-}
+  }
+
+  img {
+    height: $line-height * 2.5;
+  }
+  .post_extra_info {
+    vertical-align: middle;
+  }
+  a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
 }
 
 

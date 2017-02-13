@@ -15,7 +15,11 @@
   background-size: cover !important;
   background-image: none;
   position: relative;
-  padding: $height-large 0;
+  padding: $height--large 0;
+
+  @include breakpoint-max(sm) {
+    padding: $line-height * 2 0;
+  }
 }
 
 
@@ -48,7 +52,7 @@
   .no-gradient #feature,
   #intro {
     @include breakpoint-max(xs) {
-      padding-top: $line-height * 5 !important;
+      padding-top: $line-height * 2 !important;
     }
   }
 
@@ -67,7 +71,7 @@
 ///
 #feature::before,
 #intro::before {
-  @include color-overlay($grade: 0.4);
+  @include color-overlay($grade: 0.5);
 }
 
 
@@ -105,8 +109,12 @@
 /*                TITOLO del Featured HEADER
 *******************************************************************************/
 #feature h1 {
-  @include font(h1, $mt: 0, $mb: size(h1, mb) / 2);
+  @include font(h1, $mt: 0);
   padding: 0;
+
+  @include breakpoint-max(sm) {
+    @include m-size(h1);
+  }
 }
 
 
@@ -117,7 +125,11 @@
 *******************************************************************************/
 .feature-introduce {
   @include font(h3, $fm: primary);
+  @include breakpoint-max(sm) {
+    @include m-size(h3);
+  }
   font-style: italic;
+  padding: 0;
 }
 
 #feature h1,

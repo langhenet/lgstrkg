@@ -64,10 +64,10 @@ $layout-colors: (
   main: (
     body:       $nero,      //Corpo - testo
     body-sec:   $grigio-scuro,      //Secondario - blockquote o blog meta
-    heading:    $beige,      //Titoli 1 e 2
+    heading:    darken($beige, 10%),      //Titoli 1 e 2
     link:       $blu,      //Link
     bg:         $bianco,      //Sfondo principale
-    border:     $beige-chiaro,      //Bordi
+    border:     $grigio-chiaro,      //Bordi
 
     accent:     $blu,      //Accento - sfondo lista icone / grassetti / icone
 

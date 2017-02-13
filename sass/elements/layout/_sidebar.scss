@@ -24,6 +24,18 @@
 //****************************************************************************//
 //                           WIDGET
 //****************************************************************************//
+
+#sidebar .widget {
+  padding: ($line-height * 2) $line-height;
+  background: main-colors(main, bg-alt);
+
+  &.widget_text,
+  &.widget_text_icl {
+    padding: 0;
+    background: transparent;
+  }
+}
+
 /*
  * Ultimo Widget
  */
@@ -36,6 +48,8 @@
  * Titoli
  */
 #sidebar .widgettitle {
+  text-transform: uppercase;
+  margin-bottom: size(h3, mb);
 }
 
 
@@ -44,7 +58,7 @@
  * Corpo
  */
 #sidebar .widget ul {
-  padding: $line-height;
+  padding: 0;
 }
 
 //****************************************************************************//
@@ -56,6 +70,7 @@
 #sidebar .widget a:visited {
 
   &:hover {
+    color: main-colors(main, link);
   }
 }
 
@@ -76,15 +91,20 @@
 //                           SIDEBAR SU MOBILE
 //****************************************************************************//
 #sidebar_content {
-  @include breakpoint-max(md) {
+  @include breakpoint-max(sm) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+  }
 
+
+
+  @include breakpoint-max(sm) {
     section.widget {
-      width: 47.5%;
+      width: 100%;
       margin-right: 5%;
+      box-sizing: border-box;
 
       &:nth-child(even) {
         margin-right: 0;
@@ -94,8 +114,8 @@
 
   @at-root .right_sidebar #{&} {
     @include breakpoint-max(xs) {
-      padding-left: $line-height;
-      padding-right: $line-height;
+      //padding-left: $line-height;
+      //padding-right: $line-height;
     }
   }
 }

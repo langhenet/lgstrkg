@@ -21,14 +21,14 @@
  */
 .category-reviews #feature,
 .category-critica #feature {
-  background-image: url(http://caneuva.com/files/2016/07/DSC_11670.jpg);
+  background-image: url(http://cascinavaleggia.it/files/2017/01/critica.jpg);
   background-position: bottom center;
 }
 
 .category-news #feature,
 .category-news-en #feature {
-  background-image: url(http://caneuva.com/files/2016/07/DSC1905.jpg);
-  background-position: bottom center;
+  background-image: url(http://cascinavaleggia.it/files/2013/02/news.jpg);
+  background-position: top center;
 }
 
 
@@ -74,7 +74,15 @@
 //                          TITOLO e META
 //****************************************************************************//
 .entry_info .entry-title {
-  @include font(h3);
+  @include font(h2);
+
+  @include breakpoint-max(md) {
+    @include font(h3)
+  }
+
+  @include breakpoint-max(sm) {
+    @include m-size(h3)
+  }
 }
 
 #page .entry .entry_title a,
@@ -84,6 +92,7 @@
 
 .entry .entry_meta {
   @include font(h5);
+  display: none;
 
   @at-root #page #{&} a,
            #page #{&} a:visited {
@@ -105,4 +114,33 @@
   p {
     margin-bottom: 0;
   }
+}
+
+//****************************************************************************//
+//                         PAGINAZIONE
+//****************************************************************************//
+.wp-pagenavi {
+  height: $line-height * 2;
+  margin-bottom: $line-height;
+}
+
+#main .wp-pagenavi a {
+  text-decoration: none;
+}
+.wp-pagenavi a,
+.wp-pagenavi a:link,
+.wp-pagenavi a:visited,
+.wp-pagenavi a:active,
+.wp-pagenavi span.extend,
+.wp-pagenavi span.current {
+  padding: ($line-height / 2) $line-height;
+  background: main-colors(main, bg-alt);
+  margin-right: $line-height / 2;
+  margin-left: 0;
+}
+
+.wp-pagenavi span.current,
+.wp-pagenavi a:hover {
+  font-size: 1em;
+  background: darken(main-colors(main, bg-alt), 10%)
 }

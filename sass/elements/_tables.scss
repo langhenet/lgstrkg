@@ -4,3 +4,52 @@
 //*              descrizione - descrizione - descrizione
 //*                                                                          *//
 //****************************************************************************//
+
+  table.vino {
+    width: 80%;
+    margin: $line-height * 2 auto;
+
+  tr:nth-of-type(odd) {
+    background: palette(beige, bg-alt)
+  }
+
+  tr:nth-of-type(even) {
+    background: #c2b59b;
+  }
+
+  td {
+    padding: ($line-height / 2) 0;
+  }
+
+
+
+
+  td:first-of-type {
+    width: 30%;
+    padding-left: $line-height;
+
+    @include breakpoint-max(md) {
+      display: none;
+    }
+  }
+
+  td:nth-of-type(2) {
+    width: 30%;
+    font-weight: family(primary, bold);
+
+    @include breakpoint-max(md) {
+      padding-left: $line-height;
+    }
+  }
+
+  td:nth-of-type(3) {
+    width: 25%;
+  }
+
+  td:nth-of-type(4) {
+    width: 15%;
+    padding-right: $line-height;
+  }
+
+
+}
