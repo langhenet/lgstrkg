@@ -36,7 +36,7 @@ select {
   $pad: bspad(6);
   padding-bottom: bspad(6) + ($line-height / 2em);
 
-  @include breakpoint-max(xs) {
+  @include breakpoint-max(sm) {
     max-width: 120% !important;
     margin-left: -10% !important;
     width: 120% !important;
@@ -57,7 +57,7 @@ select {
 .gform_wrapper li,
 .gform_wrapper .top_label li.gfield.gf_left_half,
 .gform_wrapper .top_label li.gfield.gf_right_half {
-  margin-bottom: $line-height * 1.5;
+  margin-bottom: $line-height;
 }
 .gform_wrapper ul.gform_fields li.gfield,
 .gform_wrapper .top_label li.gfield.gf_right_half {
@@ -79,15 +79,13 @@ select {
 
 .gform_wrapper .top_label li.gfield.gf_left_half,
 .gform_wrapper .top_label li.gfield.gf_right_half {
-  @include breakpoint-max(xl) {
-    width: 100%;
-  }
 
-  @include breakpoint-max(md) {
+
+  @include breakpoint-max(lg) {
     width: 49%;
   }
 
-  @include breakpoint-max(xs) {
+  @include breakpoint-max(md) {
     width: 100%;
   }
 }
@@ -193,7 +191,7 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
  * Altezza Select
  */
 .gform_wrapper select {
-  height: $line-height * 1.5; //TODO
+  height: $line-height * 1.12; //TODO
 }
 
 
@@ -224,8 +222,8 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 ///
 .gform_wrapper .top_label .gfield_description {
   @include form-desc(small);
-  padding-top: font(small, lh) / 2;
-  padding-bottom: font(small, lh) / 2;
+  padding-top: size(small, lh) / 2;
+  padding-bottom: size(small, lh) / 2;
 }
 
 ///
@@ -240,8 +238,8 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 .gform_wrapper .ginput_complex label,
 .gform_wrapper .instruction {
   @include form-desc(small);
-  padding-top: font(small, lh) / 2;
-  padding-bottom: font(small, lh) / 2;
+  padding-top: size(small, lh) / 2;
+  padding-bottom: size(small, lh) / 2;
 }
 
 

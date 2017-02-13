@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   @include font(h1);
 
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(md) {
     @include m-size(h1);
   }
 }
@@ -84,7 +84,7 @@ h1 {
 h2 {
   @include font(h2);
 
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(md) {
     @include m-size(h2);
   }
 }
@@ -92,7 +92,7 @@ h2 {
 h3 {
   @include font(h3);
 
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(md) {
     @include m-size(h3);
   }
 }
@@ -121,26 +121,25 @@ h5 {
 //*     linee di codice
 //****************************************************************************//
 //TOFIX
-/*
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] h1 {
-  @include respond-to(divi-2) {
-    @include size-m(h1);
+  @include breakpoint-max(divi-lg) {
+    @include size(h1);
   }
 
-  @include respond-to(step-3) {
-    @include size-m(h1);
+  @include breakpoint-max(md) {
+    @include m-size(h1);
   }
 }
 
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] p {
-  @include respond-to(divi-2) {
-    @include size-m(p);
+  @include breakpoint-max(divi-lg) {
+    @include size(p);
   }
 
-  @include respond-to(step-3) {
-    @include size-m(p);
+  @include breakpoint-max(md) {
+    @include size(p);
   }
-}*/
+}
 
 
 

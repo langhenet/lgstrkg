@@ -50,7 +50,7 @@ $layout-colors: (
     link: $bianco-vero,
     accent: $bianco-vero,
     border: $bianco-vero,
-    bg: $grigio,
+    bg: $nero-vero,
     button-bg: $bianco-vero,
     button: $grigio,
   ),
@@ -80,7 +80,7 @@ $layout-colors: (
     accent-alt: $bianco-vero,      //accento alt - il di un link nel form
 
     form-body: $grigio,
-    form-bg: $oro,
+    form-bg: $oro-chiaro,
     form-link: $grigio,
     form-desc: $grigio,
 
@@ -123,12 +123,12 @@ $colors: (
   color1: (
     body:       $grigio,      //Corpo - testo
     body-sec:   $grigio,      //Secondario - blockquote o blog meta
-    heading:    $grigio,      //Titoli 1 e 2
+    heading:    $oro,      //Titoli 1 e 2
     link:       $grigio,      //Link
     bg:         $oro-chiaro,      //Sfondo principale
     border:     $oro,      //Bordi
 
-    accent:     $grigio,      //Accento - sfondo lista icone / grassetti / icone
+    accent:     $oro,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $bianco-vero,      //body alternativo - testo in un form o in un box
     bg-alt:     $oro,      //sfondo alt - il bg di un form o di un box
