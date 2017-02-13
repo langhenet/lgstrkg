@@ -87,6 +87,7 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-left: 0 !important;
 }
 
 //cambio impostazione flex su mobile
@@ -162,6 +163,17 @@
 
 
 ///
+//impostazione schermi ultra piccoli
+///
+@include breakpoint-max(sm) {
+  .portfolio_three_columns .portfolio_item {
+    flex-basis: 95%;
+    width: 95% !important;
+  }
+}
+
+
+///
 // Titolo & Descrizione: dimensioni per 3 colonne
 ///
 .portfolio_three_columns {
@@ -216,12 +228,22 @@
 }
 
 ///
-//impostazione su schermi medi
+//impostazione su schermi piccoli
 ///
 @include breakpoint-max(sm) {
   .portfolio_four_columns .portfolio_item {
     flex-basis: 75%;
     width: 75% !important;
+  }
+}
+
+///
+//impostazione su schermi extra piccoli
+///
+@include breakpoint-max(xs) {
+  .portfolio_four_columns .portfolio_item {
+    flex-basis: 95%;
+    width: 95% !important;
   }
 }
 

@@ -15,7 +15,11 @@
   background-size: cover !important;
   background-image: none;
   position: relative;
-  padding: $height-large 0;
+  padding: $height--large 0;
+
+  @include breakpoint-max(sm) {
+    padding: $line-height * 2 0;
+  }
 }
 
 
@@ -48,7 +52,7 @@
   .no-gradient #feature,
   #intro {
     @include breakpoint-max(xs) {
-      padding-top: $line-height * 5 !important;
+      padding-top: $line-height * 2 !important;
     }
   }
 

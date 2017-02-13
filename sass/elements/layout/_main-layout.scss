@@ -65,8 +65,8 @@
 #sidebar {
   box-sizing: border-box;
   @include breakpoint-max(lg) {
-    padding-right: $line-height;
-    padding-left: $line-height;
+    padding-right: $line-height * 2;
+    padding-left: $line-height * 2;
   }
   @include breakpoint-max(xs) {
     padding-right: $line-height / 2;
@@ -78,7 +78,7 @@
 //padding del contenuto dal featured header
 #main,
 #sidebar {
-  padding-top: $line-height * 4;
+  padding-top: $height;
 }
 //resetto padding nelle FW
 .page-template-template_fullwidth #main,
