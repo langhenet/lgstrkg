@@ -9,8 +9,13 @@
  * Contenitore Nav
  */
 #navigation {
-  bottom: 50%;
+//  bottom: 50%;
   height: $line-height;
+  position: relative;
+  order: 3;
+  width: 100%;
+  max-width: $website-width;
+  margin: 0 auto;
 }
 
 
