@@ -94,6 +94,7 @@
   display: flex;
   flex-flow: column;
   width: 100%;
+  overflow: hidden;
 }
 
 /*
@@ -121,6 +122,8 @@
   transition: all 250ms linear;
   position: relative;
   order: 2;
+  margin-top: -$line-height;
+  z-index: 1;
 
   a {
     text-align: center;

@@ -10,7 +10,28 @@
   display: block;
   position: relative;
   background: main-colors(topbar, bg);
-
+  max-width: $website-width;
+  margin: 0 auto;
+  &::before {
+    content:"";
+    background: main-colors(topbar, bg);
+    height: 100%;
+    width: 100vw;
+    left: -50%;
+    position: absolute;
+    display: inline-block;
+  }
+  &::after {
+    content:"";
+    background: main-colors(topbar, bg);
+    height: 100%;
+    width: 100vw;
+    right: -50%;
+    position: absolute;
+    display: inline-block;
+    top:0;
+    z-index: -1;
+  }
 }
 
 .sticker_sticky #top_area {//quando è scrollata la nascondo
@@ -85,8 +106,7 @@
    * Stile specifico per il menu di navigazione della Top Bar
    */
   .widget_nav_menu {
-    max-width: $website-width;
-    margin: 0 auto;
+
     float: none;
     position: relative;
 
