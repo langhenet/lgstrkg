@@ -24,7 +24,7 @@
  * BG dell'header
  */
 #header {
-  background-color: rgba(main-colors(header, bg), 0.5);
+  background-color: rgba(main-colors(header, bg), 0.6);
   transition: all 250ms linear;
 }
 
@@ -94,7 +94,6 @@
   display: flex;
   flex-flow: column;
   width: 100%;
-  overflow: hidden;
 }
 
 /*
@@ -123,7 +122,7 @@
   position: relative;
   order: 2;
   padding: 0;
-  height: $line-height * 5;
+  height: $line-height * 4;
 
   a {
     text-align: center;
@@ -136,6 +135,12 @@
     margin-top: -($line-height * 1.5);
     z-index: 1;
     position: relative;
+  }
+
+  @at-root .responsive #{&} {
+    @include breakpoint-max(lg) {
+      margin: 0 auto;
+    }
   }
 
   @at-root .sticker_sticky #{&} {

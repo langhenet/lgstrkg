@@ -74,7 +74,7 @@
     @include breakpoint-max(sm) {
       display: block;
       width: 58%;
-      float: left;
+      float: none;
     }
   }
 
@@ -115,7 +115,7 @@
     position: relative;
 
     @include breakpoint-max(md) { //nascondo il menu di navigazione sotto i 767px
-      display: none;
+    //  display: none;
     }
 
     li {
@@ -132,7 +132,7 @@
       }
 
       &::before {
-        display: none;
+      //  display: none;
       }
     }
   }

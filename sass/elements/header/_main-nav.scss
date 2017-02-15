@@ -39,6 +39,8 @@
  #navigation .menu > li {
   transition: all 250ms linear;
   padding: 0 15px 0 13px;
+  font-family: $ff-secondary;
+  text-transform: uppercase;
 }
 
 
@@ -72,6 +74,7 @@
  #navigation .menu > li.current-page-item,
  #navigation .menu > li.current-page-ancestor {
   padding: 0 15px 0 13px;
+  color: main-colors(header, link);
  }
 
 /*
@@ -109,6 +112,7 @@
 #navigation .menu > li.hover > a:visited,
 #navigation .menu > li.hover > a > i {
   transition: all 250ms linear;
+  color: main-colors(header, link);
 }
 
 
@@ -136,7 +140,7 @@
 #navigation .menu > li.current_page_ancestor > a > i,
 #navigation .menu > li.current-page-item > a > i,
 #navigation .menu > li.current-page-ancestor > a > i {
-
+  color: main-colors(header, link);
 }
 
 /******************************************************************************/
