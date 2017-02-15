@@ -24,7 +24,7 @@
  * BG dell'header
  */
 #header {
-  background-color: main-colors(header, bg);
+  background-color: rgba(main-colors(header, bg), 0.5);
   transition: all 250ms linear;
 }
 
@@ -122,12 +122,20 @@
   transition: all 250ms linear;
   position: relative;
   order: 2;
-  margin-top: -$line-height;
-  z-index: 1;
+  padding: 0;
+  height: $line-height * 5;
 
   a {
     text-align: center;
     display: block;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  img {
+    margin-top: -($line-height * 1.5);
+    z-index: 1;
+    position: relative;
   }
 
   @at-root .sticker_sticky #{&} {

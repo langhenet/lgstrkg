@@ -1,0 +1,104 @@
+TIPOGRAFIA
+
+
+h1 {
+    font-family: Playfair Display;
+letter-spacing: -2px;
+font-weight:400;
+}
+h2 {
+    font-family: Playfair Display;
+letter-spacing: -1px;
+font-weight:400;
+}
+h3 {
+    font-family: Playfair Display;
+letter-spacing: 0px;
+font-weight:400;
+}
+h4 {
+    font-family: Playfair Display;
+letter-spacing: 0px;
+text-transform: uppercase;
+font-weight:700;
+}
+p,ul,li  {
+    font-family: Fauna One;
+letter-spacing: 0px;
+font-weight:400;
+}
+
+
+
+
+
+EM
+
+html, .root {
+  font-size: 1.125em;
+  line-height: 2em;
+}
+body, .article {
+  font-family: secondary-primary;
+  font-size: 1em;
+  line-height: 2em;
+  margin-bottom: 1em;
+}
+h1, .h1 {
+  font-size: 6.55555556em;
+  line-height: 1.220339em;
+  margin-top: 0.30508475em;
+  margin-bottom: 0.6101695em;
+}
+h2, .h2 {
+  font-size: 3.5em;
+  line-height: 1.14285714em;
+  margin-top: 0.57142857em;
+  margin-bottom: 0.57142857em;
+}
+h3, .h3 {
+  font-size: 1.88888889em;
+  line-height: 1.05882353em;
+  margin-top: 1.05882353em;
+  margin-bottom: 1.05882353em;
+}
+h4, .h4 {
+  font-size: 1em;
+  line-height: 2em;
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+h5, .h5 {
+  font-size: 1em;
+  line-height: 2em;
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 2em;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}

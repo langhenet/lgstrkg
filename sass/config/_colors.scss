@@ -24,6 +24,7 @@ $null: transparent;
 $nero-vero: #000;
 $bianco-vero: #fff;
 $rosso-vero: #FF0000;
+$bordeaux: #651419;
 
 
 /*
@@ -35,7 +36,7 @@ $layout-colors: (
     link: $bianco-vero,
     accent: $bianco-vero,
     border: $bianco-vero,
-    bg: $rosso-vero,
+    bg: $bordeaux,
     button-bg: $nero-vero,
     button: $bianco-vero,
   ),
@@ -115,7 +116,7 @@ $layout-colors: (
  * Colori delle Sezioni FW
  */
 $colors: (
-  color--dark1: (
+  color--dark: (
     body:       $bianco-vero,      //Corpo - testo
     body-sec:   $bianco-vero,      //Secondario - blockquote o blog meta
     heading:    rgba($bianco-vero, 0.80),      //Titoli 1 e 2

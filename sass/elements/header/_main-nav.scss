@@ -16,8 +16,13 @@
   width: 100%;
   max-width: $website-width;
   margin: 0 auto;
-}
+  padding: ($line-height / 2) 0;
 
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 
 
 
