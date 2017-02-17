@@ -7,12 +7,14 @@
   transition: all 250ms;
   order: 1;
   width: 100%;
-  display: block;
+  display: flex;
   position: relative;
   background: main-colors(topbar, bg);
   max-width: $website-width;
   margin: 0 auto;
   padding: ($line-height / 2) 0;
+  justify-content: flex-end;
+
   &::before {
     content:"";
     background: main-colors(topbar, bg);
@@ -62,7 +64,7 @@
    */
 
   .widget { //affianco i widget uno all'altro
-    float: right;
+    //float: right;
     margin-right: $line-height;
     margin-bottom: 0;
 
@@ -82,6 +84,9 @@
    */
   .widget_nav_menu {
     float: none;
+    position: relative;
+    order: 2;
+    z-index: 99;
     position: relative;
 
 
@@ -109,6 +114,11 @@
    */
   .widget_text_icl,
   .widget_text {
+    order: 1;
+    margin-right: auto;
+    z-index: 99;
+    position: relative;
+
     @include breakpoint-min(lg) { //lo nascondo quando in formato desktop
     //  display: none;
     }
@@ -132,46 +142,13 @@
   }
 }
 
+///
+// Selettore Lingua
+///
+.widget_icl_lang_sel_widget {
+  order: 3;
+}
 .wpml-ls-legacy-list-horizontal {
   padding: 0;
   border: 0;
-}
-#lang_sel_list {
-  height: font(p, lh);
-  background: rgba(255,255,255,0.2);
-  padding: 0.1em 0;
-
-  @include breakpoint-max(lg) {
-    height: 1.9em;
-    padding: 0;
-  }
-
-  ul {
-    border-top: 0 !important;
-  }
-
-  li {
-    line-height: size(p, lh);
-    padding: 0;
-
-
-    &:last-child {
-      border-right: 0;
-    }
-
-  }
-
-  a,
-  a:visited {
-    @include font(p, $mt: 0);
-    display: inline;
-    border-right: 0 solid main-colors(header, border);
-    border-right: 1px solid #fff;
-    padding: 0 $line-height / 2 !important;
-    color: #fff;
-   }
-
-  li:last-child a {
-    border-right: 0;
-  }
 }
