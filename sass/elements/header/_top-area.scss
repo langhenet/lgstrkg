@@ -22,6 +22,7 @@
     position: absolute;
     display: inline-block;
     top: 0;
+    z-index: -1;
   }
   &::after {
     content:"";
@@ -40,37 +41,15 @@
 .sticker_sticky #top_area {//quando è scrollata la nascondo
   visibility: hidden;
   transition: all 250ms;
-  @include breakpoint-max(md) {//la rendo di nuovo visible sotto i 979px
-    display: block;
-    visibility: visible;
-  }
 }
 
 #top_area {
-//  border-bottom: 2px solid main-colors(header, border);
-//  border-top: 2px solid transparent;
-//  padding: bhpad(2);
   top: auto;
   right: auto;
 
-  @include breakpoint-max(lg) {//la paddo sotto i 979px
-    padding-top: $line-height / 2;
-  }
-
-  @include breakpoint-max(sm) {//rimuovo il padding sotto i 567px
-    padding-top: 0;
-  }
-
-  @at-root .responsive #{&} { //rendo la top bar visibile anche sotto i 787px e ne dimezzo la larghezza
-    @include breakpoint-max(md) {
-      display: block;
-      width: 100%;
-    //  float: right;
-    }
-  }
-
   @at-root .responsive #logo,
   .responsive #logo_text { //dimezzo la larghezza del logo
+
     @include breakpoint-max(sm) {
       display: block;
       width: 58%;
@@ -87,18 +66,10 @@
     margin-right: $line-height;
     margin-bottom: 0;
 
-
-    @include breakpoint-max(sm) { //li faccio cadere sotto i 567px
-      margin-right: 0;
-      clear: both;
-      margin-top: $line-height / 2;
-
-      &:last-child {
-        margin-bottom: $line-height / 2;
-      }
+    p {
+      color: main-colors(topbar, body);
+      @include font(small, $mt: 0);
     }
-
-
   }
 
   section:first-child { //tolgo il margine laterale dal primo
@@ -110,16 +81,12 @@
    * Stile specifico per il menu di navigazione della Top Bar
    */
   .widget_nav_menu {
-
     float: none;
     position: relative;
 
-    @include breakpoint-max(md) { //nascondo il menu di navigazione sotto i 767px
-    //  display: none;
-    }
 
     li {
-    //  float: left;
+      float: left;
       @include font(small, $mt: 0);
       font-style: italic;
       text-transform: uppercase;
@@ -132,18 +99,18 @@
       }
 
       &::before {
-      //  display: none;
+        display: none;
       }
     }
   }
 
   /*
-   * Widget di testo della Top body-margin
+   * Widget di testo della Top BAR
    */
   .widget_text_icl,
   .widget_text {
     @include breakpoint-min(lg) { //lo nascondo quando in formato desktop
-      display: none;
+    //  display: none;
     }
   }
 
@@ -165,7 +132,10 @@
   }
 }
 
-
+.wpml-ls-legacy-list-horizontal {
+  padding: 0;
+  border: 0;
+}
 #lang_sel_list {
   height: font(p, lh);
   background: rgba(255,255,255,0.2);
@@ -204,19 +174,4 @@
   li:last-child a {
     border-right: 0;
   }
-}
-
-#lang_sel_list a.lang_sel_sel:hover,
-#lang_sel_list a.lang_sel_sel,
-#lang_sel_list a.lang_sel_sel,
-#lang_sel_list a.lang_sel_sel:visited,
-#lang_sel_list ul a.lang_sel_other,
-#lang_sel li ul a:link,
-#lang_sel_list ul a.lang_sel_other:visited {
-  background-color: transparent !important;
-}
-
-
-#lang_sel_list ul a.lang_sel_other:hover {
-  color: main-colors(header, link) !important;
 }

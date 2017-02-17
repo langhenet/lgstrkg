@@ -24,16 +24,22 @@
  * Meta
  */
 .type-post .feature-introduce {
-  @include font(h5);
+  //@include font(h5);
 
-  font-style: italic;
-  text-transform: uppercase;
+
+  //text-transform: uppercase;
 
   //font-family: font(h5,fm);
+  font-style: italic;
+  @include font(h3, $fm: primary);
 }
 
+/********************************************************************************/
+/* META DEL BLOG
+/********************************************************************************/
+.entry_meta {
 
-
+}
 
 //****************************************************************************//
 //*                    CONTENITORE
@@ -73,25 +79,49 @@
 //****************************************************************************//
 //              ARTICOLI CORRELATI
 //****************************************************************************//
+///
+// RESETS
+///
+#main .related_popular_wrap ul.posts_list {
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+///
+// LISTA
+///
 .related_popular_wrap {
 
 
   h3 {
+    @include font(p, $mb: 0);
 
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   .posts_list {
 
+
     @at-root #page #{&} a {
+      text-decoration: none;
     }
 
     li {
     }
 
+
+
     time {
     }
   }
 }
+
+
 
 //****************************************************************************//
 //                            FORM COMMENTO

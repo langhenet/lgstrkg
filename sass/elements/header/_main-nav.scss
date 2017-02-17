@@ -150,7 +150,6 @@
 // Sottomenu - contenitore / UL
 ///
 #navigation ul li ul {
-
     @at-root .sticker_sticky #{&} { //con header scrollato - il margin top ritorna a 0 - solo su desktop
       @include breakpoint-min(xl) {
         margin-top: 0;
@@ -176,31 +175,4 @@
 #navigation ul ul li a:visited {
   @include font(p, $mt: 0);
   padding: 0 1em;
-}
-
-/******************************************************************************/
-/*          NAVIGAZIONE MOBILE - HAMBURGER NAV
-/******************************************************************************/
-///
-// Fix navigazione che copre tutto
-///
-.responsive #navigation {
-  @include breakpoint-max(md) {
-    display: inline-block;
-    width: 100%;
-    &::before {
-      content: "\f0c9";
-      font-family: 'FontAwesome';
-      position: absolute;
-    }
-  }
-}
-
-
-///
-// Colori e tipografia della nav a menu
-///
-.responsive .nav2select {
-  @include form-field(p, 4);
-  padding-left: 5em;
 }

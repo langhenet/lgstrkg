@@ -69,14 +69,7 @@
   }
 }
 
-/*
- * HEADER non sticky su mobile
- */
-#header-sticker-wrapper.sticker_enabled #header {
-  @include breakpoint-max(md) {
-    position: relative !important;
-  }
-}
+
 
 
 
@@ -124,25 +117,7 @@
   padding: 0;
   height: $line-height * 4;
 
-  a {
-    text-align: center;
-    display: block;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  img {
-    margin-top: -($line-height * 1.5);
-    z-index: 1;
-    position: relative;
-  }
-
-  @at-root .responsive #{&} {
-    @include breakpoint-max(lg) {
-      margin: 0 auto;
-    }
-  }
-
+  // LOGO DA SCROLLATO
   @at-root .sticker_sticky #{&} {
     @include breakpoint-min(xl) { //quando l'header è sticcato - tolgo il bottom solo su desktop
       bottom: 0;
@@ -155,5 +130,18 @@
         transition: all 250ms linear;
       }
     }
+  }
+
+  a {
+    text-align: center;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  img {
+    margin-top: -($line-height * 1.5);
+    z-index: 1;
+    position: relative;
   }
 }

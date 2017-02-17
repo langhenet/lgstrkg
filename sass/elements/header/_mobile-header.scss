@@ -1,0 +1,107 @@
+//******************************************************************************/
+//          HEADER
+//******************************************************************************/
+
+////
+// HEADER non sticky su mobile
+////
+#header-sticker-wrapper.sticker_enabled #header {
+  @include breakpoint-max(md) {
+    position: relative !important;
+  }
+}
+
+///
+// logo
+///
+#logo,
+#logo_text {
+  @at-root .responsive #{&} {
+    @include breakpoint-max(lg) {
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint-max(sm) {
+    display: block;
+    width: 60%;
+    float: none;
+  }
+}
+
+//******************************************************************************/
+//         TOB BAR
+//******************************************************************************/
+.sticker_sticky #top_area { //TOP AREA NASCOSTA quando sticky
+
+  @include breakpoint-max(md) {//la rendo di nuovo visible sotto i 979px
+    display: block;
+    visibility: visible;
+  }
+}
+
+#top_area {
+  @include breakpoint-max(lg) {//la paddo sotto i 979px
+    padding-top: $line-height / 2;
+  }
+
+  @include breakpoint-max(sm) {//rimuovo il padding sotto i 567px
+    padding-top: 0;
+  }
+
+  @at-root .responsive #{&} { //rendo la top bar visibile anche sotto i 787px e ne dimezzo la larghezza
+    @include breakpoint-max(md) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .widget {
+    @include breakpoint-max(sm) { //li faccio cadere sotto i 567px
+      margin-right: 0;
+      clear: both;
+      margin-top: $line-height / 2;
+
+      &:last-child {
+        margin-bottom: $line-height / 2;
+      }
+    }
+  }
+}
+
+////
+// Selettore della Lingua
+////
+#lang_sel_list {
+  @include breakpoint-max(lg) {
+    height: 1.9em;
+    padding: 0;
+  }
+}
+
+/******************************************************************************/
+/*          NAVIGAZIONE MOBILE - HAMBURGER NAV
+/******************************************************************************/
+///
+// Fix navigazione che copre tutto
+///
+.responsive #navigation {
+  @include breakpoint-max(md) {
+    display: inline-block;
+    width: 100%;
+    &::before {
+      content: "\f0c9";
+      font-family: 'FontAwesome';
+      position: absolute;
+    }
+  }
+}
+
+
+///
+// Colori e tipografia della nav a menu
+///
+.responsive .nav2select {
+  @include form-field(p, 4);
+  padding-left: 5em;
+}

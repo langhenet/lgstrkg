@@ -33,14 +33,14 @@ p, ul, ol, pre, table, blockquote,
 }
 
 
-#left-area,
+/*#left-area,
 .comment-content,
 .entry-content,
 body.et-pb-preview #main-content .container { //TOCHK - cosa fa questa roba??
   ol, ul {
     padding: 0 0 $line-height $line-height;
   }
-}
+}*/
 
 
 
@@ -185,6 +185,10 @@ sub { bottom: $sub-bottom; }
   margin-left: $line-height * 2;
   padding-bottom: 0;
   margin-bottom: $line-height;
+
+  @include breakpoint-max(md) {
+    margin-left: $line-height;
+  }
 }
 
 
@@ -193,7 +197,7 @@ sub { bottom: $sub-bottom; }
 ///
 #main ul li,
 .et_divi_builder #et_builder_outer_content .et_pb_module ul li {
-  list-style: circle;
+  list-style: disc;
 }
 
 .et_divi_builder #et_builder_outer_content .et_pb_module ol li {
