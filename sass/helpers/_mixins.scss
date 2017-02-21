@@ -201,10 +201,11 @@
   }
 
   @if ($state == hover) and ($palette == main) {
-    background: darken(main-colors($palette, button-bg), 5%);
+    background: mix(main-colors($palette, button-bg), $bianco, 80%);
     color: main-colors($palette, button);
-    border-color: main-colors($palette, button-bg);
-    border-bottom-color: darken(main-colors($palette, button-bg), 10%);
+    border-color: mix(main-colors($palette, button-bg), $bianco, 80%);
+    border-bottom-color: mix(main-colors($palette, button-bg), $bianco, 85%);
+    transition: all 700ms;
   }
 
   @if $state != hover and $palette != main {
@@ -216,10 +217,11 @@
   }
 
   @if ($state == hover) and ($palette != main) {
-    background: darken(palette($palette, button-bg), 5%);
+    background: mix(palette($palette, button-bg), $bianco, 80%);
     color: palette($palette, button);
-    border-color: palette($palette, button-bg);
-    border-bottom-color: darken(palette($palette, button-bg), 10%);
+    border-color: mix(palette($palette, button-bg), $bianco, 80%);
+    border-bottom-color: mix(palette($palette, button-bg), $bianco, 85%);
+    transition: all 700ms;
   }
 }
 

@@ -68,11 +68,11 @@ $layout-colors: (
 
   main: (
     body:       $nero,      //Corpo - testo
-    body-sec:   $nero,      //Secondario - blockquote o blog meta
+    body-sec:   $grigio,      //Secondario - blockquote o blog meta
     heading:    $grigio,      //Titoli 1 e 2
     link:       $petrolio,      //Link
     bg:         $bianco,      //Sfondo principale
-    border:     darken($grigio, 10%),      //Bordi
+    border:     $grigio,      //Bordi
 
     accent:     $petrolio,      //Accento - sfondo lista icone / grassetti / icone
 
@@ -80,10 +80,10 @@ $layout-colors: (
     bg-alt:     $grigio,      //sfondo alt - il bg di un form o di un box
     accent-alt: $bianco,      //accento alt - il di un link nel form
 
-    form-body: $bianco-vero,
+    form-body: $nero,
     form-bg: mix($bianco, $grigio-chiarissimo, 50%),
-    form-link: $bianco-vero,
-    form-desc: $bianco-vero,
+    form-link: $nero,
+    form-desc: $nero,
 
     overlay:    $nero,      //Colore sfondo overlay
 
@@ -95,11 +95,11 @@ $layout-colors: (
     ),
 
   footer: (
-    body: $nero-vero,
-    link: $nero-vero,
-    accent: $nero-vero,
-    border: $nero-vero,
-    bg: $bianco-vero,
+    body: $bianco,
+    link: $bianco,
+    accent: $bianco,
+    border: $bianco,
+    bg: $nero,
     button-bg: $nero-vero,
     button: $bianco-vero,
     ),
@@ -132,18 +132,18 @@ $colors: (
     accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $bianco,      //body alternativo - testo in un form o in un box
-    bg-alt:     lighten($petrolio, 20%),      //sfondo alt - il bg di un form o di un box
+    bg-alt:     mix($nero, $petrolio, 50%),      //sfondo alt - il bg di un form o di un box
     accent-alt: $bianco,      //accento alt - il di un link nel form
 
-    form-body: $bianco-vero,
-    form-bg: $nero-vero,
-    form-link: $bianco-vero,
-    form-desc: $bianco-vero,
+    form-body: $nero,
+    form-bg: mix($grigio-chiarissimo, $petrolio, 50%),
+    form-link: $nero,
+    form-desc: $nero,
 
     overlay:    $petrolio,      //Colore sfondo overlay
 
-    button:     $petrolio,      //colore bottone
-    button-bg:  $bianco,
+    button:     $bianco,      //colore bottone
+    button-bg:  $nero,
 
     button-subtle: $bianco-vero,
     button-bg-subtle: mix($nero-vero, white, 50%)    //bg bottone
@@ -159,14 +159,14 @@ $colors: (
 
     accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
 
-    body-alt:   $nero,      //body alternativo - testo in un form o in un box
-    bg-alt:     lighten($grigio, 20%),      //sfondo alt - il bg di un form o di un box
-    accent-alt: $nero,      //accento alt - il di un link nel form
+    body-alt:   $bianco,      //body alternativo - testo in un form o in un box
+    bg-alt:     mix($nero, $grigio, 50%),      //sfondo alt - il bg di un form o di un box
+    accent-alt: $bianco,      //accento alt - il di un link nel form
 
-    form-body: $bianco-vero,
-    form-bg: $nero-vero,
-    form-link: $bianco-vero,
-    form-desc: $bianco-vero,
+    form-body: $nero,
+    form-bg: $grigio-chiarissimo,
+    form-link: $nero,
+    form-desc: $nero,
 
     overlay:    $grigio,      //Colore sfondo overlay
 
@@ -187,14 +187,14 @@ $colors: (
 
     accent:     $petrolio,      //Accento - sfondo lista icone / grassetti / icone
 
-    body-alt:   $nero,      //body alternativo - testo in un form o in un box
-    bg-alt:     lighten($grigio, 20%),      //sfondo alt - il bg di un form o di un box
-    accent-alt: $nero,      //accento alt - il di un link nel form
+    body-alt:   $bianco,      //body alternativo - testo in un form o in un box
+    bg-alt:     $nero,      //sfondo alt - il bg di un form o di un box
+    accent-alt: $bianco,      //accento alt - il di un link nel form
 
-    form-body: $bianco-vero,
-    form-bg: $nero-vero,
-    form-link: $bianco-vero,
-    form-desc: $bianco-vero,
+    form-body: $nero,
+    form-bg: mix($grigio, $grigio-chiarissimo, 50%),
+    form-link: $nero,
+    form-desc: $nero,
 
     overlay:    $grigio-chiarissimo,      //Colore sfondo overlay
 
