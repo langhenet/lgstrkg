@@ -377,7 +377,10 @@
   @if $palette == main {
     background-color: rgba( main-colors($palette, overlay), $grade);
   }
-  @if $palette != main {
+  @else if $palette == fheader {
+    background-color: rgba( main-colors($palette, overlay), $grade);
+  }
+  @else {
     background-color: rgba( palette($palette, overlay), $grade);
   }
   z-index: 0;

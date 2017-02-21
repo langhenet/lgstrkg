@@ -62,6 +62,7 @@ $layout-colors: (
     accent: $bianco,
     border: $bianco,
     bg: $nero,
+    overlay: $nero,
     button-bg: $bianco,
     button: $nero,
   ),
@@ -85,7 +86,7 @@ $layout-colors: (
     form-link: $nero,
     form-desc: $nero,
 
-    overlay:    $nero,      //Colore sfondo overlay
+    overlay:    $bianco,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
     button-bg:  $petrolio,

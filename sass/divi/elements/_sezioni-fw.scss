@@ -414,10 +414,27 @@
 ///
 // SEZIONE OVERLAY
 ///
-.et_pb_section.lg-overlay--dark {
+.lg-overlay,
+.et_pb_section.lg-overlay {
   position: relative;
 
   &::before {
-    @include color-overlay;
+    @include color-overlay($palette: main, $grade: 0.92);
   }
+}
+
+@each $palette, $sections in $colors {
+  .#{$palette}.lg-overlay ,
+  .et_divi_builder #et_builder_outer_content .et_pb_section.#{$palette}.lg-overlay  {
+    position: relative;
+
+    .et_pb_module {
+      position: relative;
+      z-index: 1;
+    }
+    &::before {
+      @include color-overlay($palette: $palette, $grade: 0.92);
+    }
+  }
+
 }
