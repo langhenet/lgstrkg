@@ -43,7 +43,7 @@
 #page {
   background-color: main-colors(main, bg);
 
-
+  overflow: visible;
 }
 
 
@@ -103,16 +103,28 @@
 //                          BREAD CRUMBS
 //****************************************************************************//
 #breadcrumbs { //contenitore
-  margin-top: 0;
+  margin-top: -$line-height * 2;
+position: absolute;
+z-index: 9999;
+left: 0;
+font-size: 1em;
+right: 0;
+text-align: center;
+margin-bottom: 0;
 
   .breadcrumbs {
-    @include font(h5, $mt: 0);
+    @include font(h4, $mt: 0, $fm: primary, $wt: normal);
 
-    a {
+
+
+    span {
+    //  font-weight: bold;
+      color: $bianco;
     }
 
-    text {
-      font-weight: bold;
+    span a span {
+      color: #fff;
+      font-weight: normal;
     }
 
     .breadcrumbs-plus {

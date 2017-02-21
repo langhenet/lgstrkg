@@ -44,7 +44,7 @@
 // Overlay della sezione introduttiva
 ///
 #feature::before {
-  @include color-overlay;
+  @include color-overlay($palette: main, $grade: 0.55);
 }
 
 

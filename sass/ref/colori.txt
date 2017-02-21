@@ -1,0 +1,7 @@
+
+$nero: #5a5050;
+$porpora: #651419;
+$grigio-chiarissimo: #e1e1dc;
+$grigio: #c8beb4;
+$bianco: #fdfdf9; (usato per lo sfondo sito)
+$petrolio: #397d79;
