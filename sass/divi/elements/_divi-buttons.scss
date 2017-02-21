@@ -16,7 +16,7 @@
   .et_pb_button.size--small,
   .et_pb_module a.button.small {
     @extend %button;
-    @include button(small, 1, half);
+    @include button(small, 2, half);
 
     font-weight: decoration(small, wt);
     text-transform: uppercase;
@@ -51,7 +51,7 @@
   body a.big-button,
   .et_pb_module a.button.medium { //TOCHK ultima dichiarazione per bottone merda nel blurb
     @extend %button;
-    @include button(p, 4);
+    @include button(p, 4, half);
 
     font-weight: inherit; //TODO
     text-transform: uppercase;
@@ -73,8 +73,8 @@
 
     &::after {
         margin-left: 1em;
-        font-size: font(p, fs);
-        line-height: font(p, lh);
+        font-size: size(p, fs);
+        line-height: size(p, lh);
         opacity: 1;
       }
     }
@@ -87,7 +87,7 @@
   .et_pb_button.size--large,
   .et_pb_module a.button.large {
     @extend %button;
-    @include button(h3, 4, half)
+    @include button(h3, 4)
 
     font-weight: inherit; //TODO
     text-transform: uppercase;

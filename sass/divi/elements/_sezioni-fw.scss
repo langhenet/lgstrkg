@@ -432,6 +432,7 @@
       position: relative;
       z-index: 1;
     }
+    
     &::before {
       @include color-overlay($palette: $palette, $grade: 0.92);
     }

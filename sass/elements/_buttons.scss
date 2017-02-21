@@ -22,7 +22,7 @@
 ///
 .button.small {
   @extend %button;
-  @include button(small, 1, half);
+  @include button(small, 2, half);
 
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -30,7 +30,7 @@
 
 .button.medium {
   @extend %button;
-  @include button(p, 2);
+  @include button(p, 4, half);
 
   text-transform: uppercase;
   letter-spacing: 1px;
