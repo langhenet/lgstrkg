@@ -69,6 +69,11 @@ $decorations: (
     wt: normal,
   ),
 
+  h1-alt: (
+    fm: secondary,
+    wt: normal,
+  ),
+
   h2: (
     fm: secondary,
     wt: normal,
@@ -110,6 +115,13 @@ $decorations: (
       lh: 1.220339em,
       mt: 0.30508475em,
       mb: 0.6101695em,
+    ),
+
+    h1-alt: (
+      fs: 5em,
+      lh: 1.2em,
+      mt: 0.8em,
+      mb: 0.8em,
     ),
 
     h2: (

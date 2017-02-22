@@ -79,6 +79,9 @@
  #navigation .menu > li.current-page-ancestor {
   //padding: 1em 15px 1em 13px;
   color: main-colors(header, link);
+  background: url(http://nuovoitrepoggi.langhe.net/files/2017/02/decorazione.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
  }
 
 /*
@@ -178,13 +181,16 @@
 
 
 /*
- * Colori Link
+ *  Link
  */
 #navigation ul li.hover ul li a,
 #navigation ul ul li a,
 #navigation ul ul li a:visited {
   color: main-colors(header, link);
   margin-bottom: 0;
+  padding: 0;
+  @include font(p, $mb: 0);
+  text-transform: none;
 }
 
 //link selezionato
@@ -209,14 +215,4 @@
 #navigation ul li ul li a:hover,
 #navigation ul ul li a:hover {
   background: transparent !important;
-}
-
-/*
- * TIPOGRAFIA LINK
- */
-#navigation ul li.hover ul li a,
-#navigation ul ul li a,
-#navigation ul ul li a:visited {
-  @include font(p, $mt: 0, $mb: 0);
-  padding: 0 1em;
 }
