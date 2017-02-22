@@ -348,6 +348,23 @@
 
 
 //****************************************************************************//
+//    QUINTI
+//****************************************************************************//
+
+@include breakpoint-min(divi-lg) {
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_3,
+  .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_1_3 {
+    width: 37.8%;
+  }
+
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_2_3,
+  .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_2_3 {
+    width: 56.7%;
+  }
+}
+
+
+//****************************************************************************//
 //    CONTENUTI DELLE RIGHE E DELLE SEZIONI
 //****************************************************************************//
 ///
@@ -424,7 +441,7 @@
 }
 
 @each $palette, $sections in $colors {
-  .#{$palette}.lg-overlay ,
+  .#{$palette}.lg-overlay,
   .et_divi_builder #et_builder_outer_content .et_pb_section.#{$palette}.lg-overlay  {
     position: relative;
 
@@ -432,7 +449,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     &::before {
       @include color-overlay($palette: $palette, $grade: 0.92);
     }

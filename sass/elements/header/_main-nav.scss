@@ -10,13 +10,13 @@
  */
 #navigation {
 //  bottom: 50%;
-  height: $line-height;
+  height: auto;
   position: relative;
   order: 3;
   width: 100%;
   max-width: $website-width;
   margin: 0 auto;
-  padding: ($line-height / 2) 0;
+  padding: 0;
 
   .menu {
     display: flex;
@@ -37,10 +37,11 @@
  */
 
  #navigation .menu > li {
-  transition: all 250ms linear;
-  padding: 0 15px 0 13px;
+  //transition: background 150ms linear;
+  padding: ($line-height / 2) 15px ($line-height / 4) 13px;
   font-family: $ff-secondary;
   text-transform: uppercase;
+  margin-bottom: ($line-height / 4)
 }
 
 
@@ -48,8 +49,11 @@
  * I LI hover & Current
  */
  #navigation .menu > li:hover {
-  transition: all 250ms linear;
-  padding: 0 15px 0 13px;
+  //transition: all 250ms linear;
+  //padding: 1em 15px 1em 13px;
+  background: url(http://nuovoitrepoggi.langhe.net/files/2017/02/decorazione.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
  }
 
 //current
@@ -73,7 +77,7 @@
  #navigation .menu > li.current_page_ancestor,
  #navigation .menu > li.current-page-item,
  #navigation .menu > li.current-page-ancestor {
-  padding: 0 15px 0 13px;
+  //padding: 1em 15px 1em 13px;
   color: main-colors(header, link);
  }
 
@@ -83,7 +87,7 @@
  */
  #navigation .menu > li > a,
  #navigation .menu > li > a:visited {
-  transition: all 250ms linear;
+  //transition: all 250ms linear;
   height: auto;
   font-size: 1em;
   line-height: $line-height;
@@ -111,7 +115,7 @@
 #navigation .menu > li.hover > a:active,
 #navigation .menu > li.hover > a:visited,
 #navigation .menu > li.hover > a > i {
-  transition: all 250ms linear;
+  //transition: all 50ms linear;
   color: main-colors(header, link);
 }
 
@@ -150,11 +154,26 @@
 // Sottomenu - contenitore / UL
 ///
 #navigation ul li ul {
-    @at-root .sticker_sticky #{&} { //con header scrollato - il margin top ritorna a 0 - solo su desktop
-      @include breakpoint-min(xl) {
-        margin-top: 0;
-      }
+  background-color: transparent;
+  border: 0;
+  padding: ($line-height / 2) 0 0;
+  box-sizing: 2px 2px 2px rgba(#000, 0.8);
+
+  @at-root .sticker_sticky #{&} { //con header scrollato - il margin top ritorna a 0 - solo su desktop
+    @include breakpoint-min(xl) {
+      margin-top: 0;
     }
+  }
+
+  li {
+    padding: $line-height / 2;
+    background-color: rgba(main-colors(header, bg), 0.85);
+    margin-bottom: 0;
+
+    &:hover {
+      background:  rgba(main-colors(header, bg), 0.95);
+    }
+  }
 }
 
 
@@ -165,6 +184,31 @@
 #navigation ul ul li a,
 #navigation ul ul li a:visited {
   color: main-colors(header, link);
+  margin-bottom: 0;
+}
+
+//link selezionato
+#navigation .sub-menu .current-menu-item > a,
+#navigation .sub-menu .current-menu-item > a:visited,
+#navigation .sub-menu .current-menu_item > a,
+#navigation .sub-menu .current-menu_item > a:visited,
+#navigation .sub-menu .current-menu-ancestor > a,
+#navigation .sub-menu .current-menu-ancestor > a:visited,
+#navigation .sub-menu .current-page-item > a,
+#navigation .sub-menu .current-page-item > a:visited,
+#navigation .sub-menu .current-page-ancestor > a,
+#navigation .sub-menu .current-page-ancestor > a:visited,
+#navigation .sub-menu .current_page_item > a,
+#navigation .sub-menu .current_page_item > a:visited,
+#navigation .sub-menu .current_page_ancestor > a,
+#navigation .sub-menu .current_page_ancestor > a:visited {
+  background: transparent;
+}
+
+//hover
+#navigation ul li ul li a:hover,
+#navigation ul ul li a:hover {
+  background: transparent !important;
 }
 
 /*
@@ -173,6 +217,6 @@
 #navigation ul li.hover ul li a,
 #navigation ul ul li a,
 #navigation ul ul li a:visited {
-  @include font(p, $mt: 0);
+  @include font(p, $mt: 0, $mb: 0);
   padding: 0 1em;
 }

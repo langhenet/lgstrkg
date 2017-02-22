@@ -71,6 +71,10 @@
     p {
       color: main-colors(topbar, body);
       @include font(small, $mt: 0);
+
+      a {
+        color: main-colors(topbar, link);
+      }
     }
   }
 
