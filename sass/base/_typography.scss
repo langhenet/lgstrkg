@@ -193,7 +193,7 @@ sub { bottom: $sub-bottom; }
 #main ul,
 .et_divi_builder #et_builder_outer_content .et_pb_module ol,
 .et_divi_builder #et_builder_outer_content .et_pb_module ul {
-  margin-left: $line-height * 2;
+  margin-left: $line-height;
   padding-bottom: 0;
   margin-bottom: $line-height;
 
@@ -215,6 +215,14 @@ sub { bottom: $sub-bottom; }
   list-style: decimal;
 }
 
+///
+// Liste Speciali di Striking
+///
+#main ul[class^="list_"] li,
+.et_divi_builder #et_builder_outer_content .et_pb_module ul[class*=" list_"] li {
+  list-style: none !important;
+  margin: 0;
+}
 
 
 
