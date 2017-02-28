@@ -8,6 +8,7 @@
 .page-template-template_fullwidth #page .inner,
 .page-template-template_land_page #page .inner {
   width: 100%;
+  max-width: 100%;
 
   .entry.content {
     margin-bottom: 0;
@@ -48,10 +49,10 @@
 //****************************************************************************//
 ///
 // Fix delle righe ad altezza uguale in modo che il contenuto si centri
-// TOCR - forse ha senso fare diversi template per diversi allineamenti nelle righe ad altezza uguale?
+// Ci vuole !Important perché quella originale è dentro le media queries
 ///
 .et_pb_row.et_pb_equal_columns {
-  align-items: stretch !important;
+  align-items: center !important;
 }
 
 ///

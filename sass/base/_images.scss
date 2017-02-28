@@ -12,7 +12,12 @@
   border-radius: 100%;
 }
 
-
+///
+// ALlineate al centro
+///
+img.aligncenter, .wp-caption.aligncenter {
+  margin: 0 auto !important;
+}
 //****************************************************************************//
 //*               IMMAGINI SU MOBILE
 //****************************************************************************//

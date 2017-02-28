@@ -130,13 +130,14 @@ section.widget {
     a {
     @include font(p, $mt: 0, $mb: 0);
     padding-bottom: 0;
+    padding-top: 0;
     background-image: none;
     border-bottom: 0;
   }
 
   &::before {
     content: "\00BB";
-    top: -0.1em;
+    top: 0;
     position: absolute;
     @include size(p);
   }

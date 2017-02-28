@@ -30,11 +30,11 @@
   //text-transform: uppercase;
 
   //font-family: font(h5,fm);
-  font-style: italic;
+  font-style: normal;
   @include font(h3, $fm: primary);
 
   @include breakpoint-max(md) {
-    @include m-size(h3);
+    @include font(p);
   }
 }
 
@@ -59,10 +59,14 @@
 //              Authro Box
 //****************************************************************************//
 #about_the_author {
-
+  padding: ($line-height * 2) ($line-height * 2) ($line-height * 2) $line-height;
+  background: $grigio-chiarissimo;
+  margin-bottom: ($line-height * 2);
 
   h3 {
-
+    margin-top: 0;
+    text-transform: uppercase;
+    display: none;
   }
 
   .author_content {
@@ -73,6 +77,10 @@
   span.fn {
 
     a {
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $nero;
     }
   }
 
@@ -146,8 +154,9 @@
  */
 #commentform input#submit {
   @extend %button;
-  @include button(p);
+  @include button(p, 4, half);
   @include button-color(main);
 
+  text-transform: uppercase;
   height: auto;
 }

@@ -8,15 +8,22 @@
 //                             IMPOSTAZIONI GENERALI
 //****************************************************************************//
 
+.right_sidebar #sidebar {
+
+}
+
 /*
  * Contneuto Sidebar - rimozione Ombra
  */
 .has-gradient .right_sidebar #sidebar_content {
   background-image: none;
+  //border-left: 4px solid $grigio;
+  padding: 0;
 }
 
 .right_sidebar #sidebar_content.lessgap {
   padding-top: 0;
+  overflow: visible;
 }
 
 
@@ -36,6 +43,28 @@
  * Titoli
  */
 #sidebar .widgettitle {
+  color: $bianco;
+  position: relative;
+  @include font(h3, $mt: 0, $fm: primary);
+  margin-left: -$line-height * 0.55;
+  margin-right: -$line-height * 0.85;
+  padding: ($line-height / 2) ($line-height * 0.55);
+  background: $grigio;
+
+  &::after {
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 25px solid darken($grigio, 20%);
+    position: absolute;
+    bottom: -25px;
+    border-right:20px solid transparent; /*transparent right border */
+    right:0;
+  }
+
+  @include breakpoint-max(md) {
+    @include m-size(h3);
+  }
 }
 
 
@@ -43,8 +72,18 @@
 /*
  * Corpo
  */
-#sidebar .widget ul {
+#sidebar .widget {
   padding: $line-height;
+  background: $grigio-chiarissimo;
+
+  &.widget_text {
+    background: $petrolio;
+    color: $bianco;
+
+    p, h2, h3, h4, ul, ol, ul li, ol li {
+      color: $bianco;
+    }
+  }
 }
 
 //****************************************************************************//
@@ -54,8 +93,9 @@
 #sidebar .widget .posts_list a:visited,
 #sidebar .widget a,
 #sidebar .widget a:visited {
-
+  color: $nero;
   &:hover {
+    color: $nero;
   }
 }
 
@@ -81,16 +121,23 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    padding-bottom: $line-height !important;
 
     section.widget {
-      width: 47.5%;
-      margin-right: 5%;
-
       &:nth-child(even) {
         margin-right: 0;
       }
     }
+
+    section.widget {
+
+      @include breakpoint-max(md) {
+        flex-basis:100%;
+        width: 100%;
+      }
+    }
   }
+
 
   @at-root .right_sidebar #{&} {
     @include breakpoint-max(xs) {
