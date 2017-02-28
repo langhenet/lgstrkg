@@ -69,6 +69,20 @@
     padding-right: $line-height;
     padding-left: $line-height;
   }
+
+  //BLURB TRASPARENTE
+  &.blurb--transparent {
+    background: transparent !important;
+
+    @at-root #page #{&} p,
+             #page #{&} h1,
+             #page #{&} h2,
+             #page #{&} h3,
+             #page #{&} h4,
+             #page #{&} h5 {
+      color: main-colors(main, body);
+    }
+  }
 }
 
 .et_pb_main_blurb_image .et-pb-icon { // colore icona
@@ -109,6 +123,20 @@
     &.et-pb-icon-circle { // icona con il cerchio
       background: transparent !important;
       border: palette($palette, border) 2px solid;
+    }
+  }
+
+  //BLURB TRASPARENTE
+  &.blurb--transparent {
+    background: transparent !important;
+
+    @at-root #page #{&} p,
+             #page #{&} h1,
+             #page #{&} h2,
+             #page #{&} h3,
+             #page #{&} h4,
+             #page #{&} h5 {
+      color: palette($palette, body);
     }
   }
  }

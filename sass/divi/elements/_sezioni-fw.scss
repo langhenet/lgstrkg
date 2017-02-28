@@ -439,30 +439,30 @@
 ///
 //ELIMINO MARGINI BOTTOM degli utlimi elementi dei box di testo
 ///
-.et_divi_builder #et_builder_outer_content .et_pb_text p:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h1:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h2:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h3:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h4:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h5:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text ul:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text ol:last-child,
-.et_divi_builder #et_builder_outer_content .et_pb_module p:last-child {
+.et_divi_builder #et_builder_outer_content .et_pb_text > p:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h1:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h2:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h3:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h4:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h5:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > ul:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > ol:last-child,
+.et_divi_builder #et_builder_outer_content .et_pb_module > p:last-child {
   margin-bottom:0;
 }
 
 ///
 //ELIMINO I MARGINI SOPRA dei primi elementi dei box di testo
 ///
-.et_divi_builder #et_builder_outer_content .et_pb_text p:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h1:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h2:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h3:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h4:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text h5:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text ul:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_text ol:first-child,
-.et_divi_builder #et_builder_outer_content .et_pb_module p:first-child {
+.et_divi_builder #et_builder_outer_content .et_pb_text > p:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h1:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h2:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h3:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h4:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > h5:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > ul:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_text > ol:first-child,
+.et_divi_builder #et_builder_outer_content .et_pb_module > p:first-child {
   margin-top:0;
 }
 
