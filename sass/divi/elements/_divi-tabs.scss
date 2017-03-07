@@ -22,7 +22,7 @@
 
 .et_divi_builder #et_builder_outer_content .et_pb_all_tabs {
   padding: ($line-height * 2) $line-height;
-  background: main-colors(main, form-bg);
+  background: lighten(main-colors(main, form-bg), 2%);
 
   p, h1, h2, h3, h4, h5, h5, ul, ol {
     &:last-child {
@@ -45,7 +45,7 @@
 
   &.et_pb_tab_active {
     padding: $line-height / 2;
-    background: main-colors(main, form-bg);
+    background: lighten(main-colors(main, form-bg), 2%);
     bottom: 0;
   }
 }
@@ -55,14 +55,14 @@
 ///
 @each $palette, $sections in $colors {
   .et_divi_builder #et_builder_outer_content .#{$palette} .et_pb_all_tabs {
-    background: palette($palette, form-bg);
+    background: lighten(palette($palette, form-bg), 2%);
   }
 
   .et_divi_builder #et_builder_outer_content .#{$palette} ul.et_pb_tabs_controls {
     background: darken( palette($palette, form-bg), 5%);
 
     li.et_pb_tab_active {
-      background: palette($palette, form-bg);
+      background: lighten(palette($palette, form-bg), 2%);
     }
   }
 }
