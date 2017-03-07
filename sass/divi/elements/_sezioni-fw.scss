@@ -506,6 +506,38 @@
 ///
 // SEZIONE OVERLAY
 ///
+
+//DARK
+.overlay--dark,
+.et_pb_section.overlay--dark {
+  position: relative;
+
+  &::before {
+    @include color-overlay($palette: fheader, $grade: 0.65);
+  }
+
+  .et_pb_module {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+//LIGHT
+.overlay--light,
+.et_pb_section.overlay--light {
+  position: relative;
+
+  &::before {
+    @include color-overlay($palette: main, $grade: 0.85);
+  }
+
+  .et_pb_module {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+//COLOR
 .overlay--color,
 .et_pb_section.overlay--color {
   position: relative;
@@ -517,20 +549,6 @@
 
   &::before {
     @include color-overlay($palette: main, $grade: 0.55);
-  }
-}
-
-.overlay--dark,
-.et_pb_section.overlay--color {
-  position: relative;
-
-  &::before {
-    @include color-overlay($palette: fheader, $grade: 0.65);
-  }
-
-  .et_pb_module {
-    position: relative;
-    z-index: 1;
   }
 }
 

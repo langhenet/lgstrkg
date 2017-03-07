@@ -50,6 +50,9 @@ select {
   }
 }
 
+.gform_wrapper .gform_heading {
+  margin: 0;
+}
 
 /*
  * il LI che contiene i campi
@@ -58,7 +61,7 @@ select {
 .gform_wrapper li,
 .gform_wrapper .top_label li.gfield.gf_left_half,
 .gform_wrapper .top_label li.gfield.gf_right_half {
-  margin-bottom: $line-height * 1.5;
+  margin-bottom: $line-height;
 }
 .gform_wrapper ul.gform_fields li.gfield,
 .gform_wrapper .top_label li.gfield.gf_right_half {
@@ -242,8 +245,8 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 .gform_wrapper .ginput_complex label,
 .gform_wrapper .instruction {
   @include form-desc(small);
-  padding-top: size(small, lh) / 2;
-  padding-bottom: size(small, lh) / 2;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 
@@ -274,8 +277,48 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
   text-transform: uppercase;
 }
 
+///
+// FORM PAGINATI - Footer
+///
+.gform_wrapper .gform_page_footer {
+  padding: ($line-height / 2) 0;
+  margin-top: 0;
+  border-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
 
+  .button.gform_next_button {
+    @extend %button;
 
+    @include button(p, 4, half);
+    padding-left: 1em;
+    padding-right: 1em;
+    float: right;
+    clear: both;
+  }
+
+  .button.gform_previous_button {
+    @extend %button;
+
+    @include button(p, 1, half);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    float: left;
+    border: 0;
+    background: transparent;
+    color: main-colors(main, form-body)
+  }
+
+  input.button.gform_button {
+    @include button(p, 4, half);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    float: right;
+    text-transform: uppercase;
+    font-family: family(primary, fm);
+  }
+
+}
 
 //****************************************************************************//
 //                     Colori FORM, LABEL e DESCRIZIONI CAMPI
@@ -352,7 +395,7 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 @each $palette, $bg in $colors {
   .#{$palette} .gform_wrapper {
     background: palette($palette, form-bg); //BG del form
-    border-bottom-color: darken(palette($palette, form-bg), 50%); //border bottom del form
+    border-bottom-color: darken(palette($palette, form-bg), 20%); //border bottom del form
 
     a {
       color: palette($palette, form-link); //Colore link
