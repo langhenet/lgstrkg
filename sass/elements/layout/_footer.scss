@@ -9,6 +9,10 @@
  */
 #footer {
   font-size: 1em;
+
+  @at-root .has-gradient #{&} {
+    background-image: none;
+  }
 }
 
 .has-shadow #footer_shadow {
@@ -43,6 +47,12 @@
 /*
  * Titoli
  */
+
+#footer h3.widgettitle {
+ @include font(h3, $mt: 0, $mb: (size(h3, mb) / 2));
+ text-transform: uppercase;
+}
+
 #footer h3.widgettitle {
   color: main-colors(footer, body);
 }
@@ -110,7 +120,7 @@
 //****************************************************************************//
 
 #footer_bottom {
-  background: darken(main-colors(footer, bg), 0.0%);
+  background: darken(main-colors(footer, bg), 10.0%);
 
   &> .inner {
     padding: $line-height 0;
