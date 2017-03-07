@@ -24,7 +24,8 @@
 // Families
 ///
   $ff-primary: 'Fauna One', sans-serif; //TODO
-  $ff-secondary: 'Playfair Display', serif; //TODO
+  //$ff-secondary: 'Playfair Display', serif; //TODO
+  $ff-secondary: 'PT Serif', serif; //TODO
   $ff-special: $ff-primary; //TODO
   $ff-button: $ff-primary;
 
@@ -198,17 +199,17 @@ $mobile-sizes: (
 
 $forms: (
   field: (
-    fm: family(secondary, fm),
-    wt: family(secondary, normal),
+    fm: family(primary, fm),
+    wt: family(primary, normal),
   ),
 
   label: (
-    fm: family(secondary, fm),
-    wt: family(secondary, normal),
+    fm: family(primary, fm),
+    wt: family(primary, normal),
   ),
 
   desc: (
-    fm: family(secondary, fm),
-    wt: family(secondary, normal),
+    fm: family(primary, fm),
+    wt: family(primary, normal),
   ),
 );

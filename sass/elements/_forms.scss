@@ -36,10 +36,11 @@ select {
   $pad: bspad(6);
   padding-bottom: bspad(6) + ($line-height / 2em);
 
-  @include breakpoint-max(xs) {
-    max-width: 120% !important;
-    margin-left: -10% !important;
-    width: 120% !important;
+  @include breakpoint-max(sm) {
+    //width: 100%;
+    margin-left: -($line-height * 2) !important;
+    margin-right: -($line-height * 2) !important;
+    max-width: em-bp($sm);
   }
 }
 
@@ -224,8 +225,9 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 ///
 .gform_wrapper .top_label .gfield_description {
   @include form-desc(small);
-  padding-top: size(small, lh) / 2;
-  padding-bottom: size(small, lh) / 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: size(small, lh) / 2;
 }
 
 ///
@@ -254,7 +256,7 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
  */
 .gform_wrapper .gform_footer {
   padding: 0 !important;
-  margin: 0 0 0 0 !important;
+  margin: $line-height 0 0 0 !important;
   text-align: center;
 }
 
@@ -265,7 +267,7 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_footer input[type=submit] {
   @extend %button;
-  @include button(h3, 4, half);
+  @include button(h3, 4);
 
   width: 100%;
   margin: 0 auto;

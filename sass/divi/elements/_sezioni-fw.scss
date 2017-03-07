@@ -6,13 +6,21 @@
 //***************************************************************************//
 
 .page-template-template_fullwidth #page .inner,
-.page-template-template_land_page #page .inner {
+.page-template-template_land_page #page .inner,
+//queste due classi selecionano gli inner dei portfoli SENZA Sidebar - la prima è quella effettiva ma ho messo anche quella senza spazio perché lo spazio potrebbe essere un typo
+.single-portfolio #page div[class="inner "],
+.single-portfolio #page div[class="inner"] {
   width: 100%;
   max-width: 100%;
 
   .entry.content {
     margin-bottom: 0;
   }
+}
+
+//Fix portfolio con sidebar {
+.single-portfolio #page > .inner.right_sidebar {
+  width: $website-width;
 }
 
 //****************************************************************************//
@@ -52,7 +60,13 @@
 // Ci vuole !Important perché quella originale è dentro le media queries
 ///
 .et_pb_row.et_pb_equal_columns {
-  align-items: center !important;
+  align-items: stretch !important;
+
+  .et_pb_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 ///
@@ -430,6 +444,17 @@
   .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_2_3 {
     width: 56.7%;
   }
+
+//1/5 e 3/5
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_4,
+  .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_1_4 {
+    width: 17.8%;
+  }
+
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_2,
+  .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_1_2 {
+    width: 53.4%;
+  }
 }
 
 
@@ -491,7 +516,7 @@
   }
 
   &::before {
-    @include color-overlay($palette: main, $grade: 0.92);
+    @include color-overlay($palette: main, $grade: 0.55);
   }
 }
 
