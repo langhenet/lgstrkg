@@ -1,0 +1,188 @@
+#footer #text-4,
+#footer #text_icl-9 {
+  background: $bordeaux;
+  position: fixed;
+  bottom: 0;
+  right: 1vw;
+  padding: $line-height;
+  max-width: 240px;
+  z-index: 9999;
+  box-shadow: -2px -2px 2px rgba($nero, 0.5);
+  box-sizing: border-box;
+
+
+  //FORM
+  .widget-solutyon-booking-engine {
+    width: 100%;
+
+    .prenotazione_title {
+      @include font(p, $wt: bold, $mt: 0, $mb: $line-height / 2);
+      text-transform: uppercase;
+      color: $bianco;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    //TABELLA
+    table {
+      width: 100%;
+    }
+    tr {
+      display: block;
+      margin: 0 auto ($line-height / 2) auto;
+    }
+    td {
+      display: block;
+      width: auto;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    //INPUT
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="file"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    textarea {
+      color: $nero;
+      font-size: 1em;
+    }
+
+    input[type="number"] {
+      padding: 0 0 0 ($line-height / 2)  !important;
+      width: 100px;
+    }
+
+    .button__container {
+      text-align: center;
+    }
+
+    input[type="button"] {
+      @extend %button;
+      @include button(p, 4, half);
+      @include button-color(main);
+      text-align: center;
+    }
+  }
+
+  //*********MOBILE
+  //****************
+  @include breakpoint-min(lg) {
+    .booking-trigger {
+      display: none;
+    }
+
+    label[for="booking-trigger"] {
+      display: none;
+    }
+  }
+  @include breakpoint-max(xl) {
+    right: 0;
+  }
+  @include breakpoint-max(lg) {
+    position: relative;
+    background: transparent;
+    padding: 0;
+    right: 0;
+
+    .widget-solutyon-booking-engine {
+      padding-top: $line-height;
+      width: 100%;
+      height: 60%;
+      position: fixed;
+      right: 0;
+      bottom: -100%;
+      left: 0;
+      z-index: 0;
+      background: $bordeaux;
+      transition: all 500ms
+    }
+
+    .booking-trigger {
+      position: fixed;
+      bottom: 0;
+      clip: rect(0, 0, 0, 0);
+      z-index: 99999999;
+    }
+
+    label[for="booking-trigger"] {
+      position: fixed;
+      //left: 15px;
+      z-index: 2;
+      color: $bianco;
+      bottom: 0;
+
+      right: 0;
+      background: $bordeaux;
+//      width: 100%;
+      padding: ($line-height / 2) $line-height;
+      text-align: right;
+      box-sizing: border-box;
+      transition: all 500ms;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &::after {
+        content: "Prenota Adesso";
+
+
+        @at-root {
+          .current-language-english #{&} {
+            content: "Book Now";
+          }
+        }
+      }
+
+    }
+
+    .booking-trigger:checked + label {
+      color: $bianco;
+      background: transparent;
+      transition: all 500ms;
+      &::after {
+        content: "Chiudi";
+
+        @at-root {
+          .current-language-english #{&} {
+            content: "Close";
+          }
+        }
+      }
+    }
+
+    .booking-trigger:checked ~ .widget-solutyon-booking-engine {
+      bottom: 0;
+      transition: all 500ms;
+    }
+  }
+
+  @include breakpoint-max(md) {
+    .widget-solutyon-booking-engine {
+      height: 75%;
+    }
+  }
+
+  @include breakpoint-max(sm) {
+    .widget-solutyon-booking-engine {
+      height: 80%;
+    }
+  }
+
+  @include breakpoint-max(xs) {
+    .widget-solutyon-booking-engine {
+      font-size: 0.8em;
+      height: 90%;
+    }
+  }
+}

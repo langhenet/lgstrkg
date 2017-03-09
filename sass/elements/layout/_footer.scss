@@ -30,6 +30,10 @@
 
 #footer .inner {
   padding: ($line-height * 3) 0;
+
+  @include breakpoint-max(md) {
+    padding: ($line-height * 3) $line-height; 
+  }
 }
 
 
@@ -51,6 +55,10 @@
 #footer h3.widgettitle {
  @include font(h3, $mt: 0, $mb: (size(h3, mb) / 2));
  text-transform: uppercase;
+
+ @include breakpoint-max(md) {
+   @include m-size(h3, $mb: (m-size(h3, mb) / 2));
+ }
 }
 
 #footer h3.widgettitle {
