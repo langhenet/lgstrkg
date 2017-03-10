@@ -3,9 +3,9 @@
   background: $bordeaux;
   position: fixed;
   bottom: 0;
-  right: 1vw;
+  right: 0vw;
   padding: $line-height;
-  max-width: 240px;
+  max-width: 350px;
   z-index: 9999;
   box-shadow: -2px -2px 2px rgba($nero, 0.5);
   box-sizing: border-box;
@@ -14,6 +14,8 @@
   //FORM
   .widget-solutyon-booking-engine {
     width: 100%;
+    font-size: 0.8em;
+
 
     .prenotazione_title {
       @include font(p, $wt: bold, $mt: 0, $mb: $line-height / 2);
@@ -28,14 +30,20 @@
       width: 100%;
     }
     tr {
-      display: block;
+      //display: block;
       margin: 0 auto ($line-height / 2) auto;
+
     }
     td {
-      display: block;
+      //display: block;
       width: auto;
       margin: 0 auto;
-      text-align: center;
+    //  text-align: center;
+      padding-top: $line-height / 2;
+
+      &:last-child {
+        width: 40%;
+      }
     }
 
     //INPUT
@@ -73,12 +81,13 @@
       @include button(p, 4, half);
       @include button-color(main);
       text-align: center;
+      text-transform: uppercase;
     }
   }
 
   //*********MOBILE
   //****************
-  @include breakpoint-min(lg) {
+  @include breakpoint-min(xl) {
     .booking-trigger {
       display: none;
     }
@@ -87,26 +96,31 @@
       display: none;
     }
   }
+
   @include breakpoint-max(xl) {
-    right: 0;
-  }
-  @include breakpoint-max(lg) {
     position: relative;
     background: transparent;
     padding: 0;
     right: 0;
 
     .widget-solutyon-booking-engine {
-      padding-top: $line-height;
+      padding: $line-height;
       width: 100%;
       height: 60%;
       position: fixed;
-      right: 0;
       bottom: -100%;
-      left: 0;
+      right: 0;
       z-index: 0;
       background: $bordeaux;
-      transition: all 500ms
+      transition: all 500ms;
+      box-sizing: border-box;
+      max-width: 500px;
+      box-shadow: -2px -2px 10px rgba($nero-vero, 0.5);
+
+      table {
+        max-width: 400px;
+        margin: 0 auto $line-height auto;
+      }
     }
 
     .booking-trigger {
@@ -115,6 +129,8 @@
       clip: rect(0, 0, 0, 0);
       z-index: 99999999;
     }
+
+
 
     label[for="booking-trigger"] {
       position: fixed;
@@ -169,20 +185,20 @@
 
   @include breakpoint-max(md) {
     .widget-solutyon-booking-engine {
-      height: 75%;
+      height: 60%;
     }
   }
 
   @include breakpoint-max(sm) {
     .widget-solutyon-booking-engine {
-      height: 80%;
+      height: 70%;
     }
   }
 
   @include breakpoint-max(xs) {
     .widget-solutyon-booking-engine {
       font-size: 0.8em;
-      height: 90%;
+      height: 80%;
     }
   }
 }
