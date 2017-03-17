@@ -12,9 +12,33 @@
   background: main-colors(topbar, bg);
   max-width: $website-width;
   margin: 0 auto;
-  padding: ($line-height / 2) 0;
+  padding: ($line-height / 4) 0;
   justify-content: flex-end;
   flex-basis: 100%;
+
+  &::before {
+  content:"";
+  background: main-colors(topbar, bg);
+  height: 100%;
+  width: 100vw;
+  left: -50%;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  z-index: -1;
+}
+&::after {
+  content:"";
+  background: main-colors(topbar, bg);
+  height: 100%;
+  width: 100vw;
+  right: -50%;
+  position: absolute;
+  display: inline-block;
+  top:0;
+  z-index: -1;
+  top: 0;
+}
 }
 
 .sticker_sticky #top_area {//quando è scrollata la nascondo
@@ -44,6 +68,7 @@
   .widget { //affianco i widget uno all'altro
     margin-right: $line-height;
     margin-bottom: 0;
+    //padding: 0 ($line-height / 2);
 
     p {
       color: main-colors(topbar, body);
@@ -51,11 +76,12 @@
 
       a {
         color: main-colors(topbar, link);
+        background-color: transparent;
       }
     }
   }
 
-  section:first-child { //tolgo il margine laterale dal primo
+  section:last-child { //tolgo il margine laterale dal primo
     margin-right: 0;
     margin-top: 0;
   }
@@ -66,7 +92,6 @@
   .widget_nav_menu {
     float: none;
     position: relative;
-    order: 2;
     z-index: 99;
     position: relative;
 
@@ -100,8 +125,18 @@
   /*
    * Bottone della topbar
    */
-  a.button.primary {
 
+  .button {
+    @include breakpoint-min(lg) {
+      display: none;
+    }
+    &.small {
+      line-height: 1em;
+      text-transform: none;
+    }
+  }
+  a.button.primary {
+    @include button-color(main);
     &.chiama {
       background: transparent;
       border: 0;
@@ -119,9 +154,12 @@
 // Selettore Lingua
 ///
 .widget_icl_lang_sel_widget {
-  order: 3;
 }
 .wpml-ls-legacy-list-horizontal {
   padding: 0;
   border: 0;
+  @include breakpoint-min(md) {
+    border-left: 2px solid #fff;
+    padding-left: $line-height / 2;
+  }
 }

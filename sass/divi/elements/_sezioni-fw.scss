@@ -507,10 +507,82 @@
 ///
 // SEZIONE OVERLAY
 ///
-.et_pb_section.lg-overlay {
+
+//DARK
+.overlay--dark,
+.et_pb_section.overlay--dark {
   position: relative;
 
   &::before {
-    @include color-overlay;
+    @include color-overlay($palette: fheader, $grade: 0.65);
+  }
+
+  .et_pb_module {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+//COLOR
+.overlay--color,
+.et_pb_section.overlay--color {
+  position: relative;
+  background-blend-mode: luminosity;
+
+  .et_pb_module {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    @include color-overlay($palette: main, $grade: 0.90);
+  }
+}
+
+@each $palette, $sections in $colors {
+  .#{$palette}.overlay--color,
+  .et_divi_builder #et_builder_outer_content .et_pb_section.#{$palette}.overlay--color {
+    position: relative;
+
+    .et_pb_module {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      @include color-overlay($palette: $palette, $grade: 0.90);
+    }
+  }
+}
+
+//COLOR FILTER
+.color--filter,
+.et_pb_section.color--filter {
+  position: relative;
+  background-blend-mode: luminosity;
+
+  .et_pb_module {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    @include color-overlay($palette: main, $grade: 0.00);
+  }
+}
+
+@each $palette, $sections in $colors {
+  .#{$palette}.color--filter,
+  .et_divi_builder #et_builder_outer_content .et_pb_section.#{$palette}.color--filter {
+    position: relative;
+
+    .et_pb_module {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      @include color-overlay($palette: $palette, $grade: 0.30);
+    }
   }
 }

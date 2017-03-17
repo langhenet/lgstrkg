@@ -5,8 +5,8 @@
 //*                                                                     *//
 //***********************************************************************//
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Imprima);
+@import url(https://fonts.googleapis.com/css?family=Nixie+One);
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P e UL / OL
@@ -25,6 +25,11 @@ body {
 p, ul, ol, pre, table, blockquote,
 .et_divi_builder #et_builder_outer_content .et_pb_module p {
   @include margin;
+}
+
+::selection {
+  color: $bianco-vero;
+  background: darken($oro, 10%);
 }
 
 

@@ -11,6 +11,7 @@
   }
 }
 
+
 ///
 // logo
 ///
@@ -18,7 +19,13 @@
 #logo_text {
   @at-root .responsive #{&} {
     @include breakpoint-max(lg) {
-      margin: 0 auto;
+      margin: ($line-height / 2) auto 0 auto;
+    }
+
+    @include breakpoint-max(md) {
+      margin-top: ($line-height / 2);
+      flex-basis: 30%;
+      order: 0;
     }
   }
 
@@ -43,19 +50,17 @@
 #top_area {
 
 
-  @include breakpoint-max(lg) {//la paddo sotto i 979px
-    padding-top: $line-height / 2;
-  }
-
   @include breakpoint-max(md) {
     display: flex;
     visibility: visible;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: $line-height 0;
+    flex-basis: 70%;
   }
 
   @include breakpoint-max(sm) {//rimuovo il padding sotto i 567px
-    padding-top: 0;
+    padding: $line-height 0;
   }
 
   @at-root .responsive #{&} { //rendo la top bar visibile anche sotto i 787px e ne dimezzo la larghezza
@@ -70,21 +75,21 @@
     @include breakpoint-max(md) { //li faccio cadere sotto i 567px
       margin-right: 0;
       box-sizing: border-box;
-      //clear: both;
-      //margin-top: $line-height / 2;
+      padding: 0 $line-height / 2;
+
       &.widget_icl_lang_sel_widget {
-        flex-basis: 100%;
-        flex-grow: 1;
+        flex-grow: 0;
         flex-shrink: 0;
         order: 0;
         text-align: center;
+        flex-basis: auto;
       }
 
       &.widget_text,
       &.widget_text_icl {
         margin-right: 0;
-        flex-basis: 40%;
         flex-shrink: 0;
+        order: 1;
 
            }
 
@@ -127,10 +132,13 @@
   @include breakpoint-max(md) {
     display: inline-block;
     width: 100%;
+    flex-basis: 70%;
     &::before {
       content: "\f0c9";
       font-family: 'FontAwesome';
       position: absolute;
+      top: 27%;
+      left: 3%;
     }
   }
 }
@@ -141,5 +149,8 @@
 ///
 .responsive .nav2select {
   @include form-field(p, 4);
-  padding-left: 5em;
+  padding-left: $line-height !important;
+  margin-top: $line-height / 2;
+  margin-left: auto;
+  margin-right: auto;
 }

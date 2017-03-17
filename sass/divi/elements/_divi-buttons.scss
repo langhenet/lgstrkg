@@ -51,13 +51,15 @@
   body a.big-button,
   .et_pb_module a.button.medium { //TOCHK ultima dichiarazione per bottone merda nel blurb
     @extend %button;
-    @include button(p, 4);
+    @include button(p, 3);
 
     font-weight: inherit; //TODO
     text-transform: uppercase;
     border-radius: 0; //TOCHK
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
+    font-weight: bold;
+    letter-spacing: 1px;
 
     &:hover {
       @extend .et_pb_button.size--medium;
@@ -87,7 +89,7 @@
   .et_pb_button.size--large,
   .et_pb_module a.button.large {
     @extend %button;
-    @include button(h3, 4, half)
+    @include button(h3, 4)
 
     font-weight: inherit; //TODO
     text-transform: uppercase;

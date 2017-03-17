@@ -17,13 +17,23 @@
 //*               IMMAGINI SU MOBILE
 //****************************************************************************//
 .et_pb_image {
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(lg) {
     margin: 0 auto !important;
   }
 
   img {
-    @include breakpoint-max(sm) {
+    @include breakpoint-max(lg) {
+      max-height: 500px;
+    }
+    @include breakpoint-max(md) {
       max-height: 400px;
     }
   }
+}
+
+//***************************************************************************//
+// IMMAGINI STRIKING
+//**************************************************************************//
+.image_styled {
+  margin-bottom: $line-height;
 }

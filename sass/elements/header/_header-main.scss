@@ -89,6 +89,7 @@
   width: 100%;
   max-width: $website-width;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 /*
@@ -119,6 +120,7 @@
    padding: 0;
    height: auto;
    flex-basis: 33%;
+   margin-top: $line-height / 2;
 
    // LOGO DA SCROLLATO
    @at-root .sticker_sticky #{&} {
@@ -136,7 +138,7 @@
    }
 
    a {
-     text-align: center;
+     text-align: left;
      display: block;
      max-width: 400px;
      margin: 0 auto;
