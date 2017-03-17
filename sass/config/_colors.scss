@@ -213,3 +213,9 @@ $colors: (
 // Ombra
 ///
 $button-shadow: 0 0.07em 0.085em 0 rgba(0, 0, 0, 0.26);
+
+
+///
+// OVERLAY alt
+///
+$overlay--alt: linear-gradient(110deg, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 45%,rgba(65,65,60,0.74) 55%,rgba(65,65,60,0) 75%,rgba(65,65,60,0) 100%);

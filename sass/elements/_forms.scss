@@ -32,9 +32,8 @@ select {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 100%;
-  border-bottom: 6px solid;
-  $pad: bspad(6);
-  padding-bottom: bspad(6) + ($line-height / 2em);
+  border-bottom: 0;
+  padding-bottom: $line-height * 1.5;
 
   @include breakpoint-max(xs) {
     max-width: 120% !important;
@@ -83,11 +82,11 @@ select {
     width: 100%;
   }
 
-  @include breakpoint-max(md) {
+  @include breakpoint-max(lg) {
     width: 49%;
   }
 
-  @include breakpoint-max(xs) {
+  @include breakpoint-max(md) {
     width: 100%;
   }
 }
@@ -224,8 +223,8 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 ///
 .gform_wrapper .top_label .gfield_description {
   @include form-desc(small);
-  padding-top: size(small, lh) / 2;
-  padding-bottom: size(small, lh) / 2;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 ///
@@ -240,8 +239,9 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 .gform_wrapper .ginput_complex label,
 .gform_wrapper .instruction {
   @include form-desc(small);
-  padding-top: size(small, lh) / 2;
-  padding-bottom: size(small, lh) / 2;
+  
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 

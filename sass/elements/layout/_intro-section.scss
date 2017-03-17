@@ -70,9 +70,10 @@
   padding-top: $height--large;
   padding-bottom: $height;
 
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(md) {
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
+    padding-top: $line-height * 2;
   }
 }
 
@@ -98,7 +99,7 @@
 
   max-width: 770px;
 
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(md) {
     @include m-size(h1);
   }
 }
@@ -114,7 +115,7 @@
 
   max-width: 570px;
 
-  @include breakpoint-max(sm) {
+  @include breakpoint-max(md) {
     @include m-size(h3);
   }
 }

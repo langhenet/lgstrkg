@@ -161,6 +161,14 @@
   border-top-width: $bw * 1px;
   border-left-width: $bw * 1px;
   border-right-width: $bw * 1px;
+
+  //MOBILE SIZES
+  @if $size != h5 AND $size != small AND $size != p {
+    @include breakpoint-max(md) {
+      font-size: m-size($size, fs);
+      line-height: m-size($size, lh) !important;
+    }
+  }
 }
 
 ///

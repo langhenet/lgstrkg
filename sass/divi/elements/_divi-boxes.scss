@@ -11,8 +11,7 @@
   padding-top: $line-height;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: bspad(4);
-  border-bottom: 4px solid;
+  padding-bottom: $line-height;
 
   @at-root .et_divi_builder #et_builder_outer_content  #{&}.et_pb_blurb_position_top h4 { //solo titolo top
     @include font(h3, $mt: 0, $mb: 0);
