@@ -8,13 +8,13 @@
  * Padding contenitore & Dimensioni titolo
  */
 .et_pb_blurb {
-  padding-top: $line-height;
+  padding-top: $line-height * 1.5;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: $line-height;
+  padding-bottom: $line-height * 1.5;
 
-  @at-root .et_divi_builder #et_builder_outer_content  #{&}.et_pb_blurb_position_top h4 { //solo titolo top
-    @include font(h3, $mt: 0, $mb: 0);
+  @at-root .et_divi_builder #et_builder_outer_content  #{&}.et_pb_blurb_position_top h4:first-of-type { //solo titolo top
+    @include font(h3, $mt: 0);
     padding-bottom: 0;
   }
 }
@@ -60,8 +60,8 @@
   }
 
   .et_pb_blurb_container {
-    padding-right: $line-height;
-    padding-left: $line-height;
+    padding-right: $line-height * 1.5;
+    padding-left: $line-height * 1.5;
   }
 }
 

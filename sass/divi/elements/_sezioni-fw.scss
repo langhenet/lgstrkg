@@ -129,7 +129,7 @@
 /*
  * NO Padding: resetta i margini bottomo degli elementi della sezione
  */
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-no-padding .et_pb_row {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--none .et_pb_row {
  padding-top: 0 !important;
  padding-bottom: 0 !important;
 
@@ -144,13 +144,13 @@
  * SMALL padding
  */
 //prima
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-small-padding > div.et_pb_row:first-of-type {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--small > div.et_pb_row:first-of-type {
   padding-top: $height--small;
 }
 
 
 //Ultima
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-small-padding > div.et_pb_row:last-of-type {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--small > div.et_pb_row:last-of-type {
   padding-bottom: $height--small;
 }
 
@@ -204,13 +204,13 @@
 */
 
 //prima
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-large-padding > div.et_pb_row:first-of-type {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--large > div.et_pb_row:first-of-type {
   padding-top: $height--large;
 }
 
 
 //Ultima
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-large-padding > div.et_pb_row:last-of-type {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--large > div.et_pb_row:last-of-type {
   padding-bottom: $height--large;
 }
 
@@ -324,7 +324,7 @@
       //width: 100%;
       box-sizing: border-box;
       width: 100%;
-      max-width: 700px;
+      max-width: 670px;
 
 
       &.et_pb_button { //fix width del bottone che contiene 2 et_pb_module uno dentro l'altro
@@ -550,7 +550,7 @@
     }
 
     &::before {
-      @include color-overlay($palette: $palette, $grade: 0.90);
+      @include color-overlay($palette: $palette, $grade: 0.80);
     }
   }
 }
