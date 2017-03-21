@@ -319,6 +319,9 @@
   @if $media == xl {
     @media (max-width: em-bp($xl - 1)) { @content; }
   }
+  @if $media == xxl {
+    @media (max-width: em-bp($xxl - 1)) { @content; }
+  }
   @if $media == uxl {
     @media (max-width: em-bp($uxl - 1)) { @content; }
   }
@@ -347,6 +350,9 @@
   }
   @if $media == xl {
     @media (min-width: em-bp($xl)) { @content; }
+  }
+  @if $media == xxl {
+    @media (min-width: em-bp($xxl)) { @content; }
   }
   @if $media == uxl {
     @media (min-width: em-bp($uxl)) { @content; }

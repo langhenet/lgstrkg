@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5 {
 
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] h1 {
   @include breakpoint-max(lg) {
-    @include font(h1);
+    @include size(h1-alt);
   }
 
   @include breakpoint-max(md) {
@@ -151,11 +151,11 @@ h1, h2, h3, h4, h5 {
 
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] p {
   @include breakpoint-max(lg) {
-    @include font(p);
+    @include size(p);
   }
 
   @include breakpoint-max(md) {
-    @include font(p);
+    @include size(p);
   }
 }
 

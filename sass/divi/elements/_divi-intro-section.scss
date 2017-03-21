@@ -21,6 +21,12 @@
   margin-top: $line-height * -6;
   background-color: main-colors(fheader, bg) !important;
 
+  h1 {
+    @include breakpoint-max(xxl) {
+      @include size(h1-alt);
+    }
+  }
+
   h3 {
     @include font(h3, $fm: primary);
 

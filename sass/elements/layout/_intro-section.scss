@@ -16,8 +16,8 @@
   background-image: none;
   position: relative;
   text-align: center;
-  margin-top: -($line-height * 7);
-  padding-top: $line-height * 11;
+  margin-top: -($line-height * 6);
+  padding-top: $line-height * 10;
   padding-bottom: $line-height * 2;
 
   @include breakpoint-max(md) {
@@ -99,6 +99,10 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  @include breakpoint-max(xxl) {
+    @include size(h1-alt);
+  }
 
   @include breakpoint-max(md) {
     @include m-size(h1);
