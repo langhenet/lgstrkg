@@ -76,7 +76,8 @@
   padding: $line-height;
   background: $grigio-chiarissimo;
 
-  &.widget_text {
+  &.widget_text,
+  &.widget_text_icl {
     background: $petrolio;
     color: $bianco;
 

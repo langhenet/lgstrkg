@@ -5,7 +5,7 @@
   bottom: 0;
   right: 0vw;
   padding: $line-height;
-  max-width: 350px;
+  max-width: 330px;
   z-index: 9999;
   box-shadow: -2px -2px 2px rgba($nero, 0.5);
   box-sizing: border-box;
@@ -87,7 +87,7 @@
 
   //*********MOBILE
   //****************
-  @include breakpoint-min(uxl) {
+  @include breakpoint-min(xxl) {
     .booking-trigger {
       display: none;
     }
@@ -148,7 +148,7 @@
     }
   }*/
 
-  @include breakpoint-max(uxl) {
+  @include breakpoint-max(xxl) {
     position: relative;
     background: transparent;
     padding: 0;
@@ -165,7 +165,7 @@
       background: $bordeaux;
       transition: all 500ms;
       box-sizing: border-box;
-      max-width: 500px;
+      max-width: 330px;
       box-shadow: -2px -2px 10px rgba($nero-vero, 0.5);
 
       table {

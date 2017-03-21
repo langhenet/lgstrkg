@@ -8,7 +8,7 @@
 // Contenitore Featured Header costruito con DIVI
 ///
 .et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
-  padding-top: $line-height * 10 !important;
+  padding-top: $line-height * 10.5 !important;
 
   @include breakpoint-max(sm) { //contenitore a 5XX px
     padding-top: $line-height * 8 !important;
@@ -18,7 +18,7 @@
 //contenitore DIVI - posizionamento
 #intro {
   position: relative;
-  margin-top: $line-height * -6;
+  margin-top: $line-height * -6.5;
   background-color: main-colors(fheader, bg) !important;
 
   h1 {

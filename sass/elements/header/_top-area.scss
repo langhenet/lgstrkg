@@ -12,7 +12,7 @@
   background: main-colors(topbar, bg);
   max-width: $website-width;
   margin: 0 auto;
-  padding: ($line-height / 2) 0;
+  padding: ($line-height / 4) 0;
   justify-content: flex-end;
 
   &::before {
