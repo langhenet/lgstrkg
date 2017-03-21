@@ -37,7 +37,6 @@
  */
 
  #navigation .menu > li {
-  //transition: background 150ms linear;
   padding: ($line-height / 2) 15px ($line-height / 4) 13px;
   font-family: $ff-secondary;
   text-transform: uppercase;
@@ -160,7 +159,7 @@
   background-color: transparent;
   border: 0;
   padding: ($line-height / 2) 0 0;
-  box-sizing: 2px 2px 2px rgba(#000, 0.8);
+  box-shadow: 2px 2px 2px rgba(#000, 0.2);
 
   @at-root .sticker_sticky #{&} { //con header scrollato - il margin top ritorna a 0 - solo su desktop
     @include breakpoint-min(xl) {

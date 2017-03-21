@@ -145,3 +145,45 @@ section.widget {
 //****************************************************************************//
 //          WIDGET - DIVI BUILDER
 //****************************************************************************//
+////
+//POST LIST
+///
+//RESET MARGINI E STILE
+#main .recent_posts_wrap ul,
+.et_divi_builder #et_builder_outer_content .et_pb_module .recent_posts_wrap ul {
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: $line-height;
+
+  border-left-width: 4px;
+  border-left-style: solid;
+
+  @include breakpoint-max(md) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.recent_posts_wrap ul {
+  border-left-color: main-colors(main, border);
+}
+
+
+.recent_posts_wrap ul {
+  border-left-color: main-colors(main, border);
+}
+
+@each $palette, $bg in $colors {
+  .#{$palette} .recent_posts_wrap u {
+    border-left-color: palette($palette, border);
+  }
+}
