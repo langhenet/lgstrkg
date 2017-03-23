@@ -33,20 +33,7 @@
 
 
 
-///
-// Featured Header della Landing Page
-///
-.page-template-template_land_page {
 
-  //contenitore standard
-  #feature,
-  .has-gradient #feature,
-  .no-gradient #feature {
-    @include breakpoint-max(xs) {
-      padding-top: $line-height * 5 !important;
-    }
-  }
-}
 
 
 
@@ -55,7 +42,7 @@
 ///
 #feature::before {
   @include color-overlay(fheader, 0.5);
-  background: linear-gradient(110deg, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 45%,rgba(65,65,60,0.74) 55%,rgba(65,65,60,0) 75%,rgba(65,65,60,0) 100%);
+  background: $overlay--alt;
 }
 
 
@@ -74,6 +61,7 @@
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
     padding-top: $line-height * 2;
+    padding-bottom: $line-height * 2;
   }
 }
 

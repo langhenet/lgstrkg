@@ -21,11 +21,12 @@
 
 .no-gradient #footer,
 .has-gradient #footer {
-  background-color: main-colors(footer, bg);
+  background-color: darken(main-colors(footer, bg), 5.0%);
+  background-image: none;
 }
 
 #footer .inner {
-  padding: ($line-height * 3) 0;
+  padding: ($line-height * 1.5) 0;
 }
 
 
@@ -110,7 +111,7 @@
 //****************************************************************************//
 
 #footer_bottom {
-  background: darken(main-colors(footer, bg), 0.0%);
+  background: darken(main-colors(footer, bg), 10.0%);
 
   &> .inner {
     padding: $line-height 0;

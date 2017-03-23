@@ -16,6 +16,7 @@
   @at-root .et_divi_builder #et_builder_outer_content  #{&}.et_pb_blurb_position_top h4:first-of-type { //solo titolo top
     @include font(h3, $mt: 0);
     padding-bottom: 0;
+    text-align: center;
   }
 }
 

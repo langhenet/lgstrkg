@@ -77,7 +77,7 @@ $layout-colors: (
     accent:     $oro,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $grigio-scuro,      //body alternativo - testo in un form o in un box
-    bg-alt:     mix($oro, $bianco, 75%),      //sfondo alt - il bg di un form o di un box
+    bg-alt:     rgba($oro, 0.55),      //sfondo alt - il bg di un form o di un box
     accent-alt: $bianco,      //accento alt - il di un link nel form
 
     form-body: $grigio-scuro,
@@ -170,8 +170,8 @@ $colors: (
 
     overlay:    lighten($grigio-scuro, 60%),      //Colore sfondo overlay
 
-    button:     $bianco-vero,      //colore bottone
-    button-bg:  $nero-vero,
+    button:     $bianco,      //colore bottone
+    button-bg:  $verde,
 
     button-subtle: $bianco-vero,
     button-bg-subtle: mix($nero-vero, white, 60%)    //bg bottone
@@ -218,4 +218,5 @@ $button-shadow: 0 0.07em 0.085em 0 rgba(0, 0, 0, 0.26);
 ///
 // OVERLAY alt
 ///
-$overlay--alt: linear-gradient(110deg, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 45%,rgba(65,65,60,0.74) 55%,rgba(65,65,60,0) 75%,rgba(65,65,60,0) 100%);
+//$overlay--alt: linear-gradient(110deg, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 45%,rgba(65,65,60,0.74) 55%,rgba(65,65,60,0.3) 75%,rgba(65,65,60,0.3) 100%);
+$overlay--alt: linear-gradient(to right, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 40%,rgba(65,65,60,0.75) 60%,rgba(65,65,60,0.3) 70%,rgba(65,65,60,0.3) 100%);

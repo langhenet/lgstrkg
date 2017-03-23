@@ -13,17 +13,31 @@
  */
 .has-gradient .right_sidebar #sidebar_content {
   background-image: none;
+  background: none;
 }
 
 .right_sidebar #sidebar_content.lessgap {
   padding-top: 0;
+  padding-left: 0;
 }
 
+.has-gradient .right_sidebar #sidebar_content:after {
+  content: none;
+}
+
+#sidebar {
+  padding-bottom: $line-height;
+}
 
 
 //****************************************************************************//
 //                           WIDGET
 //****************************************************************************//
+
+#sidebar section.widget {
+  background: palette(color--light, bg);
+  padding: $line-height;
+}
 /*
  * Ultimo Widget
  */
@@ -36,6 +50,8 @@
  * Titoli
  */
 #sidebar .widgettitle {
+  color: palette(color--light, heading);
+  text-align: center;
 }
 
 
@@ -44,8 +60,23 @@
  * Corpo
  */
 #sidebar .widget ul {
-  padding: $line-height;
 }
+
+/********************************************************************************/
+/* WIDGET DI TESTO */
+//*****************************************************************************//
+#sidebar {
+  section.widget.widget_text,
+  section.widget.widget_text_icl {
+    background: palette(color--dark, bg);
+    padding: 0;
+
+    h1, h2, h3, h4, h5, h6, p {
+      color: palette(color--dark, body);
+    }
+  }
+}
+
 
 //****************************************************************************//
 //                           COLOR LINK
@@ -56,6 +87,7 @@
 #sidebar .widget a:visited {
 
   &:hover {
+    color: main-colors(main, accent)
   }
 }
 
@@ -83,8 +115,8 @@
     align-items: flex-start;
 
     section.widget {
-      width: 47.5%;
-      margin-right: 5%;
+      width: 100%;
+      margin-right: 0;
 
       &:nth-child(even) {
         margin-right: 0;
@@ -93,9 +125,10 @@
   }
 
   @at-root .right_sidebar #{&} {
-    @include breakpoint-max(xs) {
-      padding-left: $line-height;
-      padding-right: $line-height;
+    @include breakpoint-max(sm) {
+      padding-left: 0;
+      padding-right: 0;
     }
+
   }
 }

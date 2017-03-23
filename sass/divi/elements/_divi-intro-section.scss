@@ -13,6 +13,7 @@
 
   @include breakpoint-max(md) { //contenitore a 5XX px
     padding-top: $line-height * 2;
+    padding-bottom: $line-height * 2;
   }
 }
 
@@ -39,24 +40,6 @@
 }
 
 
-///
-// Featured Header della Landing Page di DIVI
-///
-.page-template-template_land_page {
-
-  #intro {
-    @include breakpoint-max(xs) {
-      padding-top: $line-height * 5 !important;
-    }
-  }
-
-//contenitore DIVI
-  &.et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
-    @include breakpoint-max(xs) {
-      padding-top: $line-height * 3 !important;
-    }
-  }
-}
 
 
 ///

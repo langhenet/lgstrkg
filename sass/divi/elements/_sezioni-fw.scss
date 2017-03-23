@@ -5,8 +5,7 @@
 //*                                                                         *//
 //***************************************************************************//
 
-.page-template-template_fullwidth #page .inner,
-.page-template-template_land_page #page .inner,
+
 //queste due classi selecionano gli inner dei portfoli SENZA Sidebar - la prima è quella effettiva ma ho messo anche quella senza spazio perché lo spazio potrebbe essere un typo
 .single-portfolio #page div[class="inner "],
 .single-portfolio #page div[class="inner"] {
@@ -27,6 +26,13 @@
   p, h1, h2, h3, h4, h5 {
     padding-bottom: 0;
   }
+}
+
+//*****************************************************************************//
+// RESET SEZIONI
+//*****************************************************************************//
+.et_divi_builder #et_builder_outer_content .et_pb_section {
+  z-index: 0;
 }
 
 //****************************************************************************//
@@ -168,7 +174,7 @@
   }
 
   @include breakpoint-max(sm) {
-    padding-top: $height--small;
+    padding-top: $line-height * 2;
   }
 }
 //Prima con Parallax
@@ -180,7 +186,7 @@
   }
 
   @include breakpoint-max(sm) {
-    padding-top: $height--small;
+    padding-top: $line-height * 2;
   }
 }
 
@@ -193,8 +199,8 @@
     padding-bottom: $line-height * 3;
   }
 
-  @include breakpoint-max(sm) {
-    padding-bottom: $height--small;
+  @include breakpoint-max(lg) {
+    padding-bottom: $line-height * 2;
   }
 }
 
@@ -206,12 +212,20 @@
 //prima
 .et_divi_builder #et_builder_outer_content .et_pb_section.padding--large > div.et_pb_row:first-of-type {
   padding-top: $height--large;
+
+  @include breakpoint-max(lg) {
+    padding-top: $line-height * 2;
+  }
 }
 
 
 //Ultima
 .et_divi_builder #et_builder_outer_content .et_pb_section.padding--large > div.et_pb_row:last-of-type {
   padding-bottom: $height--large;
+
+  @include breakpoint-max(sm) {
+    padding-bottom: $line-height * 2;
+  }
 }
 
 /*
@@ -393,7 +407,7 @@
   border-left: solid $line-height / 4;
 //  border-top: solid $line-height / 4;
   border-bottom: solid $line-height / 2;
-  border-color: main-colors(main, border);
+  border-color: main-colors(main, bg);
 
   @include breakpoint-max(md) {
     border-top: solid $line-height / 4;
@@ -426,12 +440,12 @@
   }
 
 //1/5 e 3/5
-  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_3 .et_pb_column_1_4,
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_4,
   .et_divi_builder #et_builder_outer_content .et_pb_gutters3.et_pb_row.lg-fifth .et_pb_column_1_4 {
     width: 17.8%;
   }
 
-  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_3 .et_pb_column_1_2,
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_2,
   .et_divi_builder #et_builder_outer_content .et_pb_gutters3.et_pb_row.lg-fifth .et_pb_column_1_2 {
     width: 53.4%;
   }

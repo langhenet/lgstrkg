@@ -37,3 +37,10 @@
 .image_styled {
   margin-bottom: $line-height;
 }
+
+//************************************************************************//
+// IMMAGINI WP
+//**********************************************************************//
+.wp-caption.aligncenter {
+  margin-bottom: $line-height !important;
+}

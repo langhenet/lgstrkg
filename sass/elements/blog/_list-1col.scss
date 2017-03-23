@@ -19,9 +19,10 @@
 /*
  * Feat Header Categorie
  */
+.category #feature,
 .category-reviews #feature,
 .category-critica #feature {
-  background-image: url(http://caneuva.com/files/2016/07/DSC_11670.jpg);
+  background-image: url(http://battaglino.com/files/2011/12/blog-grappoli.jpg);
   background-position: bottom center;
 }
 
@@ -74,7 +75,7 @@
 //                          TITOLO e META
 //****************************************************************************//
 .entry_info .entry-title {
-  @include font(h3);
+  @include font(h3, $mt: 0);
 }
 
 #page .entry .entry_title a,
@@ -83,12 +84,7 @@
 }
 
 .entry .entry_meta {
-  @include font(h5);
-
-  @at-root #page #{&} a,
-           #page #{&} a:visited {
-    color: main-colors(main, heading);
-  }
+  display: none;
 }
 
 #page .entry .entry_title a:hover,
@@ -104,5 +100,51 @@
 
   p {
     margin-bottom: 0;
+  }
+}
+
+
+//****************************************************************************//
+//                         PAGINAZIONE
+//****************************************************************************//
+.wp-pagenavi {
+  height: auto;
+  padding: 0;
+  position: relative;
+  display: block;
+
+  span.current,
+  a,
+  a:link {
+    @include font(h3, $fm: primary);
+    padding: (size(h3, lh) / 2) size(h3, lh);
+    display: inline-block;
+    text-shadow: none;
+    font-weight: normal;
+
+    @include breakpoint-max(md) {
+      @include font(p);
+      padding: (size(p, lh) / 2) size(p, lh);
+    }
+  }
+
+  span.current {
+    margin-right: 0;
+    color: lighten(main-colors(main, accent), 10%);
+    font-weight: bold;
+  }
+
+  a {
+    margin-right: 0;
+
+    &:hover {
+    }
+  }
+
+  @at-root #page #{&} a {
+    text-decoration: none;
+    &:hover {
+      color: lighten(main-colors(main, accent), 10%);
+    }
   }
 }
