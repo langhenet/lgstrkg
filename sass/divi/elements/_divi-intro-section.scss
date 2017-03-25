@@ -23,14 +23,14 @@
 
   h1 {
     @include breakpoint-max(xxl) {
-      @include size(h1-alt);
+      @include m-size(h1);
     }
   }
 
   h3 {
     @include font(h3, $fm: primary);
 
-    @include breakpoint-max(md) {
+    @include breakpoint-max(xxl) {
       @include m-size(h3);
     }
 
@@ -47,14 +47,14 @@
 .page-template-template_land_page {
 
   #intro {
-    @include breakpoint-max(xs) {
+    @include breakpoint-max(xxl) {
       padding-top: $line-height * 5 !important;
     }
   }
 
 //contenitore DIVI
   &.et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
-    @include breakpoint-max(xs) {
+    @include breakpoint-max(xxl) {
       padding-top: $line-height * 3 !important;
     }
   }
