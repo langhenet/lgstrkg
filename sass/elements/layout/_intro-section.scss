@@ -40,7 +40,7 @@
 // Overlay della sezione introduttiva
 ///
 #feature::before {
-  @include color-overlay;
+  @include color-overlay(fheader, 0.2);
 }
 
 
@@ -51,11 +51,28 @@
 #feature .inner {
   position: relative;
   z-index: 1;
-  padding: 0 0;
+  padding: $height--huge 0 $height--large 0;
+
+  @include breakpoint-max(md) {
+    padding-top: $line-height;
+    padding-bottom: $line-height * 3;
+  }
 
   @include breakpoint-max(sm) {
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
+  }
+
+  &::after {
+    content: "\f0ab";
+    @include font(h2);
+    font-family: FontAwesome;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: -0em;
+    z-index: 999;
+    text-shadow: 3px 3px 3px rgba($nero, 0.5);
   }
 }
 
@@ -78,6 +95,14 @@
 #feature h1 {
   @include font(h1, $mt: 0);
   padding: 0;
+  max-width: 800px;
+  text-align: center;
+  margin: size(h1, mt) auto;
+  text-shadow: 3px 3px 3px rgba($nero, 0.5);
+
+  @include breakpoint-max(md) {
+    @include m-size(h1);
+  }
 }
 
 
@@ -87,5 +112,15 @@
 /*                TESTO
 *******************************************************************************/
 .feature-introduce {
+  @include font(h3, $fm: primary);
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  text-shadow: 3px 3px 3px rgba($nero, 0.5);
 
+  @include breakpoint-max(md) {
+    @include m-size(h3);
+    max-width: 450px;
+  }
 }

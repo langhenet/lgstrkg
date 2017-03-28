@@ -10,7 +10,7 @@
 ///
   $base: 16;
   $font-size: 1.125em; //TODO
-  $line-height: 2em; //TODO
+  $line-height: 1.8em; //TODO
 
 
 ///
@@ -24,11 +24,11 @@
 // Families
 ///
 
-@import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
-  $ff-primary: 'Lato', sans; //TODO
-  $ff-secondary: 'Gentium Book Basic', serif; //TODO
+  $ff-primary: 'Lato', sans-serif; //TODO
+  $ff-secondary: 'Lora', serif; //TODO
   $ff-special: $ff-secondary; //TODO
   $ff-button: $ff-primary;
 
@@ -111,29 +111,26 @@ $decorations: (
 
     h1: (
       fs: 4.22222222em,
-      lh: 1.42105263em,
-      mt: 0.47368421em,
-      mb: 0.47368421em,
+      lh: 1.26315789em,
+      mt: 0.42105263em,
+      mb: 0.42105263em,
     ),
-
     h2: (
       fs: 2.61111111em,
-      lh: 1.53191489em,
-      mt: 0.76595745em,
-      mb: 0.76595745em,
+      lh: 1.36170213em,
+      mt: 0.68085106em,
+      mb: 0.68085106em,
     ),
-
     h3: (
       fs: 1.61111111em,
-      lh: 1.24137931em,
-      mt: 1.24137931em,
+      lh: 1.10344828em,
+      mt: 1.10344828em,
       mb: 0em,
     ),
-
     h4: (
       fs: 1em,
-      lh: 2em,
-      mt: 2em,
+      lh: 1.77777778em,
+      mt: 1.77777778em,
       mb: 0em,
     ),
 
