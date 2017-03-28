@@ -10,6 +10,10 @@
 .et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
   padding-top: $line-height * 10.5 !important;
 
+  @include breakpoint-max(xxl) { //contenitore a 5XX px
+    padding-top: $line-height * 9 !important;
+  }
+
   @include breakpoint-max(sm) { //contenitore a 5XX px
     padding-top: $line-height * 8 !important;
   }

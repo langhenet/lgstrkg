@@ -72,7 +72,8 @@
 
   //BLURB TRASPARENTE
   &.blurb--transparent {
-    background: transparent !important;
+    background-color: transparent !important;
+    background-size: cover;
 
     @at-root #page #{&} p,
              #page #{&} h1,
@@ -128,7 +129,7 @@
 
   //BLURB TRASPARENTE
   &.blurb--transparent {
-    background: transparent !important;
+    background-color: transparent !important;
 
     @at-root #page #{&} p,
              #page #{&} h1,
