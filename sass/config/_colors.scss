@@ -38,11 +38,11 @@ $verde: #4CAF50;
 */
 $layout-colors: (
   topbar: (
-    body: $bianco,
-    link: $bianco,
-    accent: $bianco,
-    border: $bianco,
-    bg: $oro,
+    body: $nero,
+    link: $oro,
+    accent: $oro,
+    border: $nero,
+    bg: $bianco,
     button-bg: $nero,
     button: $bianco,
   ),
@@ -142,7 +142,7 @@ $colors: (
     form-link: $bianco,
     form-desc: $bianco,
 
-    overlay:    $nero,      //Colore sfondo overlay
+    overlay:    $oro,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
     button-bg:  $verde,
@@ -169,7 +169,7 @@ $colors: (
     form-link: $bianco,
     form-desc: $bianco,
 
-    overlay:    $nero,      //Colore sfondo overlay
+    overlay:    $tortora,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
     button-bg:  $verde,
@@ -196,7 +196,7 @@ $colors: (
     form-link: $bianco,
     form-desc: $bianco,
 
-    overlay:    $nero,      //Colore sfondo overlay
+    overlay:    $marrone,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
     button-bg:  $verde,

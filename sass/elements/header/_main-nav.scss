@@ -16,7 +16,7 @@
    max-width: $website-width;
    margin: 0 auto;
    padding: 0;
-   flex-basis: 66%;
+   flex-basis: 100%;
 
    .menu {
      display: flex;
@@ -86,6 +86,7 @@
   line-height: $line-height;
   padding: 0;
   color: main-colors(header, link);
+  border-bottom: 2px solid transparent;
  }
 
 /*
@@ -110,6 +111,7 @@
 #navigation .menu > li.hover > a > i {
   transition: all 250ms linear;
   color: main-colors(header, link);
+  border-bottom: 2px solid main-colors(header, border);
 }
 
 
@@ -138,6 +140,7 @@
 #navigation .menu > li.current-page-item > a > i,
 #navigation .menu > li.current-page-ancestor > a > i {
   color: darken(main-colors(header, link), 10%);
+  border-bottom: 2px solid main-colors(header, border);
 }
 
 /******************************************************************************/

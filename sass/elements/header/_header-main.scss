@@ -118,7 +118,8 @@
    order: 1;
    padding: 0;
    height: auto;
-   flex-basis: 33%;
+   flex-basis: 100%;
+   margin-top: -$line-height * 1.5;
 
    // LOGO DA SCROLLATO
    @at-root .sticker_sticky #{&} {
@@ -138,7 +139,7 @@
    a {
      text-align: center;
      display: block;
-     max-width: 400px;
+     max-width: 250px;
      margin: 0 auto;
    }
 

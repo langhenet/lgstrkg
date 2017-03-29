@@ -4,3 +4,50 @@
 //*              descrizione - descrizione - descrizione
 //*                                                                          *//
 //****************************************************************************//
+
+table {
+  width: 100%;
+}
+
+th {
+  padding: $line-height / 2;
+}
+
+td {
+  padding: $line-height / 4 $line-height / 2;
+}
+
+thead tr {
+  background-color: lighten(main-colors(main, accent), 40%);
+  text-align: center;
+  color: main-colors(main, heading);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: main-colors(main, bg-alt);
+}
+
+tbody tr:nth-child(even) {
+  background-color: lighten(main-colors(main, bg-alt), 2.5%);
+}
+
+@each $palette, $sections in $colors {
+  .#{$palette} {
+
+    thead tr {
+      background-color: lighten(palette($palette, bg), 30%);
+      text-align: center;
+      color: palette($palette, heading);
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: palette($palette, bg-alt);
+      color: palette($palette, body-alt);
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: lighten(palette($palette, bg-alt), 2.5%);
+      color: palette($palette, body-alt);
+    }
+  }
+}

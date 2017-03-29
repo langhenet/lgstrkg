@@ -41,6 +41,10 @@
 ///
 #feature::before {
   @include color-overlay(fheader, 0.2);
+
+  @include breakpoint-max(md) {
+    @include color-overlay(fheader, 0.4);
+  }
 }
 
 
@@ -51,7 +55,7 @@
 #feature .inner {
   position: relative;
   z-index: 1;
-  padding: $height--huge 0 $height--large 0;
+  padding: $height--large 0 $height--large 0;
 
   @include breakpoint-max(md) {
     padding-top: $line-height;
@@ -73,6 +77,10 @@
     bottom: -0em;
     z-index: 999;
     text-shadow: 3px 3px 3px rgba($nero, 0.5);
+
+    @include breakpoint-max(md) {
+      @include m-size(h2);
+    }
   }
 }
 
@@ -106,8 +114,6 @@
 }
 
 
-
-
 /******************************************************************************
 /*                TESTO
 *******************************************************************************/
@@ -118,9 +124,13 @@
   margin: 0 auto;
   padding: 0;
   text-shadow: 3px 3px 3px rgba($nero, 0.5);
+  padding: size(h3, lh);
+  background: rgba($nero, 0.5);
 
   @include breakpoint-max(md) {
     @include m-size(h3);
     max-width: 450px;
+    background: transparent;
+    padding: 0;
   }
 }

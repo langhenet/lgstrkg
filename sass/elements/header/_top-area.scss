@@ -47,9 +47,14 @@
 
     p {
       color: main-colors(topbar, body);
-      @include font(small, $mt: 0);
+      @include font(p, $mb: 0, $fm: primary);
+    }
 
-      a {
+
+    a {
+      &:link,
+      &:visited,
+      &:active {
         color: main-colors(topbar, link);
       }
     }
