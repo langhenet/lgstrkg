@@ -430,3 +430,15 @@
     @include color-overlay;
   }
 }
+
+@include breakpoint-min(divi-lg) {
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_1_3,
+  .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_1_3 {
+    width: 37.8%;
+  }
+
+  .et_divi_builder #et_builder_outer_content .et_pb_gutters3 .lg-fifth .et_pb_column_2_3,
+  .et_divi_builder #et_builder_outer_content .lg-fifth .et_pb_gutters3.et_pb_row .et_pb_column_2_3 {
+    width: 56.7%;
+  }
+}
