@@ -57,7 +57,7 @@ select {
 .gform_wrapper li,
 .gform_wrapper .top_label li.gfield.gf_left_half,
 .gform_wrapper .top_label li.gfield.gf_right_half {
-  margin-bottom: $line-height * 1.5;
+  margin-bottom: $line-height;
 }
 .gform_wrapper ul.gform_fields li.gfield,
 .gform_wrapper .top_label li.gfield.gf_right_half {
@@ -272,7 +272,47 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
   text-transform: uppercase;
 }
 
+///
+// FORM PAGINATI - Footer
+///
+.gform_wrapper .gform_page_footer {
+  padding: ($line-height / 2) 0;
+  margin-top: 0;
+  border-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
 
+  .button.gform_next_button {
+    @extend %button;
+
+    @include button(p, 4, half);
+    padding-left: 1em;
+    padding-right: 1em;
+    float: right;
+    clear: both;
+  }
+
+  .button.gform_previous_button {
+    @extend %button;
+
+    @include button(p, 1, half);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    float: left;
+    border: 0;
+    background: transparent;
+    color: main-colors(main, form-body)
+  }
+
+  input.button.gform_button {
+    @include button(p, 4, half);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    float: right;
+    text-transform: uppercase;
+    font-family: family(primary, fm);
+  }
+}
 
 
 //****************************************************************************//

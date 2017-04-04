@@ -8,11 +8,20 @@
 // TONDE
 ///
 .lg-tonde,
-.et_divi_builder #et_builder_outer_content .et_pb_module img.lg-tonde {
+.et_divi_builder #et_builder_outer_content .lg-tonde img {
   border-radius: 100%;
 }
 
+.et_divi_builder #et_builder_outer_content .et_pb_module img {
+  display: block;
+}
 
+///
+// ALlineate al centro
+///
+img.aligncenter, .wp-caption.aligncenter {
+  margin: 0 auto !important;
+}
 //****************************************************************************//
 //*               IMMAGINI SU MOBILE
 //****************************************************************************//

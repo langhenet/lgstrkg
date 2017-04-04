@@ -204,13 +204,13 @@
 */
 
 //prima
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-large-padding > div.et_pb_row:first-of-type {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--large > div.et_pb_row:first-of-type {
   padding-top: $height--large;
 }
 
 
 //Ultima
-.et_divi_builder #et_builder_outer_content .et_pb_section.lg-large-padding > div.et_pb_row:last-of-type {
+.et_divi_builder #et_builder_outer_content .et_pb_section.padding--large > div.et_pb_row:last-of-type {
   padding-bottom: $height--large;
 }
 

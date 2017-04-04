@@ -47,7 +47,7 @@
 
     p {
       color: main-colors(topbar, body);
-      @include font(p, $mb: 0, $fm: primary);
+      @include font(h5, $mt: 0, $fm: primary);
     }
 
 
@@ -60,7 +60,7 @@
     }
   }
 
-  section:first-child { //tolgo il margine laterale dal primo
+  section:last-child { //tolgo il margine laterale dal primo
     margin-right: 0;
     margin-top: 0;
   }
@@ -71,7 +71,6 @@
   .widget_nav_menu {
     float: none;
     position: relative;
-    order: 2;
     z-index: 99;
     position: relative;
 
@@ -105,8 +104,12 @@
   /*
    * Bottone della topbar
    */
+  a.button.small {
+    margin-top: 0.1em;
+    display: block;
+  }
   a.button.primary {
-
+    @include button-color(none, main);
     &.chiama {
       background: transparent;
       border: 0;
@@ -124,7 +127,6 @@
 // Selettore Lingua
 ///
 .widget_icl_lang_sel_widget {
-  order: 3;
 }
 .wpml-ls-legacy-list-horizontal {
   padding: 0;

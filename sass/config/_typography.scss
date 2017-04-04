@@ -136,7 +136,7 @@ $decorations: (
 
     h5: (
       fs: 0.8em,
-      lh: 1.25em,
+      lh: 2.25em,
       mt: 1.25em,
       mb: 0,
     ),
@@ -187,13 +187,13 @@ $mobile-sizes: (
 
 $forms: (
   field: (
-    fm: family(secondary, fm),
-    wt: family(secondary, normal),
+    fm: family(primary, fm),
+    wt: family(primary, normal),
   ),
 
   label: (
-    fm: family(secondary, fm),
-    wt: family(secondary, normal),
+    fm: family(primary, fm),
+    wt: family(primary, normal),
   ),
 
   desc: (
