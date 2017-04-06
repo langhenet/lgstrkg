@@ -89,6 +89,7 @@
    padding: 0;
    height: auto;
    flex-basis: 33%;
+   margin-top: -$line-height * 2.5;
 
    // LOGO DA SCROLLATO
    @at-root .sticker_sticky #{&} {

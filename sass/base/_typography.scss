@@ -5,8 +5,8 @@
 //*                                                                     *//
 //***********************************************************************//
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,700);
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,700);
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P e UL / OL
@@ -95,6 +95,33 @@ h5 {
   @include font(h5);
 }
 
+///
+//ELIMINO MARGINI BOTTOM degli utlimi elementi dei box di testo
+///
+#page p:last-child,
+#page h1:last-child,
+#page h2:last-child,
+#page h3:last-child,
+#page h4:last-child,
+#page h5:last-child,
+#page ul:last-child,
+#page ol:last-child {
+  margin-bottom:0;
+}
+
+///
+//ELIMINO I MARGINI SOPRA dei primi elementi dei box di testo
+///
+#page p:first-child,
+#page h1:first-child,
+#page h2:first-child,
+#page h3:first-child,
+#page h4:first-child,
+#page h5:first-child,
+#page ul:first-child,
+#page ol:first-child {
+  margin-top:0;
+}
 
 
 //****************************************************************************//
