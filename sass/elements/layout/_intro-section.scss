@@ -69,14 +69,15 @@
 
   &::after {
     content: "\f0ab";
-    @include font(h2);
+    @include font(h2, $mb: 0);
     font-family: FontAwesome;
     color: #fff;
     position: absolute;
-    left: 50%;
     bottom: -0em;
     z-index: 999;
     text-shadow: 3px 3px 3px rgba($nero, 0.5);
+    width: 100%;
+    text-align: center;
 
     @include breakpoint-max(md) {
       @include m-size(h2);

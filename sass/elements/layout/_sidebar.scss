@@ -11,12 +11,14 @@
 /*
  * Contneuto Sidebar - rimozione Ombra
  */
-.has-gradient .right_sidebar #sidebar_content {
+.has-gradient .right_sidebar #sidebar_content,
+.has-gradient .right_sidebar #sidebar_content:after {
   background-image: none;
 }
 
 .right_sidebar #sidebar_content.lessgap {
   padding-top: 0;
+  padding-left: 0;
 }
 
 
@@ -24,6 +26,9 @@
 //****************************************************************************//
 //                           WIDGET
 //****************************************************************************//
+#sidebar section.widget {
+  background-color: main-colors(main, bg-alt);
+}
 /*
  * Ultimo Widget
  */
@@ -36,6 +41,9 @@
  * Titoli
  */
 #sidebar .widgettitle {
+  padding: ( size(h3, lh) * 2 ) size(h3, lh) size(h3, lh);
+  margin-bottom: 0;
+  text-align: center;
 }
 
 
@@ -44,7 +52,56 @@
  * Corpo
  */
 #sidebar .widget ul {
-  padding: $line-height;
+  padding: 0 $line-height ( $line-height * 2 ) $line-height;
+}
+
+//****************************************************************************//
+//                           WIDGET DI TEST
+//****************************************************************************//
+
+#sidebar .widget {
+
+  &.widget_text,
+  &.text_text_icl {
+    position: relative;
+    background-image: url(http://duchessamargherita.langhe.net/files/2017/04/terrazza.jpg);
+    background-size: cover;
+    text-align: center;
+    background-blend-mode: luminosity;
+
+    &::before {
+      @include color-overlay(color--dark, 0.8);
+    }
+
+    h3 {
+      padding: (size(h3, lh) * 2) size(h3, lh) 0 size(h3, lh);
+      z-index: 1;
+      position: relative;
+      color: main-colors(main, bg);
+      a {
+        color: main-colors(main, bg);
+
+        &:hover {
+          color: main-colors(main, bg)
+        }
+      }
+    }
+    p {
+      padding: 0 ($line-height * 2) ($line-height * 2);
+      z-index: 1;
+      position: relative;
+      color: main-colors(main, bg);
+
+      a {
+        color: main-colors(main, bg);
+        text-decoration: underline;
+
+        &:hover {
+          color: main-colors(main, bg)
+        }
+      }
+    }
+  }
 }
 
 //****************************************************************************//
@@ -56,6 +113,7 @@
 #sidebar .widget a:visited {
 
   &:hover {
+    color: main-colors(main, body)
   }
 }
 
@@ -66,6 +124,7 @@
 #sidebar .widget.widget_nav_menu a:visited {
 
   &:hover {
+    color: main-colors(main, body)
   }
 }
 

@@ -11,6 +11,39 @@
 }
 
 
+//****************************************************************************//
+//                        FEATURED HEADER BLOG
+//****************************************************************************//
+///
+// ARCHIVIO
+///
+ .archive.category #feature {
+   background-image: url(http://duchessamargherita.langhe.net/files/2017/04/fiori.jpg);
+   background-position: center center;
+
+  .feature-introduce {
+    display: none;
+  }
+ }
+
+///
+// SINGLE POST
+///
+ .single-post #feature {
+   background-image: url(http://duchessamargherita.langhe.net/files/2017/04/fiori.jpg);
+   background-position: top center;
+ }
+
+///
+// CATEGORIE SPECIFICHE
+///
+.category-reviews #feature,
+.category-critica #feature,
+.single-post .category-reviews #feature,
+.single-post .category-critica #feature {
+  background-image: url();
+  background-position: bottom center;
+}
 
 
 //****************************************************************************//
@@ -66,15 +99,34 @@
   border-top: 0;
   border-bottom: 0;
 }
+.image_styled.entry_image {
+  border-bottom: 0;
+  display: block;
+  margin-bottom: 0;
+}
 
-
-
+.hentry.entry.entry_full {
+  @include breakpoint-max(sm) {
+    margin-left: -$line-height;
+    margin-right: -$line-height;
+  }
+}
 
 //****************************************************************************//
 //                          TITOLO e META
 //****************************************************************************//
-.entry_info .entry-title {
-  @include font(h3);
+.entry_info {
+  overflow: hidden;
+  padding: 0 $line-height;
+  background: $tortora;
+
+  .entry-title {
+    @include font(h2);
+
+    @include breakpoint-max(md) {
+      @include m-size(h2);
+    }
+  }
 }
 
 #page .entry .entry_title a,
@@ -83,7 +135,7 @@
 }
 
 .entry .entry_meta {
-  @include font(h5);
+  display: none;
 
   @at-root #page #{&} a,
            #page #{&} a:visited {
@@ -101,8 +153,49 @@
 //                         EXCERPT e READ MORE
 //****************************************************************************//
 .entry_content {
-
+  padding: 0 $line-height $line-height $line-height;
+  background: $tortora;
   p {
     margin-bottom: 0;
+  }
+}
+
+//****************************************************************************//
+//                         PAGINAZIONE
+//****************************************************************************//
+.wp-pagenavi {
+  height: auto;
+  padding: 0;
+  position: relative;
+  display: block;
+
+  span.current,
+  a,
+  a:link {
+    @include font(h3, $fm: primary);
+    padding: (size(h3, lh) / 2) size(h3, lh);
+    display: inline-block;
+
+    @include breakpoint-max(md) {
+      @include font(p);
+      padding: (size(p, lh) / 2) size(p, lh);
+    }
+  }
+
+  span.current {
+    margin-right: 0;
+    background: main-colors(main, bg-alt);
+  }
+
+  a {
+    margin-right: 0;
+
+    &:hover {
+      background: main-colors(main, bg-alt);
+    }
+  }
+
+  @at-root #page #{&} a {
+    text-decoration: none;
   }
 }
