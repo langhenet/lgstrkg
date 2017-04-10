@@ -83,6 +83,14 @@
 
     p, h2, h3, h4, ul, ol, ul li, ol li {
       color: $bianco;
+
+      a {
+        color: $bianco;
+
+        &:hover {
+          color: $bianco;
+        }
+      }
     }
   }
 }

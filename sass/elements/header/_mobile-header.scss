@@ -127,10 +127,13 @@
   @include breakpoint-max(md) {
     display: inline-block;
     width: 100%;
+    flex-basis: 90%;
     &::before {
       content: "\f0c9";
       font-family: 'FontAwesome';
       position: absolute;
+      top: 6%;
+      left: 3%;
     }
   }
 }
@@ -141,5 +144,5 @@
 ///
 .responsive .nav2select {
   @include form-field(p, 4);
-  padding-left: 5em;
+  padding-left: $line-height !important;
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Barra</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+
+
+	<link href="/wp-content/themes/striking_r/custom-js/css/ui.datepicker.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="/wp-content/themes/striking_r/custom-js/css/style.css" rel="stylesheet" type="text/css" /> -->
+	<script type="text/javascript" src="/wp-content/themes/striking_r/custom-js/js/validate.js"></script>
+		<!-- <script type="text/javascript" src="/wp-content/themes/striking_r/custom-js/js/ui.datepicker-it.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/striking_r/custom-js/js/ui.datepicker-en.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/striking_r/custom-js/js/ui.datepicker-fr.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/striking_r/custom-js/js/ui.datepicker-de.js"></script> -->
+
+
+	<script>
+		/* INSERIRE QUI IL CODICE HOTEL */
+		var codice_hotel='i-tre-poggi-canelli';
+		var lingua = 'en';
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+<script>
+		function validate() {
+
+			if (document.getElementById('Text1').value == "" || document.getElementById('Text2').value == "") {
+				alert("Seleziona i campi nel calendario!");
+				return;
+			}
+			if (document.getElementById('Text3').value == "") {
+				alert("Seleziona il numero delle persone!");
+				return;
+			}
+			window.open('https://booking.htlbooking.net/'+codice_hotel+'?dateA=' + document.getElementById('Text1').value + '&dateP=' + document.getElementById('Text2').value + '&adulti=' + document.getElementById('Text3').value + '&lingua=' + 'it');
+		}
+	</script>
+	<input type="checkbox" id="booking-trigger" class="booking-trigger" />
+	<label for="booking-trigger"></label>
+
+	<div class="widget-solutyon-booking-engine" style="border-color:;">
+		<form action="#" class="booking_form">
+			<div class="prenotazione_title">Online Booking</div>
+			<table class="form_table">
+				<tr class="data--arrivo">
+					<td>Check-in Date:</td>
+					<td><input id="Text1" type="date" /></td>
+				</tr>
+				<tr class="data--partenza">
+					<td>Check-out Date:</td>
+					<td><input id="Text2" type="date" /></td>
+				</tr>
+
+				<tr>
+					<td class="persone--numero">Persons:</td>
+					<td><input id="Text3" type="number" value="2"/></td>
+				</tr>
+			</table>
+			<div class="button__container">
+				<input id="Button1" type="button" value="Check Availability" onclick="validate();" />
+			</div>
+		</form>
+		<!--- Non rimuovere
+		<div class="copyright">
+			<img src="./logo_solo_small.png" alt="htlbooking.net" />
+			<a href="http://www.htlbooking.net" target="_blank">Htlbooking</a>
+		</div> --->
+		<!--- Non rimuovere --->
+
+	</div>
+
+
+			<script type="text/javascript">
+			jQuery.noConflict();
+
+	jQuery(document).ready(function(){
+		var windowsize = jQuery(window).width();
+					if (windowsize > 1113){
+			if (navigator.userAgent.indexOf('Chrome') == -1) {
+				jQuery.datepicker.setDefaults(jQuery.datepicker.regional[ "it" ]);
+				jQuery('#Text1').datepicker({dateFormat: 'dd/mm/yy'});
+				jQuery('#Text2').datepicker({dateFormat: 'dd/mm/yy'});
+			}
+
+		}
+
+
+			jQuery("#Text1").change(function () {
+					var str = document.getElementById("Text1").value.toString();
+					var dd = parseInt(str.substring(0, 2)); var mm = parseInt(str.substring(3, 5)); var yyyy = parseInt(str.substring(6, 10));
+					var st = mm + '/' + dd + '/' + yyyy;
+					var today = new Date(st); today.setDate(today.getDate() + 1); var dd1 = today.getDate(); var mm1 = today.getMonth() + 1; var yyyy1 = today.getFullYear();
+					if (dd1 < 10) { dd1 = '0' + dd1 } if (mm1 < 10) { mm1 = '0' + mm1 }
+					document.getElementById("Text2").value = dd1 + '/' + mm1 + '/' + yyyy1;
+			});
+});
+</script>
+</html>

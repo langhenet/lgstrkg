@@ -70,6 +70,10 @@
 ///
 #intro::before {
   @include color-overlay(fheader, $grade: 0.35);
+
+  @include breakpoint-max(md) {
+    @include color-overlay(fheader, $grade: 0.45);
+  }
 }
 
 

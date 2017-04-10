@@ -592,6 +592,10 @@
 
   &::before {
     @include color-overlay($palette: fheader, $grade: 0.35);
+
+    @include breakpoint-max(md) {
+      @include color-overlay(fheader, $grade: 0.45);
+    }
   }
 
   .et_pb_module {
