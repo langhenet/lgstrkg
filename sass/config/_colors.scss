@@ -29,7 +29,8 @@ $nero: #5a5050;
 $grigio-chiarissimo: #e1e1dc;
 $grigio: #c8beb4;
 $bianco: #fdfdf9;
-$petrolio: #397d79;
+$petrolio: $bordeaux;
+$verde: #4CAF50;
 
 
 /*
@@ -62,7 +63,7 @@ $layout-colors: (
     accent: $bianco,
     border: $bianco,
     bg: $nero,
-    overlay: $nero,
+    overlay: $nero-vero,
     button-bg: $bianco,
     button: $nero,
   ),
@@ -144,7 +145,7 @@ $colors: (
     overlay:    $petrolio,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
-    button-bg:  $nero,
+    button-bg:  $verde,
 
     button-subtle: $bianco-vero,
     button-bg-subtle: mix($nero-vero, white, 50%)    //bg bottone

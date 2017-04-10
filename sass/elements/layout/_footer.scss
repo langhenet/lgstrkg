@@ -29,7 +29,7 @@
 }
 
 #footer .inner {
-  padding: ($line-height * 3) 0;
+  padding: ($line-height * 2) 0;
 
   @include breakpoint-max(md) {
     padding: ($line-height * 3) $line-height;
@@ -140,6 +140,7 @@
 #copyright,
 #footer_right_area {
   @include font(small);
+  line-height: 2em;
 
   color: main-colors(footer, body);
 }

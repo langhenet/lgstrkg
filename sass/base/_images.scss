@@ -14,7 +14,12 @@
 
 .et_divi_builder #et_builder_outer_content .et_pb_module img {
   display: block;
+
+  &.gallery-image {
+    margin: 0 auto;
+  }
 }
+
 
 ///
 // ALlineate al centro

@@ -69,7 +69,7 @@
 // Overlay della sezione introduttiva
 ///
 #intro::before {
-  @include color-overlay(fheader, $grade: 0.55);
+  @include color-overlay(fheader, $grade: 0.35);
 }
 
 
