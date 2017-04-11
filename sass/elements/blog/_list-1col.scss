@@ -31,39 +31,8 @@
 ///
  .single-post #feature {
    background-image: url(http://duchessamargherita.langhe.net/files/2017/04/fiori.jpg);
-   background-position: top center;
+   background-position: center center;
  }
-
-///
-// CATEGORIE SPECIFICHE
-///
-.category-reviews #feature,
-.category-critica #feature,
-.single-post .category-reviews #feature,
-.single-post .category-critica #feature {
-  background-image: url();
-  background-position: bottom center;
-}
-
-
-//****************************************************************************//
-//                        FEATURED HEADER
-//****************************************************************************//
-/*
- * Feat Header Categorie
- */
-.category-reviews #feature,
-.category-critica #feature {
-  background-image: url(http://caneuva.com/files/2016/07/DSC_11670.jpg);
-  background-position: bottom center;
-}
-
-.category-news #feature,
-.category-news-en #feature {
-  background-image: url(http://caneuva.com/files/2016/07/DSC1905.jpg);
-  background-position: bottom center;
-}
-
 
 
 
@@ -116,6 +85,21 @@
 //                          TITOLO e META
 //****************************************************************************//
 .entry_info {
+  overflow: hidden;
+  padding: 0 $line-height;
+  background: $tortora;
+
+  .entry-title {
+    @include font(h2);
+
+    @include breakpoint-max(md) {
+      @include m-size(h2);
+    }
+  }
+}
+
+//FIX TITOLI IN DIVI BUILDER
+.et_divi_builder #et_builder_outer_content .et_pb_text .entry_info {
   overflow: hidden;
   padding: 0 $line-height;
   background: $tortora;

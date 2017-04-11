@@ -62,7 +62,7 @@
 #sidebar .widget {
 
   &.widget_text,
-  &.text_text_icl {
+  &.widget_text_icl {
     position: relative;
     background-image: url(http://duchessamargherita.langhe.net/files/2017/04/terrazza.jpg);
     background-size: cover;
@@ -120,9 +120,19 @@
 ///
 // LINK Nav Menu
 ///
+#sidebar .widget.widget_nav_menu li,
+#sidebar .widget.widget_nav_menu li {
+  padding-top: $line-height / 2;
+  padding-bottom: $line-height / 2;
+
+  &::before {
+    padding-top: $line-height / 2;
+  }
+}
 #sidebar .widget.widget_nav_menu a,
 #sidebar .widget.widget_nav_menu a:visited {
-
+  padding-top: 0;
+  text-transform: uppercase;
   &:hover {
     color: main-colors(main, body)
   }

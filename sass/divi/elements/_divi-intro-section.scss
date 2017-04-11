@@ -8,15 +8,32 @@
 // Contenitore Featured Header costruito con DIVI
 ///
 .et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
-
-
+  padding-top: $height * 1.5;
+  padding-bottom: $height * 1.5;
+  @include breakpoint-max(lg) { //contenitore a 5XX px
+    padding-bottom: $line-height * 2;
+  }
+  @include breakpoint-max(md) { //contenitore a 5XX px
+    padding-top: $height;
+  }
   @include breakpoint-max(sm) { //contenitore a 5XX px
   }
 }
 
 //contenitore DIVI - posizionamento
-#intro {
+.et_divi_builder #et_builder_outer_content #intro {
   position: relative;
+  h1 {
+    color: main-colors(fheader, body);
+  }
+  p {
+    @include font(h3, $fm: primary);
+    color: main-colors(fheader, body);
+
+    @include breakpoint-max(md) {
+      @include m-size(h3);
+    }
+  }
 }
 
 
@@ -44,7 +61,7 @@
 // Overlay della sezione introduttiva
 ///
 #intro::before {
-  @include color-overlay;
+  @include color-overlay(fheader, 0.5);
 }
 
 

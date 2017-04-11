@@ -265,7 +265,7 @@ textarea.textarea:focus { //FIX - il focus di queste aree perde il bordo da 2px 
 .gform_wrapper .gform_footer input.button,
 .gform_wrapper .gform_footer input[type=submit] {
   @extend %button;
-  @include button(h3, 4, half);
+  @include button(h3, 4);
 
   width: 100%;
   margin: 0 auto;

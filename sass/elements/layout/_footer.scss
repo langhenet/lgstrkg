@@ -22,10 +22,11 @@
 .no-gradient #footer,
 .has-gradient #footer {
   background-color: main-colors(footer, bg);
+  background-image: none;
 }
 
 #footer .inner {
-  padding: ($line-height * 3) 0;
+  padding: ($line-height * 1.5) 0;
 }
 
 
@@ -34,6 +35,14 @@
 //****************************************************************************//
 #footer .widget {
   margin-bottom: $line-height * 2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#footer #footer_widget_area_four .widget {
+  margin-bottom: 0;
 }
 
 #footer .inner > div section:last-of-type {
@@ -55,6 +64,10 @@
   color: main-colors(footer, link);
 
   &:visited {
+    color: main-colors(footer, link);
+  }
+
+  &:hover {
     color: main-colors(footer, link);
   }
 }
@@ -110,7 +123,7 @@
 //****************************************************************************//
 
 #footer_bottom {
-  background: darken(main-colors(footer, bg), 0.0%);
+  background: darken(main-colors(footer, bg), 5.0%);
 
   &> .inner {
     padding: $line-height 0;
