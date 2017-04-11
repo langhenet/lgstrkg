@@ -13,7 +13,7 @@
   max-width: $website-width;
   margin: 0 auto;
   padding: ($line-height / 2) 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-basis: 100%;
 }
 
@@ -96,9 +96,8 @@
   /*
    * Widget di testo della Top body-margin
    */
-  .widget_text_icl,
   .widget_text {
-
+    margin-right: auto;
   }
 
   /*

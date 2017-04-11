@@ -167,7 +167,7 @@
 // Fix navigazione che copre tutto
 ///
 .responsive #navigation {
-  @include breakpoint-max(md) {
+  @include breakpoint-max(lg) {
     display: inline-block;
     width: 100%;
     &::before {
