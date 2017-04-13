@@ -40,10 +40,15 @@
     bottom: auto;
     transition: all 250ms linear;
     left: 0;
+    right: 0;
     flex-basis: 100%;
     max-width: 100%;
     box-shadow: 4px 5px 20px rgba($nero-vero, 0.3);
     top: 0;
+
+    @at-root .logged-in.admin-bar #{&} {
+      top: 30px;
+    }
   }
 }
 
@@ -94,6 +99,7 @@
  #navigation .menu > li.current_page_ancestor,
  #navigation .menu > li.current-page-item,
  #navigation .menu > li.current-page-ancestor {
+
  }
 
 /*
@@ -130,8 +136,10 @@
 #navigation .menu > li.hover > a:active,
 #navigation .menu > li.hover > a:visited,
 #navigation .menu > li.hover > a > i {
-  transition: all 50ms linear;
+  transition: all 150ms linear;
   color: main-colors(header, link);
+  transform: scale(1.2);
+  font-style: italic;
 }
 
 
@@ -160,6 +168,9 @@
 #navigation .menu > li.current-page-item > a > i,
 #navigation .menu > li.current-page-ancestor > a > i {
   color: darken(main-colors(header, link), 10%);
+  font-style: italic;
+  font-weight: bold;
+  transform: scale(1.2);
 }
 
 /******************************************************************************/

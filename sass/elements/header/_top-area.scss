@@ -42,14 +42,6 @@
   }
 }
 
-@include breakpoint-min(lg) {
-  .sticker_sticky #top_area {//quando è scrollata la nascondo
-    visibility: hidden;
-    transition: all 50ms;
-    padding: 0;
-    height: 0;
-  }
-}
 
 
 #top_area {
