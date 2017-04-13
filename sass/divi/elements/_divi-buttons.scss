@@ -16,12 +16,15 @@
   .et_pb_button.size--small,
   .et_pb_module a.button.small {
     @extend %button;
-    @include button(small, 1, half);
+    @include button(small, 1);
 
     font-weight: decoration(small, wt);
     text-transform: uppercase;
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
+    font-weight: family(secondary, bold);
+    letter-spacing: 1px;
+
 
     &:after { //il padding viene usato per correggere l'icona di DIVI
       display: none;
@@ -58,6 +61,9 @@
     border-radius: 0; //TOCHK
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
+    font-weight: family(secondary, bold);
+    letter-spacing: 1px;
+
 
     &:hover {
       @extend .et_pb_button.size--medium;
@@ -94,7 +100,8 @@
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
 
-
+    letter-spacing: 0;
+    font-weight: family(secondary, bold);
 
     &:hover {
       @extend .et_pb_button.size--large;
@@ -127,6 +134,8 @@
 
     padding-left: $line-height / 2;
     padding-right: $line-height / 2;
+
+    letter-spacing: 0;
 
     &:hover {
       @extend .et_pb_button.size--huge;

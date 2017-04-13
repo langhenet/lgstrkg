@@ -22,9 +22,10 @@
 ///
 .button.small {
   @extend %button;
-  @include button(small, 1, half);
+  @include button(small, 1);
 
   text-transform: uppercase;
+  font-weight: family(secondary, bold);
   letter-spacing: 1px;
 }
 
@@ -34,6 +35,7 @@
 
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: family(secondary, bold);
 }
 
 .button.large {
@@ -41,7 +43,7 @@
   @include button(h3, 4);
 
   text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: family(secondary, bold);
 }
 
 

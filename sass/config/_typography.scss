@@ -23,10 +23,10 @@
 ///
 // Families
 ///
-  $ff-primary: 'Martel Sans', sans-serif; //TODO
+  $ff-primary: 'Martel', serif; //TODO
   $ff-secondary: 'Josefin Sans', sans-serif; //TODO
   $ff-special: $ff-secondary; //TODO
-  $ff-button: $ff-primary;
+  $ff-button: $ff-secondary;
 
 
 ///
@@ -93,6 +93,11 @@ $decorations: (
     fm: primary,
     wt: normal,
   ),
+
+  blockquote: (
+    fm: secondary,
+    wt: normal,
+  ),
 );
 ////
 // Dimensioni & caratteristiche dei font principali
@@ -146,28 +151,33 @@ $decorations: (
       mt: 0,
       mb: 1.0744em,
     ),
+
+    blockquote: (
+      fs: 1.77777778em,
+      lh: (1.8125em / 1.5),
+      mt: 0.90625em,
+      mb: 0.90625em,
+    ),
 );
 
 $mobile-sizes: (
   h1: (
-    fs: 1.953125em,
-    lh: 1.538461538461538em,
-    mt: 1.536em,
-    mb: 0.768em,
+    fs: 4.11111111em,
+    lh: 1.17567568em,
+    mt: 0.39189189em,
+    mb: 0.39189189em,
   ),
-
   h2: (
-    fs: 1.5625em,
-    lh: 1.935483870967742em,
-    mt: 0.96em,
-    mb: 0.96em,
+    fs: 2.55555556em,
+    lh: 1.26086957em,
+    mt: 0.63043478em,
+    mb: 0.63043478em,
   ),
-
   h3: (
-    fs: 1.25em,
-    lh: 1.2em,
-    mt: 1.8em,
-    mb: 0.6em,
+    fs: 1.61111111em,
+    lh: 1em,
+    mt: 1em,
+    mb: 1em,
   ),
 );
 

@@ -3,6 +3,12 @@
 //*                          LAYOUT PRINCIPALE DELLE PAGINE
 //*                                                                          *//
 //****************************************************************************//
+
+.body-warp {
+  overflow: hidden;
+}
+
+
 //****************************************************************************//
 //                               LARGHEZZA SITO - solo su desktop
 //****************************************************************************//
@@ -31,13 +37,12 @@
 
 
 
-
 //****************************************************************************//
 //                               COLORE PAGINE DI STRIKING
 //****************************************************************************//
 #page {
   background-color: main-colors(main, bg);
-
+  overflow: visible;
 
 }
 
@@ -101,16 +106,28 @@
 //                          BREAD CRUMBS
 //****************************************************************************//
 #breadcrumbs { //contenitore
-  margin-top: 0;
+  margin-top: -$line-height * 4;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 1em;
+
 
   .breadcrumbs {
-    @include font(h5, $mt: 0);
+    @include font(p, $mb: 0, $fm: secondary, $wt: normal);
+    text-align: center;
+    color: rgba(main-colors(fheader, body), 1);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(1,1,1,0.5);
 
     a {
+      color: rgba(main-colors(fheader, body), 1);
     }
 
     text {
-      font-weight: bold;
+      color: rgba(main-colors(fheader, body), 1);
     }
 
     .breadcrumbs-plus {

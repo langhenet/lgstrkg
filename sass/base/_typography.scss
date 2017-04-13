@@ -6,7 +6,7 @@
 //***********************************************************************//
 
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,700);
-@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Martel:400,700);
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P e UL / OL
@@ -171,7 +171,7 @@ sub { bottom: $sub-bottom; }
 ///
 #main ul li,
 .et_divi_builder #et_builder_outer_content .et_pb_module ul li {
-  list-style: circle;
+  list-style: disc;
 }
 
 .et_divi_builder #et_builder_outer_content .et_pb_module ol li {
@@ -193,8 +193,31 @@ sub { bottom: $sub-bottom; }
 //****************************************************************************//
 //                                BLOCKQUOTE
 //****************************************************************************//
-blockquote {
+blockquote,
+.et_divi_builder #et_builder_outer_content .et_pb_module blockquote {
+  border: 0;
+  margin: 0;
+  font-size: 1em;
+  padding: $line-height $line-height $line-height ($line-height * 2);
 
+  &::before {
+    top: 1em;
+    content:"\e643" !important;
+  }
+
+  p {
+    @include font(blockquote);
+  }
+}
+
+#page blockquote {
+  p {
+    color: main-colors(main, accent);
+  }
+  
+  &::before {
+    color: main-colors(main, accent);
+  }
 }
 
 /*

@@ -43,8 +43,8 @@ $verde: #4CAF50;
 $layout-colors: (
   topbar: (
     body: $nero,
-    link: $nero,
-    accent: $nero,
+    link: $oro,
+    accent: $oro,
     border: $nero,
     bg: $beige,
     button-bg: $oro,
@@ -67,14 +67,14 @@ $layout-colors: (
     accent: $bianco,
     border: $bianco,
     bg: $nero,
-    overlay: $nero,
+    overlay: $oro,
     button-bg: $nero,
     button: $bianco,
   ),
 
   main: (
     body:       $nero,      //Corpo - testo
-    body-sec:   $nero,      //Secondario - blockquote o blog meta
+    body-sec:   $grigio-chiaro,      //Secondario - blockquote o blog meta
     heading:    $oro,      //Titoli 1 e 2
     link:       $oro,      //Link
     bg:         $bianco,      //Sfondo principale
@@ -82,7 +82,7 @@ $layout-colors: (
 
     accent:     $oro,      //Accento - sfondo lista icone / grassetti / icone
 
-    body-alt:   $nero,      //body alternativo - testo in un form o in un box
+    body-alt:   $grigio-scuro,      //body alternativo - testo in un form o in un box
     bg-alt:     $beige,      //sfondo alt - il bg di un form o di un box
     accent-alt: $oro,      //accento alt - il di un link nel form
 
@@ -94,7 +94,7 @@ $layout-colors: (
     overlay:    $nero,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
-    button-bg:  $oro,
+    button-bg:  $verde,
 
     button-subtle: $bianco,
     button-bg-subtle: mix($nero, white, 50%)    //bg bottone
@@ -137,9 +137,9 @@ $colors: (
 
     accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
 
-    body-alt:   $bianco,      //body alternativo - testo in un form o in un box
-    bg-alt:     $grigio-scuro,      //sfondo alt - il bg di un form o di un box
-    accent-alt: $bianco,      //accento alt - il di un link nel form
+    body-alt:   $grigio-scuro,      //body alternativo - testo in un form o in un box
+    bg-alt:     $beige,      //sfondo alt - il bg di un form o di un box
+    accent-alt: $oro,      //accento alt - il di un link nel form
 
     form-body: $nero,
     form-bg: $beige,

@@ -31,7 +31,7 @@
 .responsive #logo,
 .responsive #logo_text {
   @include breakpoint-max(lg) {
-    margin: 0 auto;
+    margin: -$line-height * 2.5 auto;
   }
 
   @include breakpoint-max(sm) {
@@ -39,6 +39,7 @@
     width: 60%;
     float: none;
     height: auto;
+    margin: -$line-height * 2 auto;
   }
 }
 

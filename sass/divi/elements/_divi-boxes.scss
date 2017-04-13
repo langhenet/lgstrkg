@@ -8,15 +8,19 @@
  * Padding contenitore & Dimensioni titolo
  */
 .et_pb_blurb {
-  padding-top: $line-height;
+  padding: $line-height * 1.5;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: bspad(4);
-  border-bottom: 4px solid;
+//  border-bottom: 4px solid;
 
   @at-root .et_divi_builder #et_builder_outer_content  #{&}.et_pb_blurb_position_top h4 { //solo titolo top
-    @include font(h3, $mt: 0, $mb: 0);
+    @include font(h3, $mt: 0, $mb: size(h3, lh) / 2);
     padding-bottom: 0;
+//    color: main-colors(main, heading)
+
+    @include breakpoint-max(md) {
+      @include m-size(h3);
+    }
   }
 }
 
@@ -47,14 +51,17 @@
   background-color: main-colors(main, bg-alt);
   color: main-colors(main, body-alt);
 
-  @at-root #page #{&} p,
-           #page #{&} h1,
+  @at-root #page #{&} p {
+                        color: main-colors(main, body-alt);
+                      }
+
+  @at-root #page #{&} h1,
            #page #{&} h2,
            #page #{&} h3,
            #page #{&} h4,
            #page #{&} h5 {
-    color: main-colors(main, body-alt);
-  }
+            color: main-colors(main, body-sec);
+          }
 
   @at-root #page #{&} a {
     color: main-colors(main, accent-alt);

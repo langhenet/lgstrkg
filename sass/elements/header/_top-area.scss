@@ -12,7 +12,7 @@
   background: main-colors(topbar, bg);
   max-width: $website-width;
   margin: 0 auto;
-  padding: ($line-height * 1.25) 0;
+  padding: ($line-height * 1) 0;
   justify-content: flex-end;
   flex-basis: 100%;
 
@@ -72,7 +72,7 @@
 
     p {
       color: main-colors(topbar, body);
-      @include font(small, $mt: 0, $mb: 0);
+      @include font(p, $mt: 0, $mb: 0);
 
       a {
         color: main-colors(topbar, link);
