@@ -117,7 +117,7 @@
 ///
 @include breakpoint-max(sm) {
   .portfolio_three_columns .portfolio_item {
-    flex-basis: 100%;
+    flex-basis: auto;
     width: 100% !important;
   }
 }
@@ -172,7 +172,7 @@
     width: 50% !important;
   }
   @include breakpoint-max(sm) {
-    flex-basis: 100%;
+    flex-basis: auto;
     width: 100% !important;
   }
 }
