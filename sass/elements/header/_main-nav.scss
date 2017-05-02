@@ -17,6 +17,7 @@
   max-width: $website-width;
   margin: ($line-height / 2) auto 0  auto;
   padding: 0;
+  transition: all 500ms;
 
   .menu {
     display: flex;
@@ -24,7 +25,30 @@
   }
 }
 
+@include breakpoint-min(lg) {
+  .sticker_sticky {
+    #navigation {
+      position: fixed;
+      position: fixed;
+      top: 0;
+      background: main-colors(header, bg);
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: auto;
+      max-width: 100%;
+      margin-top: 0;
+      transition: all 500ms;
+      box-shadow: 5px 5px 5px rgba($nero, 0.4);
 
+      @at-root {
+        .logged-in.admin-bar #{&} {
+          top: 30px;
+        }
+      }
+    }
+  }
+}
 
 //****************************************************************************//
 //                ELEMENTI DELLA NAVIGAZIONE

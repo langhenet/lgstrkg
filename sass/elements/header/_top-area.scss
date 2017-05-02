@@ -40,9 +40,11 @@
   }
 }
 
-.sticker_sticky #top_area {//quando è scrollata la nascondo
-  visibility: hidden;
-  transition: all 250ms;
+@include breakpoint-min(lg) {
+  .sticker_sticky #top_area {//quando è scrollata la nascondo
+    visibility: hidden;
+    transition: all 250ms;
+  }
 }
 
 #top_area {

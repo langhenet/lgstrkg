@@ -28,6 +28,16 @@
     float: none;
     height: auto;
   }
+
+  img {
+    @include breakpoint-max(md) {
+      margin-top: $line-height * -2;
+    }
+
+    @include breakpoint-max(sm) {
+      margin-top: -$line-height;
+    }
+  }
 }
 
 //******************************************************************************/

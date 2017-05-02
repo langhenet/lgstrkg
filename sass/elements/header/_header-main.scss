@@ -13,7 +13,9 @@
   height: 0 !important;
 }
 
-
+#header-sticker-wrapper.sticker_enabled #header {
+  position: relative;
+}
 
 
 //****************************************************************************//
@@ -65,7 +67,8 @@
 @include breakpoint-min(xl) {
   .sticker_sticky #header {
     background-color: main-colors(header, bg);
-    transition: all 250ms linear;
+    transition: all 500ms linear;
+    position: relative !important;
   }
 }
 
@@ -98,6 +101,12 @@
   }
 }
 
+@include breakpoint-max(lg) {
+  .sticker_sticky #header {
+    position: relative !important;
+  }
+}
+
 
 
 
@@ -119,9 +128,10 @@
 
   // LOGO DA SCROLLATO
   @at-root .sticker_sticky #{&} {
-    @include breakpoint-min(xl) { //quando l'header è sticcato - tolgo il bottom solo su desktop
+    @include breakpoint-min(lg) { //quando l'header è sticcato - tolgo il bottom solo su desktop
       bottom: 0;
-      transition: all 250ms linear;
+      transition: all 500ms linear;
+      display: none;
     }
 
     img {

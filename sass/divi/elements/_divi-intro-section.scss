@@ -22,8 +22,16 @@
 //contenitore DIVI - posizionamento
 #intro {
   position: relative;
-  margin-top: $line-height * -6.5;
+  margin-top: $line-height * 1.5;
   background-color: main-colors(fheader, bg) !important;
+
+  @include breakpoint-max(md) {
+    margin-top: $line-height * 3;
+  }
+
+  @include breakpoint-max(sm) {
+    margin-top: $line-height * 2;
+  }
 
   h1 {
     @include breakpoint-max(xxl) {

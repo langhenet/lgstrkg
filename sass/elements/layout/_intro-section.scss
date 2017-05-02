@@ -16,16 +16,25 @@
   background-image: none;
   position: relative;
   text-align: center;
-  margin-top: -($line-height * 6.5);
   padding-top: $line-height * 10.5;
   padding-bottom: $line-height * 2;
+  margin-top: $line-height * 1.5;
+
+
+  @include breakpoint-min(xl) {
+  }
 
   @include breakpoint-max(xxl) {
     padding-top: $line-height * 8;
   }
 
+  @include breakpoint-max(md) {
+    margin-top: $line-height * 3;
+  }
+
   @include breakpoint-max(sm) {
     padding-bottom: $line-height;
+    margin-top: $line-height * 2;
   }
 }
 
