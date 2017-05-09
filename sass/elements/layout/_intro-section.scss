@@ -78,6 +78,8 @@
     text-shadow: 3px 3px 3px rgba($nero, 0.5);
     width: 100%;
     text-align: center;
+    left: 0;
+    right: 0;
 
     @include breakpoint-max(md) {
       @include m-size(h2);

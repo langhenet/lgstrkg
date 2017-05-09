@@ -134,6 +134,14 @@
     }
   }
 
+  @include breakpoint-max(md) {
+    margin-top: -$line-height * 4;
+  }
+
+  @include breakpoint-max(xs) {
+    display: none;
+  }
+
   @at-root .inner.right_sidebar #{&} { //Con sidebar
   }
 }
