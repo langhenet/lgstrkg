@@ -134,10 +134,12 @@
 // Fix navigazione che copre tutto
 ///
 .responsive #navigation {
-  @include breakpoint-max(md) {
+  @include breakpoint-max(lg) {
     display: inline-block;
     width: 100%;
-    flex-basis: 90%;
+    flex-basis: auto;
+    max-width: 90%;
+    position: relative;
     &::before {
       content: "\f0c9";
       font-family: 'FontAwesome';
@@ -154,5 +156,6 @@
 ///
 .responsive .nav2select {
   @include form-field(p, 4);
-  padding-left: $line-height !important;
+  //padding-left: $line-height !important;
+  text-indent: $line-height;
 }
