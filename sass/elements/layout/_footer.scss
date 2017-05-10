@@ -22,10 +22,11 @@
 .no-gradient #footer,
 .has-gradient #footer {
   background-color: main-colors(footer, bg);
+  background-image: none;
 }
 
 #footer .inner {
-  padding: ($line-height * 3) 0;
+  padding: ($line-height * 2) 0;
 }
 
 
@@ -45,6 +46,7 @@
  */
 #footer h3.widgettitle {
   color: main-colors(footer, body);
+  text-transform: uppercase;
 }
 
 /*
@@ -56,6 +58,10 @@
 
   &:visited {
     color: main-colors(footer, link);
+  }
+
+  &:hover {
+    color: darken(main-colors(footer, link), 10%);
   }
 }
 
@@ -90,6 +96,7 @@
 
   &::before {
     color: main-colors(footer, link);
+    display: none;
   }
 }
 
@@ -99,7 +106,7 @@
   text-decoration: underline;
 
   &:hover {
-    color: ligthen(main-colors(footer, link), 100%)
+    color: darken(main-colors(footer, link), 10%);
   }
 }
 
@@ -110,7 +117,7 @@
 //****************************************************************************//
 
 #footer_bottom {
-  background: darken(main-colors(footer, bg), 0.0%);
+  background: darken(main-colors(footer, bg), 5.0%);
 
   &> .inner {
     padding: $line-height 0;
@@ -119,7 +126,7 @@
 
 #copyright,
 #footer_right_area {
-  @include font(small);
+  @include font(p, $mb: 0);
 
   color: main-colors(footer, body);
 }

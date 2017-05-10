@@ -1,0 +1,56 @@
+.et_divi_builder #et_builder_outer_content .et_pb_countdown_timer  {
+  padding: $line-height * 2;
+
+  @include breakpoint-max(md) {
+    padding: $line-height;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  p.value {
+    @include font(h2);
+
+    @include breakpoint-max(md) {
+      @include m-size(h3);
+    }
+  }
+
+  div.sep {
+    top: - $line-height * 2;
+
+    @include breakpoint-max(md) {
+      top: -$line-height * 1.75;
+    }
+
+    p {
+      @include font(h2);
+
+      @include breakpoint-max(md) {
+        @include m-size(h3);
+      }
+    }
+  }
+}
+
+
+//Label scritta sotto i valori
+.et_divi_builder #et_builder_outer_content .et_pb_countdown_timer .section p.label {
+  @include font(small, $mb: 0);
+}
+
+///
+// Titolo
+////
+.et_divi_builder #et_builder_outer_content .et_pb_countdown_timer .title {
+  @include font(h3, $mt: 0);
+
+  @include breakpoint-max(md) {
+    @include m-size(h3);
+  }
+}
+
+.et_divi_builder #et_builder_outer_content .et_pb_countdown_timer {
+  background-color: main-colors(main, bg-alt) !important;
+}

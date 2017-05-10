@@ -91,7 +91,7 @@ $layout-colors: (
     form-link: $nero,
     form-desc: $nero,
 
-    overlay:    $nero,      //Colore sfondo overlay
+    overlay:    $bianco,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
     button-bg:  $verde,
@@ -130,7 +130,7 @@ $colors: (
   color--dark: (
     body:       $bianco,      //Corpo - testo
     body-sec:   $bianco,      //Secondario - blockquote o blog meta
-    heading:    rgba($bianco, 0.99),      //Titoli 1 e 2
+    heading:    rgba($bianco, 1),      //Titoli 1 e 2
     link:       $bianco,      //Link
     bg:         $oro,      //Sfondo principale
     border:     $bianco,      //Bordi
@@ -156,13 +156,13 @@ $colors: (
   ),
   color--light: (
     body:       $nero,      //Corpo - testo
-    body-sec:   $nero,      //Secondario - blockquote o blog meta
+    body-sec:   $grigio-chiaro,      //Secondario - blockquote o blog meta
     heading:    $oro,      //Titoli 1 e 2
     link:       $oro,      //Link
     bg:         $beige,      //Sfondo principale
     border:     $grigio-chiaro,      //Bordi
 
-    accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
+    accent:     $oro,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $bianco,      //body alternativo - testo in un form o in un box
     bg-alt:     $oro,      //sfondo alt - il bg di un form o di un box
@@ -173,7 +173,7 @@ $colors: (
     form-link: $nero,
     form-desc: $nero,
 
-    overlay:    $oro,      //Colore sfondo overlay
+    overlay:    $beige,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
     button-bg:  $verde,

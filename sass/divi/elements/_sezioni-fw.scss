@@ -167,7 +167,7 @@
   }
 
   @include breakpoint-max(sm) {
-    padding-top: $height--small;
+    padding-top: $line-height * 2;
   }
 }
 //Prima con Parallax
@@ -179,7 +179,7 @@
   }
 
   @include breakpoint-max(sm) {
-    padding-top: $height--small;
+    padding-top: $line-height * 2;
   }
 }
 
@@ -193,7 +193,7 @@
   }
 
   @include breakpoint-max(sm) {
-    padding-bottom: $height--small;
+    padding-bottom: $line-height * 2;
   }
 }
 
@@ -324,7 +324,7 @@
   position: relative;
 
   &::before {
-    @include color-overlay($palette: main, $grade: 0.45);
+    @include color-overlay($palette: $nero, $grade: 0.45);
   }
 
   .et_pb_module {
@@ -348,19 +348,32 @@
   }
 
   &::before {
-    @include color-overlay($palette: main, $grade: 0.90);
+    @include color-overlay($palette: main, $grade: 0.75);
   }
 }
 
-@each $palette, $sections in $colors {
-  .#{$palette}.overlay--color,
-  .et_divi_builder #et_builder_outer_content .et_pb_section.#{$palette}.overlay--color {
+.color--dark.overlay--color,
+.et_divi_builder #et_builder_outer_content .et_pb_section.color--dark.overlay--color {
+  background-blend-mode: unset;
 
-    &::before {
-      @include color-overlay($palette: $palette, $grade: 0.7);
+  &::before {
+    @include color-overlay($palette: color--dark, $grade: 0.55);
+
+    @include breakpoint-max(lg) {
+      @include color-overlay($palette: color--dark, $grade: 0.75);
     }
   }
 }
+
+.color--light.overlay--color,
+.et_divi_builder #et_builder_outer_content .et_pb_section.color--light.overlay--color {
+  background-blend-mode: luminosity;
+
+  &::before {
+    @include color-overlay($palette: color--light, $grade: 0.80);
+  }
+}
+
 
 
 
@@ -370,7 +383,7 @@
 .color--filter,
 .et_pb_section.color--filter {
   position: relative;
-  background-blend-mode: luminosity;
+  background-blend-mode: screen;
 
   .et_pb_module {
     position: relative;

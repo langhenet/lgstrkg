@@ -44,7 +44,7 @@ $families: (
   secondary: (
     fm: $ff-secondary,
     thin: 300,
-    normal: 300,
+    normal: 400,
     bold: 700,
     bolder: 700,
   ),
@@ -196,8 +196,8 @@ $mobile-sizes: (
 
 $forms: (
   field: (
-    fm: family(secondary, fm),
-    wt: family(secondary, normal),
+    fm: family(primary, fm),
+    wt: family(primary, normal),
   ),
 
   label: (

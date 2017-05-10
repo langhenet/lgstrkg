@@ -7,6 +7,16 @@
 
 .single-portfolio {
 
+  #feature {
+    background-image: url(http://langhero.it/files/2017/04/vini.jpg);
+    background-position: center center;
+    background-blend-mode: luminosity;
+
+    &::before {
+      @include color-overlay(fheader, 0.5);
+    }
+  }
+
   #comments {
     max-width: $website-width / 2;
     margin: 0 auto;

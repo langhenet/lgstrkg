@@ -16,11 +16,16 @@
 ///
 #header .inner {
   @include breakpoint-max(lg) {
-    padding: 0 $line-height;
+    padding: 0 $line-height * 3;
+    justify-content: space-between;
   }
 
   @include breakpoint-max(md) {
-    padding: 0 ( $line-height / 2 );
+    padding: 0 $line-height * 2;
+  }
+
+  @include breakpoint-max(sm) {
+    padding: 0 $line-height * 1;
   }
 }
 
@@ -31,15 +36,18 @@
 .responsive #logo,
 .responsive #logo_text {
   @include breakpoint-max(lg) {
-    margin: -$line-height * 2.5 auto;
+//    margin: -$line-height * 2.5 auto;
+    order: 0;
+    flex-basis: 20%;
+    box-sizing: border-box;
   }
 
   @include breakpoint-max(sm) {
     display: block;
-    width: 60%;
+  //  width: 60%;
     float: none;
     height: auto;
-    margin: -$line-height * 2 auto;
+  //  margin: -$line-height * 2 auto;
   }
 }
 
@@ -57,16 +65,45 @@
 
 
   @include breakpoint-max(lg) {//la paddo sotto i 979px
+    background-color: transparent;
+    order: 1;
+    flex-basis: 70%;
+    padding-right: 0;
+    padding-top: $line-height;
+    box-sizing: border-box;
+
+
+    &::before,
+    &::after {
+      background-color: transparent;
+      content: none;
+    }
+
+    .widget,
+    .widget_text,
+    .widget_text_icl {
+      p,
+      a {
+      color: main-colors(header, body);
+      text-align: right;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
   @include breakpoint-max(md) {
     display: flex;
     visibility: visible;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: flex-end;
   }
 
   @include breakpoint-max(sm) {//rimuovo il padding sotto i 567px
-    padding-top: 0;
+    padding-top: $line-height / 2;
   }
 
   @at-root .responsive #{&} { //rendo la top bar visibile anche sotto i 787px e ne dimezzo la larghezza
@@ -76,11 +113,18 @@
   }
 
   .widget {
+    @include breakpoint-max(lg) {
+    }
+
     @include breakpoint-max(md) { //li faccio cadere sotto i 567px
-      margin-right: 0;
+      //margin-right: 0;
       box-sizing: border-box;
       //clear: both;
       //margin-top: $line-height / 2;
+      margin-bottom: $line-height / 2;
+      margin-right: 0;
+
+
       &.widget_icl_lang_sel_widget {
         flex-shrink: 0;
         text-align: center;
@@ -88,8 +132,9 @@
 
       &.widget_text,
       &.widget_text_icl {
-        margin-right: 0;
+        //margin-right: 0;
         flex-shrink: 0;
+        display: block;
       }
 
       &.widget_nav_menu {
@@ -104,8 +149,11 @@
       }
 
       &:last-child {
-      //  margin-bottom: $line-height / 2;
+        margin-right: 0;
       }
+    }
+
+    @include breakpoint-max(sm) {
     }
   }
 }
@@ -127,14 +175,21 @@
 // Fix navigazione che copre tutto
 ///
 .responsive #navigation {
+
+  @include breakpoint-max(lg) {
+      flex-basis: 100%;
+  }
+
   @include breakpoint-max(md) {
     display: inline-block;
     width: 100%;
+
+
     &::before {
       content: "\f0c9";
       font-family: 'FontAwesome';
       position: absolute;
-      top: 0.25em;
+      top: 0.5em;
       left: 0.7em;
     }
   }
@@ -151,5 +206,9 @@
     padding-bottom: bhpad(2);
     padding-left: 2em !important;
     border: 2px solid main-colors(header, border);
+
+    option {
+      padding-left: 2em;
+    }
   }
 }

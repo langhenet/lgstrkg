@@ -380,8 +380,12 @@
   @else if $palette == fheader {
     background-color: rgba( main-colors($palette, overlay), $grade);
   }
-  @else {
+  @else if $palette == color--dark OR $palette == color--light OR $palette == color--dark-alt {
     background-color: rgba( palette($palette, overlay), $grade);
+  }
+
+  @else {
+    background-color: rgba( $palette, $grade);
   }
   z-index: 0;
 }

@@ -16,7 +16,7 @@
    max-width: $website-width;
    margin: 0 auto;
    padding: 0;
-   flex-basis: 66%;
+   flex-basis: 88%;
    //transition: all 250ms linear;
 
    .menu {
@@ -48,6 +48,11 @@
 
     @at-root .logged-in.admin-bar #{&} {
       top: 30px;
+    }
+
+    ul {
+      max-width: $uxl;
+      margin: 0 auto;
     }
   }
 }
@@ -180,7 +185,7 @@
 // Sottomenu - contenitore / UL
 ///
 #navigation ul li ul {
-  background-color: transparent;
+  background-color: main-colors(header, bg);
   border: 0;
   padding: ($line-height / 2) 0 0;
   box-shadow: 2px 2px 2px rgba(#000, 0.2);
@@ -212,8 +217,12 @@
   color: main-colors(header, link);
   margin-bottom: 0;
   padding: 0;
-  @include font(p, $mb: 0);
+  @include font(p, $mb: 0, $fm: secondary);
   text-transform: none;
+
+  &:hover {
+    color: main-colors(header, link) !important;
+  }
 }
 
 //link selezionato
@@ -232,6 +241,7 @@
 #navigation .sub-menu .current_page_ancestor > a,
 #navigation .sub-menu .current_page_ancestor > a:visited {
   background: transparent;
+  color: main-colors(header, link);
 }
 
 //hover

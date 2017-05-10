@@ -15,8 +15,13 @@
   background-image: none;
 }
 
+.has-gradient .right_sidebar #sidebar_content:after {
+  background: none;
+}
+
 .right_sidebar #sidebar_content.lessgap {
   padding-top: 0;
+  padding-left: 0;
 }
 
 
@@ -24,6 +29,41 @@
 //****************************************************************************//
 //                           WIDGET
 //****************************************************************************//
+
+#sidebar .widget {
+  padding: $line-height $line-height * 1.5;
+  background-color: main-colors(main, bg-alt);
+
+  //DI testo
+  &.widget_text,
+  &.widget_text_icl {
+    padding: 0;
+
+    p>a {
+      text-decoration: underline;
+    }
+
+    .has--background {
+      background-color: palette(color--dark, bg);
+      padding: $line-height;
+      position: relative;
+      z-index: 0;
+      background-blend-mode: luminosity;
+      background-image: url(http://langhero.it/files/2017/04/pere-madere.jpg);
+      background-size: cover;
+
+      h1, h2, h3, h4, h5, p, ul, ol, li, a {
+        color: palette(color--dark, body);
+        z-index: 999999;
+      }
+
+      &::before {
+        @include color-overlay(color--dark, 0.5);
+        z-index: -1;
+      }
+    }
+  }
+}
 /*
  * Ultimo Widget
  */
@@ -36,6 +76,7 @@
  * Titoli
  */
 #sidebar .widgettitle {
+  color: main-colors(main, accent-alt);
 }
 
 
@@ -44,7 +85,7 @@
  * Corpo
  */
 #sidebar .widget ul {
-  padding: $line-height;
+  padding: $line-height 0;
 }
 
 //****************************************************************************//
@@ -54,8 +95,9 @@
 #sidebar .widget .posts_list a:visited,
 #sidebar .widget a,
 #sidebar .widget a:visited {
-
+  color: main-colors(main, body-alt);
   &:hover {
+    color: main-colors(main, body-alt);
   }
 }
 
@@ -64,12 +106,16 @@
 ///
 #sidebar .widget.widget_nav_menu a,
 #sidebar .widget.widget_nav_menu a:visited {
-
+  padding-top: $line-height / 4;
+  padding-bottom: $line-height / 4;
   &:hover {
+    color: main-colors(main, body-alt);
   }
 }
 
-
+#sidebar .widget.widget_nav_menu li::before {
+  top: 0.3em;
+}
 
 
 //****************************************************************************//

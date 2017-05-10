@@ -21,10 +21,16 @@
 
 .et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] p {
   @include breakpoint-max(lg) {
-    @include font(p);
+    @include size(p);
   }
 
   @include breakpoint-max(md) {
-    @include font(p);
+    @include size(p);
+  }
+}
+
+.et_divi_builder #et_builder_outer_content div[class*='et_pb_text_'] blockquote p {
+  @include breakpoint-max(md) {
+    @include m-size(h3);
   }
 }

@@ -65,6 +65,7 @@
   .widget { //affianco i widget uno all'altro
     margin-right: $line-height;
     margin-bottom: 0;
+    max-width: 100%;
 
     p {
       color: main-colors(topbar, body);
@@ -76,7 +77,7 @@
     }
   }
 
-  section:first-child { //tolgo il margine laterale dal primo
+  section:last-child { //tolgo il margine laterale dal primo
     margin-right: 0;
     margin-top: 0;
   }
@@ -87,7 +88,7 @@
   .widget_nav_menu {
     float: none;
     position: relative;
-    order: 2;
+  //  order: 2;
     z-index: 99;
     position: relative;
 
@@ -115,13 +116,24 @@
    */
   .widget_text_icl,
   .widget_text {
+  }
 
+  .widget_text_icl {
+    display: none;
   }
 
   /*
    * Bottone della topbar
    */
+  a.button.small {
+    margin-top: -0.1em;
+  }
   a.button.primary {
+    @include button-color($palette: main);
+
+    &:hover {
+      @include button-color($state: hover);
+    }
 
     &.chiama {
       background: transparent;
@@ -140,7 +152,7 @@
 // Selettore Lingua
 ///
 .widget_icl_lang_sel_widget {
-  order: 3;
+  //order: 3;
 }
 .wpml-ls-legacy-list-horizontal {
   padding: 0;

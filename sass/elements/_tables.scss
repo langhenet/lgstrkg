@@ -4,3 +4,52 @@
 //*              descrizione - descrizione - descrizione
 //*                                                                          *//
 //****************************************************************************//
+
+table {
+  width: 100%;
+}
+
+.tariffe-firstrow {
+  font-weight: bold;
+  background: main-colors(main, bg-alt);
+
+  th {
+    padding: $line-height / 4;
+    border-right: 1px solid;
+    width: 150px;
+    max-width: 150px;
+  }
+
+  th:first-child {
+    text-align: left;
+    max-width: 400px;
+    width: 400px;
+  }
+
+  th:last-child {
+    border-right: 0;
+  }
+}
+
+
+table.tariffe {
+  tr {
+    border-bottom: 1px solid;
+  }
+  td {
+    padding: $line-height / 4;
+    border-right: 1px solid;
+    max-width: 150px;
+    width: 150px;
+    text-align: center;
+  }
+  td:first-child {
+    max-width: 400px;
+    width: 400px;
+    text-align: left;
+  }
+
+  td:last-child {
+    border-right: 0;
+  }
+}

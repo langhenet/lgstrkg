@@ -5,15 +5,19 @@
 // ARCHIVIO
 ///
  .archive.category #feature {
-   background-image: url();
+   background-image: url(http://langhero.it/files/2017/04/tappi-spumanti.jpg);
    background-position: top center;
+
+  .feature-introduce {
+    display: none;
+  }
  }
 
 ///
 // SINGLE POST
 ///
  .single-post #feature {
-   background-image: url();
+   background-image: url(http://langhero.it/files/2017/04/tappi-spumanti.jpg);
    background-position: top center;
  }
 
