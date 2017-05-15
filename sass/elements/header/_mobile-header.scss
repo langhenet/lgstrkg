@@ -67,7 +67,7 @@
   @include breakpoint-max(lg) {//la paddo sotto i 979px
     background-color: transparent;
     order: 1;
-    flex-basis: 70%;
+    flex-basis: 80%;
     padding-right: 0;
     padding-top: $line-height;
     box-sizing: border-box;
@@ -94,7 +94,7 @@
     }
   }
 
-  @include breakpoint-max(md) {
+  @include breakpoint-max(lg) {
     display: flex;
     visibility: visible;
     flex-wrap: wrap;
@@ -104,19 +104,26 @@
 
   @include breakpoint-max(sm) {//rimuovo il padding sotto i 567px
     padding-top: $line-height / 2;
+    flex-basis: 79%;
   }
 
   @at-root .responsive #{&} { //rendo la top bar visibile anche sotto i 787px e ne dimezzo la larghezza
-    @include breakpoint-max(md) {
+    @include breakpoint-max(lg) {
       display: flex;
     }
   }
 
   .widget {
     @include breakpoint-max(lg) {
+      &.widget_text,
+      &.widget_text_icl {
+        //margin-right: 0;
+        flex-shrink: 0;
+        display: block;
+      }
     }
 
-    @include breakpoint-max(md) { //li faccio cadere sotto i 567px
+    @include breakpoint-max(lg) { //li faccio cadere sotto i 567px
       //margin-right: 0;
       box-sizing: border-box;
       //clear: both;
@@ -128,13 +135,6 @@
       &.widget_icl_lang_sel_widget {
         flex-shrink: 0;
         text-align: center;
-      }
-
-      &.widget_text,
-      &.widget_text_icl {
-        //margin-right: 0;
-        flex-shrink: 0;
-        display: block;
       }
 
       &.widget_nav_menu {
@@ -180,7 +180,7 @@
       flex-basis: 100%;
   }
 
-  @include breakpoint-max(md) {
+  @include breakpoint-max(lg) {
     display: inline-block;
     width: 100%;
 
@@ -189,7 +189,7 @@
       content: "\f0c9";
       font-family: 'FontAwesome';
       position: absolute;
-      top: 0.5em;
+      top: 0.35em;
       left: 0.7em;
     }
   }
@@ -206,6 +206,7 @@
     padding-bottom: bhpad(2);
     padding-left: 2em !important;
     border: 2px solid main-colors(header, border);
+    -webkit-appearance: none;
 
     option {
       padding-left: 2em;

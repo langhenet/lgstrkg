@@ -206,18 +206,25 @@ blockquote,
   border: 0;
   margin: 0;
   font-size: 1em;
-  padding: $line-height $line-height $line-height ($line-height * 2);
+  padding: size(blockquote, lh);
+  padding-left: size(blockquote, lh) * 2;
+
+  @include font(blockquote);
+
+  @include breakpoint-max(lg) {
+    @include m-size(h3);
+  }
+
+  @include breakpoint-max(sm) {
+    padding: size(blockquote, lh) / 2;
+  }
 
   &::before {
     top: 1em;
     content:"\e643" !important;
-  }
 
-  p {
-    @include font(blockquote);
-
-    @include breakpoint-max(lg) {
-      @include m-size(h3);
+    @include breakpoint-max(sm) {
+      display: none;
     }
   }
 }

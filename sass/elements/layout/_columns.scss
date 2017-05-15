@@ -1,0 +1,24 @@
+@include breakpoint-max(md) {
+  .one_fourth,
+  :not([class^="one_half"]) > [class^="one_fourth"] {
+    width: 25% !important;
+    clear: none;
+    float: left;
+  }
+}
+
+@include breakpoint-max(sm) {
+  .one_fourth,
+  :not([class^="one_half"]) > [class^="one_fourth"] {
+    width: 50% !important;
+  }
+}
+
+@include breakpoint-max(xs) {
+  .one_fourth,
+  :not([class^="one_half"]) > [class^="one_fourth"] {
+    width: 100% !important;
+    float: none;
+    clear: both;
+  }
+}

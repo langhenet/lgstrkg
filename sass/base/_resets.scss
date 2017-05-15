@@ -12,7 +12,13 @@
     height: inherit;
 }
 
-
+/*@include breakpoint-max(sm) {
+  .et_pb_fullwidth_code iframe {
+    max-width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
+}*/
 
 //****************************************************************************//
 //*                 STRIKING

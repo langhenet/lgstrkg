@@ -123,22 +123,32 @@
 //****************************************************************************//
 #sidebar_content {
   @include breakpoint-max(md) {
-    display: flex;
+  //  display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
 
     section.widget {
-      width: 47.5%;
-      margin-right: 5%;
+    //  width: 47.5%;
+    //  margin-right: 5%;
 
       &:nth-child(even) {
+        margin-right: 0;
+      }
+      @include breakpoint-max(sm) {
+        width: 100%;
         margin-right: 0;
       }
     }
   }
 
+
+
   @at-root .right_sidebar #{&} {
+    @include breakpoint-max(md) {
+      padding-bottom: $line-height * 2;
+    }
+
     @include breakpoint-max(xs) {
       padding-left: $line-height;
       padding-right: $line-height;
