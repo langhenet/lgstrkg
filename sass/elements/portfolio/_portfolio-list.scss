@@ -201,8 +201,8 @@
   margin-right: 0 !important;
 
   @include breakpoint-max(lg) {
-    flex-basis: 33.33333%;
-    width: 33.33333%;
+    flex-basis: 25%;
+    width: 25%;
   }
 
   @include breakpoint-max(md) {
