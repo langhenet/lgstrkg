@@ -13,7 +13,7 @@
     @include font(h2);
 
     @include breakpoint-max(md) {
-      @include m-size(h3);
+      @include m-size(h3, $mt: 0, $mb: 0);
     }
   }
 
@@ -21,15 +21,28 @@
     top: - $line-height * 2;
 
     @include breakpoint-max(md) {
-      top: -$line-height * 1.75;
+      top: -$line-height * 0.8;
     }
 
     p {
       @include font(h2);
 
       @include breakpoint-max(md) {
-        @include m-size(h3);
+        @include m-size(h3, $mt: 0, $mb: 0);
       }
+    }
+  }
+
+  @include breakpoint-max(xs) {
+    .days.section.values {
+      width: 100%;
+      max-width: 100%;
+      font-size: 1.25em;
+      margin-bottom: 1.25em;
+    }
+
+    div.sep.section {
+      display: none;
     }
   }
 }
@@ -47,7 +60,7 @@
   @include font(h3, $mt: 0);
 
   @include breakpoint-max(md) {
-    @include m-size(h3);
+    @include m-size(h3, $mt: 0);
   }
 }
 
