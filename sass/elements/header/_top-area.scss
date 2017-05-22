@@ -1,127 +1,20 @@
-
-/*
- * Top Area con scroll
- */
-  #top_area {//imposto il visible per poter fare transizione
-  visibility: visible;
-  transition: all 250ms;
-  order: 0;
-  width: 100%;
-  display: flex;
-  position: relative;
+.av_minimal_header #header_meta {
   background: main-colors(topbar, bg);
-  max-width: $website-width;
-  margin: 0 auto;
-  padding: ($line-height / 2) 0;
-  justify-content: flex-end;
-  flex-basis: 100%;
+  line-height: $line-height;
 }
 
-.sticker_sticky #top_area {//quando è scrollata la nascondo
-  visibility: hidden;
-  transition: all 250ms;
-}
+#header_meta .sub_menu {
+  top: 0;
 
+  li {
+  line-height: $line-height;
+  @include font(h5, $mt: 0, $fm: secondary);
+  text-transform: uppercase;
+  border-right: 0;
 
-#top_area {
-  top: auto;
-  right: auto;
-
-  @at-root .responsive #logo,
-  .responsive #logo_text { //dimezzo la larghezza del logo
-
-    @include breakpoint-max(sm) {
-      display: block;
-      width: 58%;
-      float: none;
+    a {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
-
-  /*
-   * Widget della Top Bar
-   */
-
-  .widget { //affianco i widget uno all'altro
-    margin-right: $line-height;
-    margin-bottom: 0;
-
-    p {
-      color: main-colors(topbar, body);
-      @include font(small, $mt: 0);
-
-      a {
-        color: main-colors(topbar, link);
-      }
-    }
-  }
-
-  section:first-child { //tolgo il margine laterale dal primo
-    margin-right: 0;
-    margin-top: 0;
-  }
-
-  /*
-   * Stile specifico per il menu di navigazione della Top Bar
-   */
-  .widget_nav_menu {
-    float: none;
-    position: relative;
-    order: 2;
-    z-index: 99;
-    position: relative;
-
-    li {
-      float: left;
-      @include font(small);
-      font-style: italic;
-      text-transform: uppercase;
-
-      a {
-        border-bottom: 0;
-        color: main-colors(header, link);
-        padding: 0 14px;
-        line-height: inherit;
-      }
-
-      &::before {
-        display: none;
-      }
-    }
-  }
-
-  /*
-   * Widget di testo della Top body-margin
-   */
-  .widget_text_icl,
-  .widget_text {
-
-  }
-
-  /*
-   * Bottone della topbar
-   */
-  a.button.primary {
-
-    &.chiama {
-      background: transparent;
-      border: 0;
-      padding: 0;
-
-      span {
-        padding: 0;
-      }
-    }
-  }
-}
-
-
-///
-// Selettore Lingua
-///
-.widget_icl_lang_sel_widget {
-  order: 3;
-}
-.wpml-ls-legacy-list-horizontal {
-  padding: 0;
-  border: 0;
 }

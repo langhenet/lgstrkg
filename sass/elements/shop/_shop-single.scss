@@ -1,0 +1,28 @@
+//*************************************************************************
+//** GALLERIA & IMMAGINI
+//*************************************************************************
+.template-shop .single-product-main-image .images a.woocommerce-product-gallery__trigger {
+  border: 0;
+  display: inline;
+}
+
+//*************************************************************************
+//** TITOLO & PREZZO
+//*************************************************************************
+.single-product .product_title {
+  @include breakpoint-max(lg) {
+    @include m-size(h1, $mt: 0);
+  }
+}
+
+///
+// Prezzo
+///
+#top .single-product-summary p.price {
+  @include font(h3);
+  display: block;
+
+  @include breakpoint-max(lg) {
+    @include m-size(h3, $mt:0);
+  }
+}

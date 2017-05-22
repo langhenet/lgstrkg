@@ -1,81 +1,24 @@
-//***************************************************************************//
-//*                                                                     *****//
-//*                               SEZIONE INTRODUTTIVA
-//*              a cappello delle pagine
-//*                                                                         *//
-//***************************************************************************//
+.container_wrap {
+  border-top: 0;
+}
+#top .title_container .container {
+  padding: $line-height / 2 50px;
+  min-height: auto;
+}
 
-///
-// Contenitore Featured Header
-///
-#feature,
-.has-gradient #feature,
-.no-gradient #feature {
-  background-color: main-colors(fheader, bg);
-  background-size: cover !important;
-  background-image: none;
+.title_container .main-title {
+  min-height: auto;
+  @include font(h3, $fm: primary, $mt: 0, $mb: 0, $wt: bold);
+  text-transform: uppercase;
+  display: block;
+}
+
+
+.title_container .breadcrumb {
   position: relative;
-}
-
-
-
-
-///
-// Overlay della sezione introduttiva
-///
-#feature::before {
-  @include color-overlay(fheader, 0.45);
-}
-
-
-
-///
-// Inner del featured header
-///
-#feature .inner {
-  position: relative;
-  z-index: 1;
-  padding: 0 0;
-
-  @include breakpoint-max(md) {
-    padding-top: $line-height * 2;
-    padding-bottom: $line-height * 4;
-    max-width: 470px;
-  }
-  
-  @include breakpoint-max(sm) {
-    padding-left: $line-height / 2;
-    padding-right: $line-height / 2;
-  }
-}
-
-
-
-///
-// Shadow del Featured Header
-///
-.has-shadow #feature .top_shadow,
-.has-shadow #feature .bottom_shadow {
-  display: none;
-}
-
-
-
-
-/******************************************************************************
-/*                TITOLO del Featured HEADER
-*******************************************************************************/
-#feature h1 {
-  @include font(h1, $mt: 0);
-  padding: 0;
-}
-
-
-
-
-/******************************************************************************
-/*                TESTO
-*******************************************************************************/
-.feature-introduce {
-  @include font(h3, $mt: 0, $fm: primary);
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  @include font(h5, $mt: 0, $mb: 0, $fm: primary);
+  overflow: hidden;
 }

@@ -9,23 +9,23 @@
 // BASE DEL BODY
 ///
   $base: 16;
-  $font-size: 1.25em; //TODO
-  $line-height: 1.5em; //TODO
+  $font-size: 1.125em; //TODO
+  $line-height: 1.83333333em; //TODO
 
 
 ///
 // p and other standard elements
 ///
   $margin-top: 0em; //TODO
-  $margin-bottom: 1.5em; //TODO
+  $margin-bottom: 1.83333333em; //TODO
 
 
 ///
 // Families
 ///
-  $ff-primary: 'PT primary', serif; //TODO
-  $ff-secondary: 'Open secondary', sans-serif; //TODO
-  $ff-special: $ff-primary; //TODO
+  $ff-primary: 'Roboto Slab', serif; //TODO
+  $ff-secondary: 'Lato', sans-serif; //TODO
+  $ff-special: 'Schoolbell', sans-serif; //TODO
   $ff-button: $ff-secondary;
 
 
@@ -111,37 +111,37 @@ $decorations: (
     ),
 
     h1: (
-      fs: 3.375em,
-      lh: 1.33333333333em,
-      mt: 0.888888888888889em,
-      mb: 0.44444444444444em,
+      fs: 4.11111111em,
+      lh: 1.33783784em,
+      mt: 0.44594595em,
+      mb: 0.44594595em,
     ),
 
     h2: (
-      fs: 2.25em,
-      lh: 1.33333333333em,
-      mt: 1.33333333333em,
-      mb: 0.6666666666667em,
+      fs: 2.55555556em,
+      lh: 1.43478261em,
+      mt: 0.7173913em,
+      mb: 0.7173913em,
     ),
 
     h3: (
-      fs: 1.5em,
-      lh: 2em,
-      mt: 1.5em,
-      mb: 1em,
+      fs: 1.61111111em,
+      lh: 1.13793103em,
+      mt: 1.13793103em,
+      mb: 1.13793103em,
     ),
 
     h4: (
       fs: 1em,
-      lh: 1.5em,
-      mt: 1.5em,
-      mb: 1.5em,
+      lh: 1.83333333em,
+      mt: 1.83333333em,
+      mb: 0em,
     ),
 
     h5: (
       fs: 0.75em,
-      lh: 2em,
-      mt: 2em,
+      lh: 2.444444444444em,
+      mt: 2.444444444444em,
       mb: 0em,
     ),
 
@@ -162,24 +162,22 @@ $decorations: (
 
 $mobile-sizes: (
   h1: (
-    fs: 1.953125em,
-    lh: 1.538461538461538em,
-    mt: 1.536em,
-    mb: 0.768em,
+    fs: 2.38888889em,
+    lh: 1.53488372em,
+    mt: 0.76744186em,
+    mb: 0.76744186em,
   ),
-
   h2: (
-    fs: 1.5625em,
-    lh: 1.935483870967742em,
-    mt: 0.96em,
-    mb: 0.96em,
+    fs: 1.77777778em,
+    lh: 1.03125em,
+    mt: 1.03125em,
+    mb: 1.03125em,
   ),
-
   h3: (
-    fs: 1.25em,
-    lh: 1.2em,
-    mt: 1.8em,
-    mb: 0.6em,
+    fs: 1.33333333em,
+    lh: 1.375em,
+    mt: 1.375em,
+    mb: 1.375em,
   ),
 );
 

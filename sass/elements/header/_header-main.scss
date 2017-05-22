@@ -1,119 +1,13 @@
-//****************************************************************************//
-//*                                                                          *//
-//*                           LAYOUT DELL'HEADER
-//*                    in versione LOGO sopra NAVIGAZIONE
-//*                              (tutto centrato)
-//*                                                                          *//
-//****************************************************************************//
-
-/*
- * Resetta l'altezza del contenitore dell'header
- */
-#header-sticker-wrapper {
-  height: 0 !important;
+/*#header_main {
+  padding-top: $line-height / 2;
+  padding-bottom: $line-height / 2;
 }
-
-
-
-
-//****************************************************************************//
-//                HEADER
-//****************************************************************************//
-
-/*
- * BG dell'header
- */
-#header {
-  background-color: main-colors(header, bg);
-  transition: all 250ms linear;
-}
-
-
-/*
- * BG dell'header - da scrollato -  - solo su desktop
- */
-@include breakpoint-min(xl) {
-  .sticker_sticky #header {
-    background-color: main-colors(header, bg);
-    transition: all 250ms linear;
-  }
-}
-
-
-
-
-
-//****************************************************************************//
-//                INNER HEADER
-//****************************************************************************//
-
-/*
- * Altezza
- */
-#header .inner {
+div .logo {
+  padding-top: $line-height / 2;
+  padding-bottom: $line-height / 2;
   position: relative;
-  height: auto;
-  transition: all 250ms linear;
-  display: flex;
-  flex-flow: row;
-  width: 100%;
-  max-width: $website-width;
-  flex-wrap: wrap;
+}*/
+
+#header_main {
+  min-height: $line-height * 4;
 }
-
-/*
- * Altezza - da scrollato - solo su desktop
- */
-@include breakpoint-min(xl) {
-.sticker_sticky #header .inner {
-    transition: all 250ms linear;
-  }
-}
-
-
-
-
-//****************************************************************************//
-//                LOGO
-//****************************************************************************//
-
-/*
- * Contenitore del logo //TODO @at-root directive is not working here
- */
- #logo,
- #logo_text {
-   bottom: 0;
-   transition: all 250ms linear;
-   position: relative;
-   order: 1;
-   padding: 0;
-   height: auto;
-   flex-basis: 33%;
-
-   // LOGO DA SCROLLATO
-   @at-root .sticker_sticky #{&} {
-     @include breakpoint-min(xl) { //quando l'header è sticcato - tolgo il bottom solo su desktop
-       bottom: 0;
-       transition: all 250ms linear;
-     }
-
-     img {
-       @include breakpoint-min(xl) { //quando l'header è sticcato - rimpicciolisco il logo solo su desktop
-         width: 40%;
-         transition: all 250ms linear;
-       }
-     }
-   }
-
-   a {
-     text-align: center;
-     display: block;
-     max-width: 400px;
-     margin: 0 auto;
-   }
-
-   img {
-     z-index: 1;
-     position: relative;
-   }
- }

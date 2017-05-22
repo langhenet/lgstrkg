@@ -21,10 +21,19 @@
 
 
 $null: transparent;
-$nero: #000;
+$nero-vero: #000;
+$nero: #212121;
 $bianco: #fff;
 $rosso-vero: #FF0000;
-
+$verde: #8BC34A;
+$green: #4CAF50;
+$blu: #2196F3;
+$blu-light: #03A9F4;
+$arancio: #FF9800;
+$grigio-chiaro: #f5F5F5;
+//$grigio-chiaro: #E0E0E0;
+$grigio: #616161;
+$rosa: #e91e62;
 
 /*
 * Colori delle parti principali del sito
@@ -32,11 +41,11 @@ $rosso-vero: #FF0000;
 $layout-colors: (
   topbar: (
     body: $nero,
-    link: $nero,
-    accent: $nero,
+    link: $verde,
+    accent: $verde,
     border: $nero,
-    bg: $bianco,
-    button-bg: $nero,
+    bg: mix($verde, $bianco, 5%),
+    button-bg: $green,
     button: $bianco,
   ),
 
@@ -116,7 +125,7 @@ $layout-colors: (
  * Colori delle Sezioni FW
  */
 $colors: (
-  color--dark: (
+  alternate: (
     body:       $bianco,      //Corpo - testo
     body-sec:   $bianco,      //Secondario - blockquote o blog meta
     heading:    rgba($bianco, 0.90),      //Titoli 1 e 2
@@ -152,3 +161,4 @@ $colors: (
 // Ombra
 ///
 $button-shadow: 0 0.07em 0.085em 0 rgba(0, 0, 0, 0.26);
+$card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

@@ -5,8 +5,9 @@
 //*                                                                     *//
 //***********************************************************************//
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P e UL / OL
@@ -21,9 +22,11 @@ body {
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
 }
+.helvetica-neue-websave {
+  font-family: $ff-primary;
+}
 
-p, ul, ol, pre, table, blockquote,
-.et_divi_builder #et_builder_outer_content .et_pb_module p {
+p, ul, ol, pre, table, blockquote {
   @include margin;
 }
 
@@ -58,6 +61,11 @@ ul ul, ol ol, ul ol, ol ul {
 ///
 h1, h2, h3, h4, h5 {
   padding-bottom: 0;
+}
+.template-page .entry-content-wrapper h1,
+.template-page .entry-content-wrapper h2 {
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 
@@ -96,7 +104,7 @@ h5 {
 }
 
 .body--special {
-  @include font(h3, $fm: primary, $wt: normal);
+  @include font(h3, $fm: special, $wt: normal);
 
   @include breakpoint-max(xl) {
     @include m-size(h3);
@@ -133,10 +141,8 @@ sub { bottom: $sub-bottom; }
 ///
 // Impostazione di Margine e Padding per OL e UL
 ///
-#main ol,
-#main ul,
-.et_divi_builder #et_builder_outer_content .et_pb_module ol,
-.et_divi_builder #et_builder_outer_content .et_pb_module ul {
+.content ol,
+.content ul {
   margin-left: $line-height * 2;
   padding-bottom: 0;
   margin-bottom: $line-height;
@@ -144,38 +150,25 @@ sub { bottom: $sub-bottom; }
   @include breakpoint-max(md) {
     margin-left: $line-height;
   }
+
+  li {
+    margin-left: $line-height / 2;
+  }
 }
 
 
 ///
 // Stile lista per UL e OL
 ///
-#main ul li,
-.et_divi_builder #et_builder_outer_content .et_pb_module ul li {
-  list-style: circle;
+.content ul li {
+  list-style: disc;
 }
-
-.et_divi_builder #et_builder_outer_content .et_pb_module ol li {
-  list-style: decimal;
-}
-
-
-///
-// Liste Speciali di Striking
-///
-#main ul[class^="list_"] li,
-.et_divi_builder #et_builder_outer_content .et_pb_module ul[class*=" list_"] li {
-  list-style: none !important;
-  margin: 0;
-}
-
 
 
 //****************************************************************************//
 //                                BLOCKQUOTE
 //****************************************************************************//
-blockquote,
-.et_divi_builder #et_builder_outer_content .et_pb_module blockquote {
+blockquote {
   border: 0;
   margin: 0;
   font-size: 1em;
@@ -202,7 +195,7 @@ blockquote,
   }
 }
 
-#page blockquote {
+blockquote {
   p {
     color: main-colors(main, accent);
   }
@@ -216,7 +209,7 @@ blockquote,
 * Blockquote - citazione COLORI
 */
 @each $palette, $section in $colors  {
-  #page .#{$palette} blockquote { //TOCHK il #page è necessario?
+ .#{$palette} blockquote {
 
     &::before {
       color: palette($palette, accent);
@@ -235,22 +228,22 @@ blockquote,
 /*
  * Colori Tipografia
  */
-#page h1 {color: main-colors(main, heading);}
-#page h2 {color: main-colors(main, heading);}
-#page h3 {color: main-colors(main, heading);}
-#page h4 {color: main-colors(main, heading);}
-#page h5 {color: main-colors(main, heading);}
-#page p, ul, ol {color: main-colors(main, body);}
-#page a,
-#page a:visited {color: main-colors(main, link);}
-#page a:hover {color: darken(main-colors(main, link), 10%);}
+.content h1 {color: main-colors(main, heading);}
+.content h2 {color: main-colors(main, heading);}
+.content h3 {color: main-colors(main, heading);}
+.content h4 {color: main-colors(main, heading);}
+.content h5 {color: main-colors(main, heading);}
+.content p, ul, ol {color: main-colors(main, body);}
+.content a,
+.content a:visited {color: main-colors(main, link);}
+.content a:hover {color: darken(main-colors(main, link), 10%);}
 
 //TOCHK
 /*
  * Colori Tipografia nelle Varie sezioni
  */
 @each $palette, $sections in $colors {
-  #page .#{$palette} {
+  .#{$palette}_color {
     p, ul, ol {
       color: palette($palette, body)
     }
@@ -278,11 +271,11 @@ blockquote,
  * Decorazione link - Striking e DIVI builder
  **/
 a,
-#main a:link,
-#main a:visited,
-#main a:hover,
-#main a:active,
-#main a:focus {
+.content a:link,
+.content a:visited,
+.content a:hover,
+.content a:active,
+.content a:focus {
   text-decoration: underline;
 
   &.button,
@@ -296,11 +289,11 @@ a,
 ///
 // Link DENTRO titoli - Colori
 ///
-#page h1 > a,
-#page h2 > a,
-#page h3 > a,
-#page h4 > a,
-#page h5 > a {
+.content h1 > a,
+.content h2 > a,
+.content h3 > a,
+.content h4 > a,
+.content h5 > a {
   text-decoration: none;
   color: layout-colors(main, heading);
 
@@ -323,11 +316,11 @@ a,
 // Link nei titoli - Colori nelle varie sezioni
 ///
 @each $palette, $bg in $colors {
-  #page .#{$palette} h1 > a,
-  #page .#{$palette} h2 > a,
-  #page .#{$palette} h3 > a,
-  #page .#{$palette} h4 > a,
-  #page .#{$palette} h5 > a {
+  .content .#{$palette} h1 > a,
+  .content .#{$palette} h2 > a,
+  .content .#{$palette} h3 > a,
+  .content .#{$palette} h4 > a,
+  .content .#{$palette} h5 > a {
     color: palette($palette, heading);
 
     &:link {

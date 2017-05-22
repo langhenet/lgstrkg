@@ -1,0 +1,184 @@
+///
+//Il Main degli Archivi dei prodotti
+///
+.post-type-archive-product .container_wrap.main_color,
+.tax-product_cat .container_wrap.main_color {
+  background: $grigio-chiaro;
+}
+
+///
+// Filtri - elemento LI
+///
+
+.content .product-sorting li {
+  margin-left: 0;
+}
+
+
+
+
+//************************************************************************
+// Lista PRODOTTI
+//************************************************************************
+///
+// Contenitore UL dei Prodotti
+///
+.content ul.products {
+  margin-left: 0;
+}
+
+///
+// Il LI della lista dei Prodotti
+///
+.entry-content-wrapper ul.products li {
+  box-shadow: $card-shadow;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+///
+// INNER del LI
+///
+.inner_product {
+  border: 0;
+}
+
+///
+// LINK PRODOTTO
+////
+.content a.woocommerce-LoopProduct-link {
+  text-decoration: none;
+}
+
+
+///
+// Header Prodotto
+///
+#top div .inner_product_header,
+#top div .product_on_sale .inner_product_header {
+  padding: $line-height / 2;
+}
+
+.inner_product_header_cell {
+  text-align: center;
+}
+
+////
+// Titolo Prodotto
+///
+h2.woocommerce-loop-product__title {
+  @include font(p, $mb: size(p, lh) / 2, $mt: size(p, lh) / 2);
+  text-decoration: none;
+  padding: 0;
+  color: $grigio;
+}
+
+///
+// PREZZO
+///
+#top .inner_product_header_cell .price {
+  @include font(p, $mb: 0);
+  text-align: center;
+}
+#top .price span,
+#top del,
+#top  ins {
+  font-size: 1em;
+}
+
+
+///
+// BOllino ONSALE
+///
+#top .onsale {
+  top: -$line-height;
+}
+
+#top .main_color .onsale {
+  background: $rosa;
+}
+
+////
+// Contenitore Bottoni
+////
+.avia_cart_buttons {
+  padding: 0;
+  opacity: 1;
+  border-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+///
+// Bottone Acquista
+///
+.button-mini-delimiter {
+  display: none;
+}
+
+#top .avia_cart_buttons .button {
+  width: 100%;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  float: none;
+  @include font(h5, $mb:0, $mt: 0, $wt: bold);
+  text-transform: uppercase;
+
+  &.ajax_add_to_cart {
+    background: $verde;
+    color: $bianco;
+    order: 1;
+  }
+
+  &.show_details_button {
+    background: $grigio-chiaro;
+    order: 0;
+  }
+}
+
+//*********************************************************************
+// LAYOUT DELLA GRIGLIA
+//*********************************************************************
+.shop_columns_3 .products .product {
+  margin-top: 0;
+  margin-bottom: $line-height;
+  width: 31%;
+  margin-right: 3.5%;
+
+  &.last {
+    margin-right: 0;
+  }
+
+  @include breakpoint-max(lg) {
+    width: 48%;
+    margin-right: 4%;
+    clear: none;
+    margin-bottom: $line-height;
+
+    @at-root #top #main #{&}.last {
+      margin-right: 4%;
+      clear: none;
+    }
+
+    &:nth-child(2n+2) {
+      margin-right: 0 !important;
+    }
+  }
+
+  @include breakpoint-max(md) {
+    @at-root .responsive #top #main #{&} {
+      width: 48%;
+      margin-right: 4%;
+      margin-bottom: $line-height;
+    }
+  }
+
+  @include breakpoint-max(sm) {
+    @at-root .responsive #top #main #{&} {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $line-height;
+    }
+  }
+}
