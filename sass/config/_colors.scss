@@ -101,6 +101,7 @@ $layout-colors: (
     bg: $bianco-vero,
     button-bg: $nero-vero,
     button: $bianco-vero,
+    overlay: $grigio,
     ),
 
   sidebar: (
@@ -122,9 +123,9 @@ $layout-colors: (
 $colors: (
   color1: (
     body:       $grigio,      //Corpo - testo
-    body-sec:   $grigio,      //Secondario - blockquote o blog meta
+    body-sec:   $grigio-chiaro,      //Secondario - blockquote o blog meta
     heading:    $oro,      //Titoli 1 e 2
-    link:       $grigio,      //Link
+    link:       $oro,      //Link
     bg:         $oro-chiaro,      //Sfondo principale
     border:     $oro,      //Bordi
 
@@ -132,20 +133,20 @@ $colors: (
 
     body-alt:   $bianco-vero,      //body alternativo - testo in un form o in un box
     bg-alt:     $oro,      //sfondo alt - il bg di un form o di un box
-    accent-alt: $grigio,      //accento alt - il di un link nel form
+    accent-alt: $bianco-vero,      //accento alt - il di un link nel form
 
-    form-body: $bianco-vero,
-    form-bg: $nero-vero,
-    form-link: $bianco-vero,
-    form-desc: $bianco-vero,
+    form-body: $grigio,
+    form-bg: $oro,
+    form-link: $grigio,
+    form-desc: $grigio,
 
     overlay:    $nero-vero,      //Colore sfondo overlay
 
     button:     $bianco-vero,      //colore bottone
-    button-bg:  $nero-vero,
+    button-bg:  $verde,
 
     button-subtle: $bianco-vero,
-    button-bg-subtle: mix($nero-vero, white, 50%)    //bg bottone
+    button-bg-subtle: mix($nero-vero, white, 50%)    //bg bottone    //bg bottone
   ),
 );
 

@@ -1,0 +1,30 @@
+.et_divi_builder #et_builder_outer_content .et_pb_fullwidth_menu {
+  margin-bottom: 0;
+  background: $oro !important;
+
+  .fullwidth-menu-nav > ul.nav {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: $website-width;
+
+    li {
+      @include font(p, $mb:0, $fm: serif);
+      padding: $line-height / 2;
+
+      a {
+        padding-bottom: 0;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      &.lg-button {
+        background: $verde;
+      }
+    }
+  }
+}

@@ -4,3 +4,24 @@
 //*              descrizione - descrizione - descrizione
 //*                                                                          *//
 //****************************************************************************//
+
+.et_divi_builder #et_builder_outer_content .box--prezzi {
+//  margin-left: -$line-height;
+//  margin-right: -$line-height;
+  max-width: $website-width * 1.05;
+
+  .et_pb_column_1_4   {
+    margin-right: 0;
+    width: 25%;
+    padding: 0 $line-height;
+    border-right: 2px solid  $oro;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+  }
+}

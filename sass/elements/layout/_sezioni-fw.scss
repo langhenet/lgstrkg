@@ -412,3 +412,12 @@
     @include color-overlay($grade: 0.5);
   }
 }
+
+
+.et_pb_section.overlay--dark  {
+  position: relative;
+
+  &::before {
+    @include color-overlay(footer, $grade: 0.6);
+  }
+}
