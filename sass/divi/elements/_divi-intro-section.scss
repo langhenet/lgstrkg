@@ -77,7 +77,7 @@
 // Overlay della sezione introduttiva
 ///
 #intro::before {
-  @include color-overlay(fheader, $grade: 0.35);
+  @include color-overlay(fheader, $grade: 0.30);
 
   @include breakpoint-max(md) {
     @include color-overlay(fheader, $grade: 0.45);
