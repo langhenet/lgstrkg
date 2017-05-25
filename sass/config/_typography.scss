@@ -9,7 +9,7 @@
 // BASE DEL BODY
 ///
   $base: 16;
-  $font-size: 1.25em; //TODO
+  $font-size: 1.125em; //TODO
   $line-height: 1.5em; //TODO
 
 
@@ -23,10 +23,10 @@
 ///
 // Families
 ///
-  $ff-primary: 'PT primary', serif; //TODO
-  $ff-secondary: 'Open secondary', sans-serif; //TODO
-  $ff-special: $ff-primary; //TODO
-  $ff-button: $ff-secondary;
+  $ff-primary: 'Open Sans', sans-serif; //TODO
+  $ff-secondary: 'PT Serif', serif; //TODO
+  $ff-special: $ff-secondary; //TODO
+  $ff-button: $ff-primary;
 
 
 ///
@@ -35,7 +35,7 @@
 $families: (
   primary: (
     fm: $ff-primary,
-    thin: 200,
+    thin: 400,
     normal: 400,
     bold: 600,
     bolder: 600,
@@ -43,18 +43,18 @@ $families: (
 
   secondary: (
     fm: $ff-secondary,
-    thin: 300,
+    thin: 400,
     normal: 400,
-    bold: 700,
-    bolder: 900,
+    bold: 400,
+    bolder: 400,
   ),
 
   special: (
     fm: $ff-special,
-    thin: 300,
+    thin: 400,
     normal: 400,
-    bold: 400,
-    bolder: 400,
+    bold: 600,
+    bolder: 600,
   ),
 );
 

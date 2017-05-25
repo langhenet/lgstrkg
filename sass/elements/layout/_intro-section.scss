@@ -24,7 +24,7 @@
 // Overlay della sezione introduttiva
 ///
 #feature::before {
-  @include color-overlay;
+  @include color-overlay(fheader, 0.4);
 }
 
 
@@ -35,7 +35,7 @@
 #feature .inner {
   position: relative;
   z-index: 1;
-  padding: 0 0;
+  padding: $line-height * 4 0;
 
   @include breakpoint-max(sm) {
     padding-left: $line-height / 2;
@@ -62,6 +62,12 @@
 #feature h1 {
   @include font(h1, $mt: 0);
   padding: 0;
+  max-width: 870px;
+
+
+  @include breakpoint-max(md) {
+    @include m-size(h1);
+  }
 }
 
 
@@ -71,5 +77,6 @@
 /*                TESTO
 *******************************************************************************/
 .feature-introduce {
-
+  @include font(h3, $fm: primary);
+  max-width: 670px;
 }

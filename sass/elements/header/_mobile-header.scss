@@ -39,6 +39,7 @@
     width: 60%;
     float: none;
     height: auto;
+    flex-basis: 35%;
   }
 }
 
@@ -49,6 +50,21 @@
 
   @include breakpoint-max(md) {//la rendo di nuovo visible sotto i 979px
 
+  }
+}
+
+@include breakpoint-max(lg) {
+  #language_flags {
+    right: 0;
+    top: 0;
+    float: none;
+    display: block;
+    order: 0;
+    flex-basis: 80%;
+    align-self: flex-end;
+    padding: 1em;
+    text-align: right;
+    justify-self: initial;
   }
 }
 
@@ -122,6 +138,12 @@
 /******************************************************************************/
 /*          NAVIGAZIONE MOBILE - HAMBURGER NAV
 /******************************************************************************/
+
+@include breakpoint-max(lg) {
+  #navigation {
+    margin-top: 2.5em;
+  }
+}
 ///
 // Fix navigazione che copre tutto
 ///
@@ -136,6 +158,9 @@
       top: 0.25em;
       left: 0.7em;
     }
+  }
+  @include breakpoint-max(sm) {
+    flex-basis: 55%;
   }
 }
 

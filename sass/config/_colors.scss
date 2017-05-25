@@ -21,10 +21,14 @@
 
 
 $null: transparent;
-$nero: #000;
 $bianco: #fff;
 $rosso-vero: #FF0000;
-
+$blu: #1f4072;
+$viola: #a32639;
+$nero: #333;
+$verde: #4CAF50;
+$grigio: #f3f3f3;
+$black: #000;
 
 /*
 * Colori delle parti principali del sito
@@ -36,17 +40,17 @@ $layout-colors: (
     accent: $nero,
     border: $nero,
     bg: $bianco,
-    button-bg: $nero,
+    button-bg: $verde,
     button: $bianco,
   ),
 
   header: (
-    body: $nero,
-    link: $nero,
-    accent: $rosso-vero,
-    border: $nero,
-    bg: $bianco,
-    button-bg: $nero,
+    body: $bianco,
+    link: $bianco,
+    accent: $bianco,
+    border: $bianco,
+    bg: $viola,
+    button-bg: $verde,
     button: $bianco,
   ),
 
@@ -56,7 +60,7 @@ $layout-colors: (
     accent: $nero,
     border: $nero,
     bg: $bianco,
-    overlay: $rosso-vero,
+    overlay: $black,
     button-bg: $nero,
     button: $bianco,
   ),
@@ -64,16 +68,16 @@ $layout-colors: (
   main: (
     body:       $nero,      //Corpo - testo
     body-sec:   $nero,      //Secondario - blockquote o blog meta
-    heading:    lighten($nero, 50%),      //Titoli 1 e 2
-    link:       $rosso-vero,      //Link
+    heading:    lighten($nero, 20%),      //Titoli 1 e 2
+    link:       $viola,      //Link
     bg:         $bianco,      //Sfondo principale
-    border:     lighten($nero, 10%),      //Bordi
+    border:     lighten($nero, 20%),      //Bordi
 
-    accent:     $rosso-vero,      //Accento - sfondo lista icone / grassetti / icone
+    accent:     $viola,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $bianco,      //body alternativo - testo in un form o in un box
-    bg-alt:     lighten($nero, 40%),      //sfondo alt - il bg di un form o di un box
-    accent-alt: $rosso-vero,      //accento alt - il di un link nel form
+    bg-alt:     $viola,      //sfondo alt - il bg di un form o di un box
+    accent-alt: $bianco,      //accento alt - il di un link nel form
 
     form-body: $bianco,
     form-bg: lighten($nero, 20%),
@@ -83,19 +87,19 @@ $layout-colors: (
     overlay:    $nero,      //Colore sfondo overlay
 
     button:     $bianco,      //colore bottone
-    button-bg:  lighten($nero, 10%),
+    button-bg:  $verde,
 
     button-subtle: $bianco,
     button-bg-subtle: mix($nero, white, 50%)    //bg bottone
     ),
 
   footer: (
-    body: $nero,
-    link: $nero,
-    accent: $nero,
-    border: $nero,
-    bg: $bianco,
-    button-bg: $nero,
+    body: $bianco,
+    link: $bianco,
+    accent: $bianco,
+    border: $bianco,
+    bg: $viola,
+    button-bg: $verde,
     button: $bianco,
     ),
 
@@ -116,18 +120,18 @@ $layout-colors: (
  * Colori delle Sezioni FW
  */
 $colors: (
-  color--dark1: (
-    body:       $bianco,      //Corpo - testo
-    body-sec:   $bianco,      //Secondario - blockquote o blog meta
-    heading:    rgba($bianco, 0.80),      //Titoli 1 e 2
-    link:       $bianco,      //Link
-    bg:         $rosso-vero,      //Sfondo principale
+  color--dark: (
+    body:       $nero,      //Corpo - testo
+    body-sec:   $nero,      //Secondario - blockquote o blog meta
+    heading:    rgba($nero, 0.90),      //Titoli 1 e 2
+    link:       $blu,      //Link
+    bg:         lighten(mix($blu, $nero, 55%), 65%),      //Sfondo principale
     border:     $bianco,      //Bordi
 
-    accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
+    accent:     $blu,      //Accento - sfondo lista icone / grassetti / icone
 
-    body-alt:   $bianco,      //body alternativo - testo in un form o in un box
-    bg-alt:     $nero,      //sfondo alt - il bg di un form o di un box
+    body-alt:   $nero,      //body alternativo - testo in un form o in un box
+    bg-alt:     lighten($viola, 45%),      //sfondo alt - il bg di un form o di un box
     accent-alt: $bianco,      //accento alt - il di un link nel form
 
     form-body: $bianco,
@@ -135,10 +139,37 @@ $colors: (
     form-link: $bianco,
     form-desc: $bianco,
 
-    overlay:    $nero,      //Colore sfondo overlay
+    overlay:    $black,      //Colore sfondo overlay
 
-    button:     $bianco,      //colore bottone
+    button:     $verde,      //colore bottone
     button-bg:  $nero,
+
+    button-subtle: $bianco,
+    button-bg-subtle: mix($nero, white, 50%)    //bg bottone
+  ),
+  color--dark-alt: (
+    body:       $bianco,      //Corpo - testo
+    body-sec:   $bianco,      //Secondario - blockquote o blog meta
+    heading:    rgba($bianco, 0.90),      //Titoli 1 e 2
+    link:       $bianco,      //Link
+    bg:         $viola,      //Sfondo principale
+    border:     $bianco,      //Bordi
+
+    accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
+
+    body-alt:   $bianco,      //body alternativo - testo in un form o in un box
+    bg-alt:     lighten($viola, 45%),      //sfondo alt - il bg di un form o di un box
+    accent-alt: $bianco,      //accento alt - il di un link nel form
+
+    form-body: $bianco,
+    form-bg: $bianco,
+    form-link: $bianco,
+    form-desc: $bianco,
+
+    overlay:    $black,      //Colore sfondo overlay
+
+    button:     $verde,      //colore bottone
+    button-bg:  $bianco,
 
     button-subtle: $bianco,
     button-bg-subtle: mix($nero, white, 50%)    //bg bottone

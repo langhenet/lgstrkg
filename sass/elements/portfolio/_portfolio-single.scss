@@ -6,7 +6,12 @@
 //***************************************************************************//
 
 .single-portfolio {
-
+  #feature {
+    background-image: url(http://daffaraegrasso.com/wp-content/uploads/2017/05/DSC_3747.jpg);
+    &::before {
+      background-color: rgba(black, 0.5);
+    }
+  }
   #comments {
     max-width: $website-width / 2;
     margin: 0 auto;

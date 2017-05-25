@@ -24,6 +24,9 @@
 //****************************************************************************//
 //                           WIDGET
 //****************************************************************************//
+#sidebar section.widget {
+  padding: $line-height / 2;
+}
 /*
  * Ultimo Widget
  */
@@ -36,6 +39,7 @@
  * Titoli
  */
 #sidebar .widgettitle {
+  margin-bottom: size(h3, mb);
 }
 
 
@@ -44,7 +48,7 @@
  * Corpo
  */
 #sidebar .widget ul {
-  padding: $line-height;
+  padding: 0;
 }
 
 //****************************************************************************//
@@ -56,7 +60,12 @@
 #sidebar .widget a:visited {
 
   &:hover {
+    color: main-colors(main, accent);
   }
+}
+
+#sidebar .posts_list li {
+  margin-left: 0;
 }
 
 ///

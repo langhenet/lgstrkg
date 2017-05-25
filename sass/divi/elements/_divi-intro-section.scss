@@ -10,6 +10,7 @@
 .et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
 
 
+
   @include breakpoint-max(sm) { //contenitore a 5XX px
   }
 }
@@ -17,6 +18,8 @@
 //contenitore DIVI - posizionamento
 #intro {
   position: relative;
+  padding-top: $line-height * 4 !important;
+  padding-bottom: $line-height * 4 !important;
 }
 
 
@@ -24,7 +27,7 @@
 // Overlay della sezione introduttiva
 ///
 #intro::before {
-  @include color-overlay;
+  @include color-overlay(fheader, 0.4);
 }
 
 
@@ -32,8 +35,12 @@
 // Testo della Parte introduttiva
 ///
 .et_divi_builder #et_builder_outer_content #intro {
+  color: $bianco;
+  h1, h2, h3, h4, h5, p {
+    color: $bianco;
+  }
 
-  p {
-
+  h3 {
+    @include font(h3, $fm: primary);
   }
 }

@@ -51,7 +51,8 @@
 //                          TITOLO e META
 //****************************************************************************//
 .entry_info .entry-title {
-  @include font(h3);
+  @include font(h3, $mt: 0, $mb: 0);
+  border-bottom: 0;
 }
 
 #page .entry .entry_title a,
@@ -61,6 +62,7 @@
 
 .entry .entry_meta {
   @include font(h5);
+  display: none;
 
   @at-root #page #{&} a,
            #page #{&} a:visited {
@@ -81,5 +83,16 @@
 
   p {
     margin-bottom: 0;
+  }
+}
+
+#page .read_more_wrap a,
+#page .read_more_wrap a:visited,
+.read_more_wrap a:visited,
+.read_more_wrap a {
+  color: main-colors(main, accent);
+
+  &:hover {
+    color: main-colors(main, accent);
   }
 }

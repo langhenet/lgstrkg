@@ -13,7 +13,9 @@
   height: 0 !important;
 }
 
-
+#language_flags {
+  z-index: 9999;
+}
 
 
 //****************************************************************************//
@@ -88,7 +90,7 @@
    order: 1;
    padding: 0;
    height: auto;
-   flex-basis: 33%;
+   flex-basis: 18%;
 
    // LOGO DA SCROLLATO
    @at-root .sticker_sticky #{&} {
@@ -115,5 +117,7 @@
    img {
      z-index: 1;
      position: relative;
+     margin-top: $line-height / 4;
+
    }
  }

@@ -21,7 +21,13 @@
 
 .no-gradient #footer,
 .has-gradient #footer {
+  background-color: lighten(main-colors(footer, bg), 3%);
+  background-image: none;
+}
+
+#footer_bottom {
   background-color: main-colors(footer, bg);
+  background-image: none;
 }
 
 #footer .inner {
@@ -99,7 +105,7 @@
   text-decoration: underline;
 
   &:hover {
-    color: ligthen(main-colors(footer, link), 100%)
+    color: lighten(main-colors(footer, link), 100%)
   }
 }
 
