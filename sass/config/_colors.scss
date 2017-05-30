@@ -148,11 +148,12 @@ $colors: (
     button-bg-subtle: mix($nero, white, 50%)    //bg bottone
   ),
   color--dark-alt: (
-    body:       $bianco,      //Corpo - testo
-    body-sec:   $bianco,      //Secondario - blockquote o blog meta
-    heading:    rgba($bianco, 0.90),      //Titoli 1 e 2
-    link:       $bianco,      //Link
-    bg:         $viola,      //Sfondo principale
+    body:       $nero,      //Corpo - testo
+    body-sec:   $nero,      //Secondario - blockquote o blog meta
+    heading:    rgba($nero, 0.90),      //Titoli 1 e 2
+    link:       $viola,      //Link
+    //bg:         lighten($viola, 55%),      //Sfondo principale
+    bg:         lighten(mix($viola, $nero, 65%), 60%),      //Sfondo principale
     border:     $bianco,      //Bordi
 
     accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone

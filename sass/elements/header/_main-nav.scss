@@ -23,6 +23,10 @@
      justify-content: space-around;
      margin-top: 2.2em;
    }
+
+   @include breakpoint-max(lg) {
+     max-width: 430px;
+   }
  }
 
 
