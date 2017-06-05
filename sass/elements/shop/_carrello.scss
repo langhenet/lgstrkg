@@ -1,0 +1,192 @@
+#top.woocommerce-cart {
+  //CARRELLO VUOTO
+  .return-to-shop .wc-backward {
+
+    @include button-color-subtle(none, main);
+    @include font(p, 3, half);
+
+    text-transform: uppercase;
+  }
+
+  .cart  {
+    margin-bottom: $line-height;
+
+    thead {
+      @include breakpoint-max(md) {
+        display: none;
+      }
+    }
+
+    th {
+      border: 0;
+      padding: $line-height $line-height / 2;
+      color: main-colors(main, body-sec);
+
+      @include breakpoint-max(md) {
+        @include font(p);
+      }
+    }
+
+    tr {
+      border-bottom: 1px solid main-colors(main, border);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    td {
+      border: 0;
+      padding: $line-height / 2 $line-height / 2;
+
+      &.product-name {
+
+        a {
+          text-decoration: none;
+        }
+
+        @include breakpoint-max(md) {
+          text-align: left;
+          display: block;
+          width: 100%;
+        }
+
+        .variation {
+          @include font(small, $mt: 0, $mb: 0);
+        }
+      }
+
+      &.product-quantity {
+
+        .quantity {
+          margin: 0;
+        }
+
+        input.minus,
+        input.plus {
+          background: main-colors(main, bg);
+          border: 0;
+        }
+
+        input.qty {
+          border: 0;
+        }
+
+        @include breakpoint-max(md) {
+          display: block;
+          float: right;
+        }
+
+        @include breakpoint-max(xs) {
+          display: block;
+          float: left;
+          padding: 0 $line-height / 2 $line-height / 2 $line-height / 2;
+        }
+      }
+
+      &.product-subtotal,
+      &.product-price {
+        @include breakpoint-max(md) {
+          display: inline-block;
+          width: 50% !important;
+          text-align: left;
+          padding: 0 $line-height / 2 $line-height / 2 $line-height / 2;
+        }
+
+        @include breakpoint-max(xs) {
+          width: 100% !important;
+        }
+
+        &.product-price {
+          @include breakpoint-max(xs) {
+            display: none;
+          }
+        }
+      }
+
+      &.actions {
+        padding: $line-height $line-height / 2;
+
+        .coupon .input-text {
+          @include form-field(h5, 3);
+          margin: size(h5, lh) 0 0 0;
+        }
+
+        .coupon .button {
+          @include button(h5, 2, half);
+          @extend %button;
+          @include button-color-subtle(none, main);
+
+          margin: size(h5, lh) 0 0 0;
+          text-transform: uppercase;
+        }
+
+        .button {
+          @include button(h5, 2, half);
+          @extend %button;
+          @include button-color(none, main);
+
+          margin: size(h5, lh) 0 0 0;
+          text-transform: uppercase;
+
+          &:disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .cart-collaterals .cart_totals{
+
+    h2 {
+      @include font(h3);
+      text-transform: uppercase;
+    }
+
+    table.shop_table  {
+      margin: $line-height 0;
+
+      th,
+      td {
+        padding: $line-height / 2;
+      }
+    }
+
+    .wc-proceed-to-checkout {
+      .checkout-button {
+        @extend %button;
+        @include button(p, 4, half);
+        @include button-color(none, main);
+
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+///
+// Metodi Spedizione
+///
+.content ul#shipping_method li {
+  list-style: none;
+}
+tr.shipping {
+  .button {
+    @extend %button;
+    @include button(h5, 2, quarter);
+    @include button-color(none, main);
+    text-transform: uppercase;
+
+    &:hover {
+      @include button-color(hover);
+    }
+  }
+}
+
+.cart-collaterals .cart_totals table small {
+  display: inline;
+}

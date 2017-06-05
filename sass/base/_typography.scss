@@ -336,3 +336,31 @@ a,
     }
   }
 }
+
+/*
+ * Ultimi elementi no margin-bottom
+ */
+.av_textblock_section p:last-child,
+.av_textblock_section h1:last-child,
+.av_textblock_section h2:last-child,
+.av_textblock_section h3:last-child,
+.av_textblock_section h4:last-child,
+.av_textblock_section h5:last-child,
+.av_textblock_section ul:last-child,
+.av_textblock_section ol:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Primi elementi no margin-top
+ */
+.av_textblock_section p:first-child,
+.av_textblock_section h1:first-child,
+.av_textblock_section h2:first-child,
+.av_textblock_section h3:first-child,
+.av_textblock_section h4:first-child,
+.av_textblock_section h5:first-child,
+.av_textblock_section ul:first-child,
+.av_textblock_section ol:first-child {
+  margin-top: 0;
+}

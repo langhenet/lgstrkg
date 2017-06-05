@@ -1,3 +1,17 @@
 .html_header_top.html_header_topbar_active.html_header_sticky.html_large #top #main {
   padding-top: $line-height * 5;
 }
+
+.container {
+  padding: 0 $line-height * 1.5;
+}
+
+
+.responsive #top #wrap_all .container {
+@include breakpoint-max(md) {
+    max-width: 100%;
+    padding-left: $line-height;
+    padding-right: $line-height;
+    width: 100%;
+  }
+}

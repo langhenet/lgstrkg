@@ -1,6 +1,23 @@
 .container_wrap {
   border-top: 0;
 }
+
+
+///
+// Colori
+///
+.alternate_color.title_container {
+  background: $verde;
+  color: #fff;
+}
+.alternate_color .breadcrumb,
+.alternate_color .breadcrumb a,
+#top .alternate_color.title_container .main-title,
+#top .alternate_color.title_container .main-title a {
+  color: $bianco;
+}
+
+
 #top .title_container .container {
   padding: $line-height / 2 50px;
   min-height: auto;

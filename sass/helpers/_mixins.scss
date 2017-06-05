@@ -231,20 +231,35 @@
 //****************************************************************************//
 @mixin button-color-subtle($state:none, $palette:main) {
 
-  @if $state != hover {
-    background: palette($palette, button-bg-subtle);
-    color: palette($palette, button-subtle);
-    border-color: palette($palette, button-bg-subtle);
-    border-bottom-color: darken(palette($palette, button-bg-subtle), 10%);
-    opacity: 1;
-  }
+    @if ($state != hover) and ($palette == main) {
+      background: main-colors($palette, button-bg-subtle);
+      color: main-colors($palette, button-subtle);
+      border-color: main-colors($palette, button-bg-subtle);
+      border-bottom-color: darken(main-colors($palette, button-bg-subtle), 10%);
+      opacity: 1;
+    }
 
-  @else {
-    background: darken(palette($palette, button-bg-subtle), 5%);
-    color: palette($palette, button-subtle);
-    border-color: palette($palette, button-bg-subtle);
-    border-bottom-color: darken(palette($palette, button-bg-subtle), 10%);
-  }
+    @if ($state == hover) and ($palette == main) {
+      background: darken(main-colors($palette, button-bg-subtle), 5%);
+      color: main-colors($palette, button-subtle);
+      border-color: main-colors($palette, button-bg-subtle);
+      border-bottom-color: darken(main-colors($palette, button-bg-subtle), 10%);
+    }
+
+    @if $state != hover and $palette != main {
+      background: palette($palette, button-bg-subtle);
+      color: palette($palette, button-subtle);
+      border-color: palette($palette, button-bg-subtle);
+      border-bottom-color: darken(palette($palette, button-bg-subtle), 10%);
+      opacity: 1;
+    }
+
+    @if ($state == hover) and ($palette != main) {
+      background: darken(palette($palette, button-bg-subtle), 5%);
+      color: palette($palette, button-subtle);
+      border-color: palette($palette, button-bg-subtle);
+      border-bottom-color: darken(palette($palette, button-bg-subtle), 10%);
+    }
 }
 
 

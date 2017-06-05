@@ -1,3 +1,9 @@
+/**********************************************************************************
+/* LAYOUT GENERALE
+**********************************************************************************/
+.template-shop div.product div.summary {
+  padding-bottom: 0;
+}
 //*************************************************************************
 //** GALLERIA & IMMAGINI
 //*************************************************************************
@@ -6,12 +12,38 @@
   display: inline;
 }
 
+///
+// Immagine Principale
+///
+.template-shop .single-product-main-image .images a {
+  border: 0;
+}
+
+///
+// Contenitore Galleria
+///
+div.product div.images div.thumbnails {
+  margin-top: $line-height;
+  padding-top: 0;
+}
+
+
+///
+// Contenitore Immagini falleria
+///
+#top .single-product-main-image .thumbnails a {
+  border: 0;
+}
+
 //*************************************************************************
 //** TITOLO & PREZZO
 //*************************************************************************
 .single-product .product_title {
+
+  @include font(h2);
+
   @include breakpoint-max(lg) {
-    @include m-size(h1, $mt: 0);
+    @include m-size(h2, $mt: 0);
   }
 }
 
@@ -25,4 +57,246 @@
   @include breakpoint-max(lg) {
     @include m-size(h3, $mt:0);
   }
+}
+
+/************************************************************************
+/* META
+************************************************************************/
+///
+// SELETTORE QUANTITA'
+///
+
+div form.cart div.quantity {
+  margin-bottom: 0;
+  margin-right: $line-height;
+
+  @include breakpoint-max(xs) {
+    margin-right: $line-height / 2;
+  }
+}
+
+// + e -
+#top  div .quantity input.plus,
+#top  div .quantity input.minus {
+  height: $line-height * 1.5;
+  font-size: 1em;
+}
+//Colore
+#top .main_color .quantity input.plus,
+#top .main_color .quantity input.minus {
+  background-color: $grigio-chiarissimo;
+}
+
+#top div .quantity input.qty {
+  height: $line-height * 1.5;
+  line-height: $line-height;
+  //padding: bhpad(2) !important;
+  font-size: 1em;
+  border-left: 0;
+  border-right: 0;
+}
+
+///
+// Bottone
+///
+.single-product .single_add_to_cart_button {
+  @extend %button;
+  @include button(h5, 4, half);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#top form {
+  margin-bottom: $line-height;
+}
+
+.single-product div .main_color .single_add_to_cart_button {
+  @include button-color(main);
+
+  &:hover {
+    @include button-color(hover);
+  }
+}
+
+///
+// LINK CATEGORIA
+///
+.template-shop .product_meta {
+  @include font(p, $mb: 0);
+}
+
+/*********************************************************************************
+// VARIAZIONI
+*********************************************************************************/
+#top .variations_form {
+  padding: $line-height;
+  margin: $line-height 0;
+  background: $verde;
+  color: #fff;
+
+  @include breakpoint-max(lg) {
+    padding: $line-height / 2;
+  }
+
+  @include breakpoint-max(xs) {
+    margin-left: -$line-height;
+    margin-right: -$line-height;
+
+    @at-root .responsive .single-product-summary {
+      overflow: visible;
+    }
+  }
+
+  .single_variation_wrap {
+    margin: $line-height / 2;
+    padding: 0;
+  }
+
+  .single_add_to_cart_button  {
+    background: transparent;
+    border-color: #fff;
+
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+}
+
+#top .main_color .variations_form {
+  .price,
+  .stock {
+    color: #fff;
+    display: block;
+    @include font(p);
+  }
+}
+
+#top table.variations {
+  font-size: 1em;
+
+  @include breakpoint-max(xs) {
+    display: block;
+
+    tr {
+      padding-bottom: $line-height / 2;
+      display: block;
+      overflow: hidden;
+    }
+
+    td {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  tr:nth-child(even) {
+    color: #fff !important;
+  }
+}
+
+#top .variations td {
+  text-align: left;
+  vertical-align: middle;
+  padding: $line-height / 2;
+}
+
+#top .variations .label label {
+  @include font(p, $mb: 0, $wt: bold);
+}
+
+/**********************************************************************************
+/* TABS
+*********************************************************************************/
+/*
+ * Contenitore
+ */
+#top div.product .woocommerce-tabs {
+  padding-top: $line-height * 2;
+  margin-bottom: $line-height;
+
+  @include breakpoint-max(xs) {
+    margin-left: -$line-height;
+    margin-right: -$line-height;
+  }
+}
+
+
+
+/*
+ * Tab
+ */
+//SIZE
+div.product .woocommerce-tabs ul.tabs li {
+  @include font(p, $mb: 0);
+
+  @include breakpoint-max(sm) {
+    width: 100%;
+  }
+}
+
+//Padding
+#top div div.product .woocommerce-tabs ul.tabs li a,
+#top div div.product .woocommerce-tabs ul.tabs li.active a {
+  padding: $line-height / 2;
+
+  @include breakpoint-max(sm) {
+    width: 100%;
+  }
+}
+
+//Colori
+#top div div.product .woocommerce-tabs ul.tabs li {
+
+  a {
+    background: main-colors(main, bg-alt)
+  }
+
+  &.active a {
+    background-color: $bianco;
+  }
+}
+
+
+/*
+ * Contenuto
+ */
+#top div div.product .woocommerce-tabs .panel {
+  padding: $line-height * 1.5;
+
+  @include breakpoint-max(sm) {
+    padding: $line-height;
+  }
+
+  h2:first-of-type {
+    display: none;
+  }
+}
+
+/*
+ * Recensioni
+ */
+.woocommerce-noreviews { display: none }
+
+#top #commentform .comment-form-rating label {
+  @include font(h3, $mt: 0);
+  padding-top: 0;
+}
+
+#top #commentform p,
+#top #review_form p.stars {
+  padding: 0;
+  margin-bottom: $line-height;
+}
+#top #commentform p.form-submit {
+  margin-bottom: 0;
+}
+
+/********************************************************************************
+/* PRODOTTI CORRELATI
+*********************************************************************************/
+#top .related.products > h2,
+#top .upsells.products > h2 {
+  @include font(h1);
+  text-transform: uppercase;
+  text-align: center;
 }

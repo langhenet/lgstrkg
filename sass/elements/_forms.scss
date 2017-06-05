@@ -1,0 +1,27 @@
+#top .input-text,
+#top input[type="text"],
+#top input[type="input"],
+#top input[type="password"],
+#top input[type="email"],
+#top input[type="number"],
+#top input[type="url"],
+#top input[type="tel"],
+#top input[type="search"],
+#top textarea,
+#top select {
+  @include form-field(p, 2);
+}
+
+#top #commentform p.form-submit,
+#top #review_form p.form-submit {
+  input.submit {
+    @extend %button;
+    @include button(p, 3, half);
+    @include button-color($palette: main);
+    text-transform: uppercase;
+
+    &:hover {
+      @include button-color(hover);
+    }
+  }
+}

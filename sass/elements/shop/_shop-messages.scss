@@ -1,0 +1,16 @@
+#top div.woocommerce-message {
+  background: $verde-chiaro;
+  color: $verde;
+
+  .button.wc-forward {
+    @include button-color(none, main);
+    @include button(h5, 1, quarter);
+
+    font-family: $ff-button;
+    text-transform: uppercase;
+
+    &:hover {
+      @include button-color(hover, main);
+    }
+  }
+}

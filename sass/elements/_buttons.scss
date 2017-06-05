@@ -1,0 +1,57 @@
+.content a.avia-button:active,
+.content a.avia-button:focus,
+.content a.avia-button:hover,
+.content a.avia-button:link,
+.content a.avia-button:visited,
+a.avia-button,
+.content a.button:active,
+.content a.button:focus,
+.content a.button:hover,
+.content a.button:link,
+.content a.button:visited,
+a.button {
+  text-decoration: none;
+
+  @extend %button;
+}
+
+
+.avia-button.avia-size-small {
+  @include button(h5, 2, quarter);
+
+  margin-top: size(h5, lh);
+  text-transform: uppercase;
+}
+
+.avia-button.avia-size-medium {
+  @include button(p, 3, half);
+
+  margin-top: size(p, lh);
+  text-transform: uppercase;
+}
+
+.avia-button.avia-size-large {
+  @include button(h3, 4);
+
+  margin-top: size(h3, lh);
+  text-transform: uppercase;
+}
+
+
+
+/**********************************************************************************************************************/
+/** COLORI
+***********************************************************************************************************************/
+#top .main_color .avia-color-theme-color {
+  @include button-color($state: none, $palette: main);
+
+  &:hover {
+    @include button-color(hover, main);
+  }
+}
+
+@each $palette, $section in $colors {
+  #top .#{$palette}_color .avia-color-theme-color {
+    @include button-color($state: none, $palette: $palette);
+  }
+}
