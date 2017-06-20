@@ -1,0 +1,56 @@
+#top #main .sidebar {
+  border-left: 0;
+  float: left;
+  width: 27%;
+  overflow: visible;
+}
+
+.inner_sidebar {
+  margin-left: 0;
+}
+
+
+.sidebar .widget {
+  padding: $line-height;
+  background: main-colors(main, bg-alt);
+  padding: $line-height;
+  margin-bottom: $line-height;
+  box-shadow: $card-shadow;
+
+  &:first-child {
+    padding-top: $line-height;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.widget_text {
+    padding: 0;
+    background: palette(socket, bg);
+
+    h1, h2, h3, h4, h5, p, ol, ul {
+      color: palette(socket, body);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .widgettitle {
+    @include font(h4, $wt: bold, $mt: 0, $mb: size(h4, lh));
+  }
+}
+
+
+.sidebar a {
+  text-decoration: none;
+}
+.sidebar p a {
+  text-decoration: underline;
+}

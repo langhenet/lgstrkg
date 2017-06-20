@@ -8,3 +8,34 @@
 //    color: palette($palette, heading);
 //  }
 //}
+
+/******************************************************************************/
+/* SPACING
+/******************************************************************************/
+///
+// Piccolo
+///
+.avia-section-small .content,
+.avia-section-small .sidebar {
+  padding-top: $line-height;
+  padding-bottom: $line-height;
+}
+
+///
+// Grande
+///
+.avia-section-large .content,
+.avia-section-large .sidebar {
+  padding-top: $line-height * 5;
+  padding-bottom: $line-height * 5;
+}
+
+
+///
+// XTRA Grande
+///
+.avia-section-huge .content,
+.avia-section-huge .sidebar {
+  padding-top: $line-height * 7;
+  padding-bottom: $line-height * 7; 
+}

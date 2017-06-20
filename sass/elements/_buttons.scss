@@ -53,5 +53,9 @@ a.button {
 @each $palette, $section in $colors {
   #top .#{$palette}_color .avia-color-theme-color {
     @include button-color($state: none, $palette: $palette);
+
+    &:hover {
+      @include button-color(hover, $palette);
+    }
   }
 }

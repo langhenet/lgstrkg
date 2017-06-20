@@ -1,0 +1,29 @@
+@include breakpoint-max(lg) {
+  .cart_dropdown {
+    border-left: 0;
+  //  float: right;
+
+    .cart_dropdown_first {
+      overflow: hidden;
+    }
+  }
+
+  #advanced_menu_toggle,
+  #advanced_menu_hide {
+    right: -$line-height;
+  }
+}
+
+@include breakpoint-max(md) {
+  #advanced_menu_toggle,
+  #advanced_menu_hide {
+    right: 0;
+  }
+}
+
+@include breakpoint-max(sm) {
+  #header_main {
+    min-height: $line-height * 3;
+    padding-top: $line-height / 2;
+  }
+}

@@ -7,6 +7,11 @@
 //*************************************************************************
 //** GALLERIA & IMMAGINI
 //*************************************************************************
+.single-product-main-image  {
+  overflow: visible;
+}
+
+
 .template-shop .single-product-main-image .images a.woocommerce-product-gallery__trigger {
   border: 0;
   display: inline;
@@ -129,6 +134,19 @@ div form.cart div.quantity {
 // VARIAZIONI
 *********************************************************************************/
 #top .variations_form {
+
+  &::before {
+    content: "Scegli le Opzioni";
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    @include font(h3, $wt: bold, $mt: 0);
+
+    @include breakpoint-max(md) {
+      @include m-size(h3);
+    }
+  }
+
   padding: $line-height;
   margin: $line-height 0;
   background: $verde;
@@ -156,8 +174,14 @@ div form.cart div.quantity {
     background: transparent;
     border-color: #fff;
 
+    @include breakpoint-max(xs) {
+      margin-top: size(h5, lh) !important;
+      display: block !important;
+      clear: both;
+    }
+
     &.disabled {
-      opacity: 0.6;
+      opacity: 0.4;
     }
   }
 }
@@ -176,7 +200,9 @@ div form.cart div.quantity {
 
   @include breakpoint-max(xs) {
     display: block;
-
+    tbody {
+      display: block;
+    }
     tr {
       padding-bottom: $line-height / 2;
       display: block;

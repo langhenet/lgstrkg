@@ -1,0 +1,79 @@
+///
+// sidebar
+///
+
+.post-type-archive-product .container_wrap.main_color .sidebar .widget,
+.tax-product_cat .container_wrap.main_color .sidebar .widget {
+  background: palette(alternate, bg-alt);
+
+  &.widget_text {
+    padding: 0;
+    background: palette(socket, bg);
+  }
+
+  &.widget_products {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+
+//Reset Padding Widget WooCommerce
+#top .widget_layered_nav,
+#top .widget_layered_nav_filters {
+  padding: $line-height;
+}
+
+.wc-layered-nav-term.chosen {
+  background: palette(footer, bg);
+  color: palette(footer, body);
+
+  a {
+    color: palette(footer, body);
+
+    &:hover {
+      color: palette(footer, body);
+      background: transparent !important;
+    }
+
+    &::before {
+      color: palette(footer, body) !important;
+    }
+  }
+}
+
+///
+// LISTA PRODOTTI
+///
+.sidebar .widget.widget_products {
+  //padding: 0;
+  //background: transparent;
+  //box-shadow: none;
+}
+
+#top div ul.product_list_widget li {
+    @include font(h5, $mt: 0);
+    padding: $line-height / 2 0;
+
+
+    a {
+      font-size: 1em;
+      line-height: inherit !important;
+      //display: table;
+      font-weight: normal;
+
+      .product-title {
+      //  display: table-cell;
+        line-height: 1em;
+        display: block;
+        padding-top: size(h5, lh) / 2;
+      }
+    }
+
+    img {
+      //display: table-cell;
+      width: $line-height * 2;
+      padding: 0;
+      margin-right: 0;
+    }
+}

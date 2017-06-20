@@ -25,3 +25,194 @@
     }
   }
 }
+
+/***************************************************************************/
+/** GRAVITY container & Colors
+/***************************************************************************/
+#top .gform_wrapper {
+  margin: 0;
+  padding: $line-height * 1.5;
+
+  background: main-colors(main, form-bg);
+
+  label {
+    color: main-colors(main, form-body);
+    @include form-label(p);
+  }
+
+  .gfield_description {
+    color: main-colors(main, form-desc);
+
+    a {
+      color: main-colors(main, form-link);
+    }
+  }
+}
+
+@each $palette, $section in $colors {
+  #top .#{$palette}_color .gform_wrapper {
+    background: palette($palette, form-bg);
+
+    label {
+      color: palette($palette, form-body);
+
+      .gfield_required {
+        color: palette($palette, form-body);
+      }
+    }
+
+    .gfield_description {
+      color: palette($palette, form-desc);
+
+      a {
+        color: palette($palette, form-link);
+      }
+    }
+  }
+}
+
+
+
+/***************************************************************************/
+/** GRAVITY - CAMPI
+/***************************************************************************/
+///
+// Margine dei Campi
+///
+#top .gform_wrapper ul li.gfield {
+  margin-top: 0;
+  margin-bottom: $line-height !important;
+  @include form-field(p);
+
+  padding: 0 !important;
+
+  &.gf_left_half {
+    padding-right: $line-height / 4 !important;
+  }
+
+  &.gf_right_half {
+    padding-left: $line-height / 4 !important;
+  }
+
+  .ginput_container_name .name_first {
+    padding-right: $line-height / 4;
+  }
+
+  .ginput_container_name .name_last {
+    padding-left: $line-height / 4;
+  }
+}
+
+///
+// Sublabel e Desc
+///
+#top .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+#top .gform_wrapper .gfield_description {
+  margin: 0 !important;
+  @include form-desc();
+  padding: 0;
+}
+
+
+///
+// Colori dei campi
+///
+#top .main_color .input-text,
+#top .main_color input[type='text'],
+#top .main_color input[type='input'],
+#top .main_color input[type='password'],
+#top .main_color input[type='email'],
+#top .main_color input[type='number'],
+#top .main_color input[type='url'],
+#top .main_color input[type='tel'],
+#top .main_color input[type='search'],
+#top .main_color textarea,
+#top .main_color select {
+  background: #fff;
+  border-color: $grigio-chiaro;
+}
+
+@each $palette, $section in $colors {
+  #top .#{$palette}_color .input-text,
+  #top .#{$palette}_color input[type='text'],
+  #top .#{$palette}_color input[type='input'],
+  #top .#{$palette}_color input[type='password'],
+  #top .#{$palette}_color input[type='email'],
+  #top .#{$palette}_color input[type='number'],
+  #top .#{$palette}_color input[type='url'],
+  #top .#{$palette}_color input[type='tel'],
+  #top .#{$palette}_color input[type='search'],
+  #top .#{$palette}_color textarea,
+  #top .#{$palette}_color select {
+    background: #fff;
+
+    border-color: $grigio-chiaro;
+    color: main-colors(main, body)
+  }
+}
+
+/***************************************************************************/
+/** GRAVITY - CAMPI Complessi Su Mobile
+/***************************************************************************/
+@include breakpoint-max(lg) {
+  #top .gform_wrapper ul li.gfield.gf_left_half,
+  #top .gform_wrapper ul li.gfield.gf_right_half {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  #top .gform_wrapper {
+    padding: $line-height;
+  }
+}
+
+
+@include breakpoint-max(md) {
+  #top .gform_wrapper {
+    padding: $line-height * 1.5;
+  }
+}
+
+@include breakpoint-max(xs) {
+  #top .gform_wrapper {
+    padding: $line-height * 1.5;
+    margin: 0 (-$line-height) !important;
+    width: 130%;
+    max-width: 900px;
+  }
+}
+
+
+/***************************************************************************/
+/** GRAVITY - BOTTONE
+/***************************************************************************/
+
+#top .gform_wrapper .gform_footer {
+  padding: 0;
+  margin: 0;
+
+  input[type=submit] {
+    @extend %button;
+    @include button(p, 3, half);
+    @include button-color(none, main);
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+    @include button-color(hover, main)
+    }
+  }
+}
+
+///
+// Loop Colori
+///
+@each $palette, $section in $colors {
+  #top .#{$palette} .gform_wrapper .gform_footer {
+      @include button-color(none, $palette);
+
+      &:hover {
+        @include button-color(none, $palette);
+      }
+  }
+}

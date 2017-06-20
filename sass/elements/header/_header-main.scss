@@ -17,7 +17,22 @@ div .logo {
   }
 }
 
+.html_header_top.html_header_sticky.html_large .av_minimal_header #header_main .container {
+  height: $line-height * 4;
+  line-height: $line-height * 4;
+}
 
+///
+// Logo
+////
+div .logo {
+  top: 0.7em;
+}
+
+.logo img {
+  max-width: 220px;
+  height: auto;
+}
 /****************************************************************************/
 /** CARRELLINO
 /****************************************************************************/

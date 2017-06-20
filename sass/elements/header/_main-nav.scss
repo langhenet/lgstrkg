@@ -1,3 +1,7 @@
 .av-main-nav > li > a {
   font-weight: normal;
 }
+
+.header_color .main_menu ul:first-child > li > a {
+  color: main-colors(header, link)
+}

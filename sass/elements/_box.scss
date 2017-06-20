@@ -1,0 +1,42 @@
+#top .iconbox_top {
+  margin-top: $line-height;
+
+  .iconbox_icon {
+    display: none;
+  }
+
+  .iconbox_content {
+    padding: $line-height * 2 $line-height $line-height * 2 $line-height;
+
+    .iconbox_content_title  {
+      padding: 0;
+      @include font(h4, $mt: 0, $mb: size(h4, lh), $wt: bold);
+    }
+  }
+}
+
+#top .iconbox_top .iconbox_content {
+  background: main-colors(main, bg-alt);
+
+  h1, h2, h3, h4, h5, p, ol, ul {
+    color: main-colors(main, body-alt);
+  }
+
+  a {
+    color: main-colors(main, accent-alt);
+  }
+}
+
+@each $palette, $bg in $colors {
+  #top .#{$palette}_color .iconbox_top .iconbox_content {
+    background: palette($palette, bg-alt);
+
+    h1, h2, h3, h4, h5, p, ol, ul {
+      color: palette($palette, body-alt);
+    }
+
+    a {
+      color: palette($palette, accent-alt);
+    }
+  }
+}
