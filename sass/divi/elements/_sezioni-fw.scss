@@ -591,10 +591,10 @@
   position: relative;
 
   &::before {
-    @include color-overlay($palette: fheader, $grade: 0.30);
+    @include color-overlay($palette: fheader, $grade: 0.25);
 
     @include breakpoint-max(md) {
-      @include color-overlay(fheader, $grade: 0.45);
+      @include color-overlay(fheader, $grade: 0.40);
     }
   }
 
