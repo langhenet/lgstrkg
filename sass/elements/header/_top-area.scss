@@ -17,4 +17,8 @@
       padding-bottom: 0;
     }
   }
+
+  @at-root .header_color #{&} li > a {
+    color: main-colors(topbar, link);
+  }
 }

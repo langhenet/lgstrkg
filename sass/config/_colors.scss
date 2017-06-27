@@ -43,7 +43,7 @@ $rosa-chiaro: lighten($rosa, 42.5%);
 $layout-colors: (
   topbar: (
     body: $nero,
-    link: $verde,
+    link: $nero,
     accent: $verde,
     border: $nero,
     bg: mix($verde, $bianco, 5%),
@@ -84,7 +84,7 @@ $layout-colors: (
 
     body-alt:   $nero,      //body alternativo - testo in un form o in un box
     bg-alt:     $grigio-chiarissimo,      //sfondo alt - il bg di un form o di un box
-    accent-alt: $verde,      //accento alt - il di un link nel form
+    accent-alt: $rosa,      //accento alt - il di un link nel form
 
     form-body: $grigio,
     form-bg: $verde-chiaro,

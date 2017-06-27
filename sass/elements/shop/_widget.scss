@@ -7,13 +7,37 @@
   background: palette(alternate, bg-alt);
 
   &.widget_text {
-    padding: 0;
+  //  padding: 0;
     background: palette(socket, bg);
+
+    p {
+      padding-left: $line-height;
+      padding-right: $line-height;
+
+      &:first-child {
+        padding-top: $line-height;
+      }
+      &:last-child {
+        padding-bottom: $line-height;
+      }
+    }
+
+    h3 {
+      padding-left: size(h3, lh);
+      padding-right: size(h3, lh);
+
+      &:first-child {
+        padding-top: size(h3, lh);
+      }
+      &:last-child {
+        padding-bottom: size(h3, lh);
+      }
+    }
   }
 
   &.widget_products {
-    background: transparent;
-    box-shadow: none;
+    //background: transparent;
+    //box-shadow: none;
   }
 }
 
@@ -45,35 +69,63 @@
 ///
 // LISTA PRODOTTI
 ///
-.sidebar .widget.widget_products {
-  //padding: 0;
-  //background: transparent;
-  //box-shadow: none;
-}
+
 
 #top div ul.product_list_widget li {
-    @include font(h5, $mt: 0);
-    padding: $line-height / 2 0;
+  @include font(h5, $mt: 0);
+  padding: $line-height / 2 0;
 
 
-    a {
-      font-size: 1em;
-      line-height: inherit !important;
-      //display: table;
-      font-weight: normal;
+  a {
+    font-size: 1em;
+    line-height: inherit !important;
+    //display: table;
+    font-weight: normal;
+    text-decoration: none;
 
-      .product-title {
-      //  display: table-cell;
-        line-height: 1em;
-        display: block;
-        padding-top: size(h5, lh) / 2;
-      }
+    .product-title {
+    //  display: table-cell;
+      line-height: 1em;
+      display: block;
+      padding-top: size(h5, lh) / 2;
     }
 
-    img {
-      //display: table-cell;
-      width: $line-height * 2;
-      padding: 0;
-      margin-right: 0;
+    del,
+    ins {
+      float: left;
+      display: block;
+      margin-top: size(h5, lh) * -1;
     }
+  }
+
+  img {
+    //display: table-cell;
+    width: $line-height * 2;
+    padding: 0;
+    margin-right: 0;
+  }
+}
+
+
+///
+// CATEGORIE PRODOTTO
+///
+.widget.widget_product_categories li.cat-item {
+  @include font(p, $mb: 0);
+
+  &> a {
+    font-size: 1em;
+  }
+
+  &> ul > li.cat-item {
+    @include font(h5, $mt: 0, $fm: primary);
+
+    &> ul > li.cat-item {
+      @include font(p, $mb: 0);
+    }
+  }
+
+  &.current-cat > a {
+    color: main-colors(main, accent);
+  }
 }

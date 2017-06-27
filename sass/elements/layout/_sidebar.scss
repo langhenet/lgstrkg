@@ -12,7 +12,7 @@
 
 .sidebar .widget {
   padding: $line-height;
-  background: main-colors(main, bg-alt);
+  background: lighten( main-colors(main, bg-alt), 0.5%);
   padding: $line-height;
   margin-bottom: $line-height;
   box-shadow: $card-shadow;
@@ -38,6 +38,30 @@
 
       &:first-child {
         margin-top: 0;
+      }
+    }
+
+    p {
+      padding-left: $line-height;
+      padding-right: $line-height;
+
+      &:first-child {
+        padding-top: $line-height;
+      }
+      &:last-child {
+        padding-bottom: $line-height;
+      }
+    }
+
+    h3 {
+      padding-left: size(h3, lh);
+      padding-right: size(h3, lh);
+
+      &:first-child {
+        padding-top: size(h3, lh);
+      }
+      &:last-child {
+        padding-bottom: size(h3, lh);
       }
     }
   }

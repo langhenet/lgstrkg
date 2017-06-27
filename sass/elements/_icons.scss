@@ -1,0 +1,26 @@
+.content .avia-icon-list {
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    list-style: none;
+    margin-left: 0;
+  }
+}
+
+.avia-icon-list .iconlist_title {
+  margin-top: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+.main_color .avia-icon-list .iconlist_icon {
+  background-color: main-colors(main, accent-alt)
+}
+
+@each $palette, $section in $colors  {
+  .#{$palette}_color .avia-icon-list .iconlist_icon {
+    background-color: palette($palette, accent);
+    color: palette($palette, bg);
+  }
+}

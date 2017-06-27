@@ -1,7 +1,43 @@
 #footer {
   background: lighten($rosa, 5%);
+  padding: $line-height 0;
+
+  .widget {
+    margin: $line-height 0;
+  }
 }
 
 #socket {
   background: $rosa;
+
+  .container {
+    padding-top: $line-height;
+    padding-bottom: $line-height;
+  }
+}
+
+
+///
+// COLUMNS
+///
+#footer div .av_one_fourth {
+  margin-left: 3%;
+  width: 22.7%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+///
+// WIDGET NAV MENU
+///
+#top #footer .widget_nav_menu li {
+  @include font(p, $mb: 0);
+
+  a {
+    padding: 0;
+    padding-left: $line-height / 2;
+  }
 }

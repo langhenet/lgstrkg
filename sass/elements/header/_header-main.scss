@@ -1,12 +1,9 @@
-/*#header_main {
-  padding-top: $line-height / 2;
-  padding-bottom: $line-height / 2;
+/*
+ * Header Stretch
+ */
+.html_header_top #top .av_header_stretch .container {
+  max-width: 1920px;
 }
-div .logo {
-  padding-top: $line-height / 2;
-  padding-bottom: $line-height / 2;
-  position: relative;
-}*/
 
 #header_main {
   min-height: $line-height * 4;
@@ -27,6 +24,10 @@ div .logo {
 ////
 div .logo {
   top: 0.7em;
+
+  @at-root .header-scrolled-full #{&} {
+    top: 0.05em;
+  }
 }
 
 .logo img {

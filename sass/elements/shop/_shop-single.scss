@@ -23,6 +23,9 @@
 .template-shop .single-product-main-image .images a {
   border: 0;
 }
+.single-product div.product .woocommerce-product-gallery .flex-viewport {
+  margin-bottom: $line-height;
+}
 
 ///
 // Contenitore Galleria
@@ -38,6 +41,23 @@ div.product div.images div.thumbnails {
 ///
 #top .single-product-main-image .thumbnails a {
   border: 0;
+}
+
+
+///
+// Immagine galleria
+///
+.single-product div.product .woocommerce-product-gallery img {
+  border: 0;
+}
+
+
+/***************************************************************************
+/** SIDEBAR
+/**************************************************************************/
+#top #main .single-product-main-image .sidebar,
+#top #main .single-product-main-image .inner_sidebar {
+  padding-top: $line-height;
 }
 
 //*************************************************************************

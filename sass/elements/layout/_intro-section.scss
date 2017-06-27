@@ -7,8 +7,16 @@
 // Colori
 ///
 .alternate_color.title_container {
-  background: $verde;
+  background-color: $verde;
   color: #fff;
+  background-image: url(http://giocattolionline.net/files/2017/06/bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  @include breakpoint-max(md) {
+    background-size: 80%;
+    background-position: 280% 100%;
+  }
 }
 .alternate_color .breadcrumb,
 .alternate_color .breadcrumb a,
@@ -28,6 +36,10 @@
   @include font(h3, $fm: primary, $mt: 0, $mb: 0, $wt: bold);
   text-transform: uppercase;
   display: block;
+
+  @include breakpoint-max(lg) {
+    @include m-size(h3, $mt:0 , $mb: 0);
+  }
 }
 
 
@@ -38,4 +50,12 @@
   margin-top: 0;
   @include font(h5, $mt: 0, $mb: 0, $fm: primary);
   overflow: hidden;
+
+  @include breakpoint-max(md) {
+    line-height: size(h5, lh) / 2;
+  }
+
+  .trail-before {
+    padding-left: 0;
+  }
 }
