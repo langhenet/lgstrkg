@@ -38,78 +38,85 @@ div .logo {
 /** CARRELLINO
 /****************************************************************************/
 
-#top .header_color .main_menu .dropdown_widget  {
-  box-shadow: $card-shadow;
-  padding: $line-height / 2 !important;
-  background: #fff;
+#top .header_color .cart_dropdown .cart_dropdown_first {
 
-  .widget_shopping_cart_content {
-    box-shadow: none !important;
-    border: 0 !important;
+  .cart_dropdown_link {
+    background-color: main-colors(header, accent);
+    color: main-colors(header, bg);
   }
 
-  ul {border: 0;}
+  .dropdown_widget  {
 
-  li {
-    @include font(h5, $mt: 0);
-    padding: size(h5, lh) / 4 0;
-
-    &:hover {
-      background: none;
+    .widget_shopping_cart_content {
+      border: 0 !important;
+      box-shadow: $card-shadow;
+      padding: ($line-height / 2) !important ;
+      background: #fff;
     }
-  }
 
-  p.total {
-    @include font(h5, $mt: 0);
-    padding: size(h5, lh) / 2 0;
-    border-bottom: 0;
-  }
+    ul {border: 0;}
+
+    li {
+      @include font(h5, $mt: 0);
+      padding: size(h5, lh) / 4 0;
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    p.total {
+      @include font(h5, $mt: 0);
+      padding: size(h5, lh) / 2 0;
+      border-bottom: 0;
+    }
 
 
-  ///
-  // RESET COLORI
-  ///
-  ul > li > a {
-    color: $grigio;
+    ///
+    // RESET COLORI
+    ///
+    ul > li > a {
+      color: $grigio;
 
-    &:hover {
+      &:hover {
+        color: $grigio;
+      }
+    }
+
+    ul span {
       color: $grigio;
     }
-  }
 
-  ul span {
-    color: $grigio;
-  }
+    ul .variation {
+      color: $grigio;
+    }
 
-  ul .variation {
-    color: $grigio;
-  }
+    p {
+      font-size: 1em;
+    }
+    p strong {
+      color: $grigio;
+    }
 
-  p {
-    font-size: 1em;
-  }
-  p strong {
-    color: $grigio;
-  }
+    ///
+    // BOTTONI
+    ////
+    .buttons {
+      background: transparent;
+      padding: 0;
+      border-top: 0;
 
-  ///
-  // BOTTONI
-  ////
-  .buttons {
-    background: transparent;
-    padding: 0;
-    border-top: 0;
+      a.button {
+        @extend %button;
+        @include button(h5, 2, quarter);
+        border-color: $verde;
+        width: 68%;
+        min-width: auto;
 
-    a.button {
-      @extend %button;
-      @include button(h5, 2, quarter);
-      border-color: $verde;
-      width: 68%;
-      min-width: auto;
-
-      &.checkout.wc-forward {
-        @include button-color(none, main);
-        width: 30%;
+        &.checkout.wc-forward {
+          @include button-color(none, main);
+          width: 30%;
+        }
       }
     }
   }

@@ -1,7 +1,145 @@
+.av-main-nav > li {
+  line-height: $line-height;
+}
 .av-main-nav > li > a {
   font-weight: normal;
 }
 
-.header_color .main_menu ul:first-child > li > a {
-  color: main-colors(header, link)
+.header_color .main_menu ul:first-child > li > a,
+.header_color .main_menu .menu ul li a {
+  color: main-colors(header, link);
+}
+
+/*
+ * Search
+ */
+#top #menu-item-search.menu-item-search-dropdown>a {
+  padding: 0 $line-height;
+}
+
+/*************************************************************************************
+/** MEGA MENU
+/************************************************************************************/
+/*
+ * Contenitore
+ */
+//2colonne
+.avia_mega2  {
+ max-width: 600px;
+}
+
+//3colonne
+.avia_mega3  {
+ max-width: 800px;
+}
+
+//4colonne
+.avia_mega4  {
+  max-width: 1100px;
+}
+
+
+
+#header.av_minimal_header .main_menu .avia_mega_div > .sub-menu {
+  padding: $line-height !important;
+  border-top: 3px solid $verde !important;
+}
+
+#top #header .avia_mega_div > .sub-menu > li {
+  padding-top: 0;
+  padding-bottom: $line-height;
+  padding-left: $line-height / 2;
+  padding-right: $line-height / 2;
+
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+
+  a {
+    color: main-colors(header, body);
+  }
+
+  &.nascosto > span > a,
+  &.nascosto > a {
+
+    visibility: hidden;
+  }
+}
+
+#top #header .avia_mega_div > .sub-menu .mega_menu_title {
+  text-transform: uppercase;
+
+  a {
+    color: main-colors(header, accent)
+  }
+}
+
+#top #header .avia_mega_div > .sub-menu > li > ul > li {
+
+  a {
+  padding: $line-height / 4 $line-height / 2;
+  }
+
+  &.grande {
+    text-transform: uppercase;
+
+    a {
+      color: main-colors(header, accent);
+      padding: 0;
+      font-weight: bold;
+      .avia-bullet {
+        display: none;
+      }
+    }
+  }
+}
+
+.avia_mega_div .avia-bullet {
+  margin-top: $line-height / 1.5;
+}
+
+
+/*************************************************************************************
+/** Ajax Search
+/************************************************************************************/
+.ajax_search_response {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+/*
+ * Titoli Sezioni
+ */
+.ajax_search_response h4 {
+  @include font(p, $wt: bold, $mt: $line-height, $mb: 0);
+  text-transform: uppercase;
+  padding: 0 $line-height / 2;
+}
+
+
+/*
+ * Entry di ricerca
+ */
+.ajax_search_entry  {
+  padding: $line-height / 2;
+}
+
+/*
+ * Titoli e Excerpt
+ */
+.header_color .ajax_search_title,
+.header_color .ajax_search_excerpt {
+  color: main-colors(header, body);
+}
+
+.header_color .ajax_search_title {
+  text-transform: none;
+  @include font(p, $mb: 0);
+}
+
+.header_color .ajax_search_excerpt {
+  @include font(h5, $mt: 0);
 }

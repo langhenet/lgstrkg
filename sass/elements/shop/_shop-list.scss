@@ -9,7 +9,21 @@
 ///
 // Filtri - elemento LI
 ///
+.sort-param {
+//  font-family: $ff-secondary;
+  @include font(h5, $mt: 0);
 
+  ul {
+    width: 100%;
+
+    li {
+
+      @at-root .content #{&} a {
+        text-decoration: none;
+      }
+    }
+  }
+}
 .content .product-sorting li {
   margin-left: 0;
 }
