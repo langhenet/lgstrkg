@@ -108,3 +108,25 @@
   }
  }
 }
+
+/****************************************************************/
+/** STRIKING box
+/****************************************************************/
+.content_box {
+  background: lighten(main-colors(main, bg-alt), 40%);
+  font-size: 1em;
+
+  .content_box_title {
+    background: main-colors(main, bg-alt);
+    color: main-colors(main, body-alt);
+    padding: $line-height / 2;
+
+    @include font(p, $mb: 0, $mt: 0);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .content_box_content {
+    padding: $line-height;
+  }
+}

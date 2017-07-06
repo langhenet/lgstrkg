@@ -25,10 +25,18 @@ $bianco: #fff;
 $rosso-vero: #FF0000;
 $blu: #1f4072;
 $viola: #a32639;
-$nero: #333;
 $verde: #4CAF50;
-$grigio: #f3f3f3;
 $black: #000;
+
+$nero: #212121;
+$grigio-scuro: #616161;
+$grigio: #E0E0E0;
+$grigio-chiaro: #F5F5F5;
+
+$arancio: #FF5722;
+$rosso: #F44336;
+$blu: #2196F3;
+$blu-light: #039BE5;
 
 /*
 * Colori delle parti principali del sito
@@ -45,38 +53,38 @@ $layout-colors: (
   ),
 
   header: (
-    body: $bianco,
-    link: $bianco,
-    accent: $bianco,
-    border: $bianco,
-    bg: $viola,
+    body: $grigio-scuro,
+    link: $grigio-scuro,
+    accent: $verde,
+    border: $nero,
+    bg: $bianco,
     button-bg: $verde,
     button: $bianco,
   ),
 
   fheader: (
-    body: $nero,
-    link: $nero,
-    accent: $nero,
-    border: $nero,
-    bg: $bianco,
+    body: $bianco,
+    link: $bianco,
+    accent: $bianco,
+    border: $bianco,
+    bg: $rosso,
     overlay: $black,
     button-bg: $nero,
     button: $bianco,
   ),
 
   main: (
-    body:       $nero,      //Corpo - testo
+    body:       $grigio-scuro,      //Corpo - testo
     body-sec:   $nero,      //Secondario - blockquote o blog meta
-    heading:    lighten($nero, 20%),      //Titoli 1 e 2
-    link:       $viola,      //Link
+    heading:    $grigio-scuro,      //Titoli 1 e 2
+    link:       $rosso,      //Link
     bg:         $bianco,      //Sfondo principale
     border:     lighten($nero, 20%),      //Bordi
 
-    accent:     $viola,      //Accento - sfondo lista icone / grassetti / icone
+    accent:     $rosso,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $bianco,      //body alternativo - testo in un form o in un box
-    bg-alt:     $viola,      //sfondo alt - il bg di un form o di un box
+    bg-alt:     $verde,      //sfondo alt - il bg di un form o di un box
     accent-alt: $bianco,      //accento alt - il di un link nel form
 
     form-body: $bianco,
@@ -98,7 +106,7 @@ $layout-colors: (
     link: $bianco,
     accent: $bianco,
     border: $bianco,
-    bg: $viola,
+    bg: $rosso,
     button-bg: $verde,
     button: $bianco,
     ),

@@ -32,6 +32,11 @@
 
 #footer .inner {
   padding: ($line-height * 3) 0;
+
+  @include breakpoint-max(md) {
+    padding: ($line-height * 3) $line-height * 2;
+    width: 100% !important;
+  }
 }
 
 
@@ -120,12 +125,23 @@
 
   &> .inner {
     padding: $line-height 0;
+
+    @include breakpoint-max(md) {
+      padding: $line-height $line-height * 2;
+      width: 100% !important;
+    }
+
+    @include breakpoint-max(xs) {
+      padding: $line-height $line-height;
+    }
   }
 }
 
+
+
 #copyright,
 #footer_right_area {
-  @include font(small);
+  @include font(h5, $mt: 0, $fm: primary);
 
   color: main-colors(footer, body);
 }

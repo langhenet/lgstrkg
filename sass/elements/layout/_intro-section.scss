@@ -15,6 +15,7 @@
   background-size: cover !important;
   background-image: none;
   position: relative;
+  border-bottom: $line-height / 2 solid $verde;
 }
 
 
@@ -24,7 +25,7 @@
 // Overlay della sezione introduttiva
 ///
 #feature::before {
-  @include color-overlay(fheader, 0.4);
+  @include color-overlay(fheader, 0.3);
 }
 
 

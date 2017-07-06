@@ -28,6 +28,7 @@
 #header {
   background-color: main-colors(header, bg);
   transition: all 250ms linear;
+  border-bottom: $line-height / 2 solid $verde;
 }
 
 
@@ -43,7 +44,10 @@
 
 
 
-
+#site_name,
+#site_description {
+  color: main-colors(header, body)
+}
 
 //****************************************************************************//
 //                INNER HEADER
