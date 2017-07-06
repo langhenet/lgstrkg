@@ -144,23 +144,23 @@
     margin-top: 2.5em;
   }
 }
+/******************************************************************************/
+/*          NAVIGAZIONE MOBILE - HAMBURGER NAV
+/******************************************************************************/
 ///
 // Fix navigazione che copre tutto
 ///
 .responsive #navigation {
-  @include breakpoint-max(md) {
+  @include breakpoint-max(lg) {
     display: inline-block;
     width: 100%;
     &::before {
       content: "\f0c9";
       font-family: 'FontAwesome';
       position: absolute;
-      top: 0.25em;
+      top: 0.4em;
       left: 0.7em;
     }
-  }
-  @include breakpoint-max(sm) {
-    flex-basis: 55%;
   }
 }
 
@@ -173,7 +173,16 @@
     @include font(p);
     padding-top: bhpad(2);
     padding-bottom: bhpad(2);
+  //  text-indent: 2em;
+    -webkit-appearance: none;
     padding-left: 2em !important;
-    border: 2px solid main-colors(header, border);
+    border: 2px solid main-colors(header, accent);
+
+  }
+}
+
+@include breakpoint-max(xl) {
+  #header {
+    background-image: none;
   }
 }
