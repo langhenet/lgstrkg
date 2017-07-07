@@ -250,3 +250,22 @@ h2.woocommerce-loop-product__title {
     margin-bottom: $line-height;
   }
 }
+
+/*************************************************************************************
+** Category List
+*************************************************************************************/
+.products .product-category.product {
+  a {
+    text-decoration: none;
+  }
+}
+
+.products .product h2.woocommerce-loop-category__title {
+  @include font(p, $mb: 0);
+  padding: $line-height / 2;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+  }
+}

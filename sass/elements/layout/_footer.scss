@@ -1,20 +1,51 @@
 #footer {
-  background: lighten($rosa, 5%);
+  background: main-colors(footer, bg);
   padding: $line-height 0;
 
   .widget {
     margin: $line-height 0;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
 #socket {
-  background: $rosa;
+  background: main-colors(footer, bg);
+
 
   .container {
-    padding-top: $line-height;
-    padding-bottom: $line-height;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .copyright {
+      float: none;
+      text-align: center;
+      display: block;
+      padding-top: $line-height;
+      padding-bottom: $line-height;
+      border-top: main-colors(footer, border) 1px solid;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
   }
 }
+
+///
+// RESETS TITOLI WIDGET
+
+//Reset MT
+.flex_column .widget .widgettitle,
+.content .widget .widgettitle {
+  margin-top: size(p, lh);
+}
+
+#footer .widgettitle {
+  @include font(p, $mb: 0, $wt: bold, $fm: secondary);
+}
+
 
 
 ///
@@ -38,6 +69,6 @@
 
   a {
     padding: 0;
-    padding-left: $line-height / 2;
+    padding-left: 0;
   }
 }

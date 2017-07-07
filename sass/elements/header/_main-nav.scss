@@ -23,6 +23,10 @@
 /*
  * Contenitore
  */
+.avia_mega_div {
+  border-top: 3px solid $verde !important;
+}
+
 //2colonne
 .avia_mega2  {
  max-width: 600px;
@@ -42,7 +46,6 @@
 
 #header.av_minimal_header .main_menu .avia_mega_div > .sub-menu {
   padding: $line-height !important;
-  border-top: 3px solid $verde !important;
 }
 
 #top #header .avia_mega_div > .sub-menu > li {

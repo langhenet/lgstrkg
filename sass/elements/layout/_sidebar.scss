@@ -1,5 +1,21 @@
+//Reset Sidebar left
+#top #main .sidebar_left {
+  .sidebar {
+    border-right: 0;
+  }
+  
+  .content {
+    border-left: 0;
+  }
+
+  .inner_sidebar {
+    margin-right: 0;
+  }
+}
+
 #top #main .sidebar {
   border-left: 0;
+  border-right: 0;
   float: left;
   width: 27%;
   overflow: visible;
@@ -7,6 +23,7 @@
 
 .inner_sidebar {
   margin-left: 0;
+  margin-right: 0;
 }
 
 

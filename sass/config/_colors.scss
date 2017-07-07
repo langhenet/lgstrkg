@@ -34,7 +34,7 @@ $arancio: #FF9800;
 $grigio-chiarissimo: #f5F5F5;
 $grigio-chiaro: #E0E0E0;
 $grigio: #616161;
-$rosa: #e91e62;
+$rosa: #2196F3;
 $rosa-chiaro: lighten($rosa, 42.5%);
 
 /*
@@ -84,7 +84,7 @@ $layout-colors: (
 
     body-alt:   $nero,      //body alternativo - testo in un form o in un box
     bg-alt:     $grigio-chiarissimo,      //sfondo alt - il bg di un form o di un box
-    accent-alt: $rosa,      //accento alt - il di un link nel form
+    accent-alt: $verde,      //accento alt - il di un link nel form
 
     form-body: $grigio,
     form-bg: $verde-chiaro,
@@ -101,13 +101,13 @@ $layout-colors: (
     ),
 
   footer: (
-    body: $nero,
-    link: $nero,
-    accent: $nero,
-    border: $nero,
-    bg: $bianco,
-    button-bg: $nero,
-    button: $bianco,
+    body: $bianco,
+    link: $bianco,
+    accent: $bianco,
+    border: $bianco,
+    bg: $rosa,
+    button-bg: $bianco,
+    button: $verde,
     ),
 
   sidebar: (
@@ -195,7 +195,7 @@ $colors: (
 
     body-alt:   $grigio,      //body alternativo - testo in un form o in un box
     bg-alt:     $verde-chiaro,      //sfondo alt - il bg di un form o di un box
-    accent-alt: $verde-chiaro,      //accento alt - il di un link nel form
+    accent-alt: $verde,      //accento alt - il di un link nel form
 
     form-body: $grigio,
     form-bg: $bianco,
@@ -204,8 +204,8 @@ $colors: (
 
     overlay:    $nero,      //Colore sfondo overlay
 
-    button:     $bianco,      //colore bottone
-    button-bg:  $rosa,
+    button:     $verde,      //colore bottone
+    button-bg:  $bianco,
 
     button-subtle: $bianco,
     button-bg-subtle: mix($nero, white, 50%)    //bg bottone
