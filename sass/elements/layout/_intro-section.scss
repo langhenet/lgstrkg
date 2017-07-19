@@ -12,7 +12,9 @@
   background-image: url(http://giocattolionline.net/files/2017/06/bg.png);
   background-repeat: no-repeat;
   background-position: top right;
-
+  @include breakpoint-max(lg) {
+    background-image: none;
+  }
   @include breakpoint-max(md) {
     background-size: 80%;
     background-position: 280% 100%;

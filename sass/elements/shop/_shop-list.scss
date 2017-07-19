@@ -35,6 +35,17 @@
 // Lista PRODOTTI
 //************************************************************************
 ///
+// Reset Overflow per ombre
+///
+.template-shop.avia-content-slider {
+  overflow: visible;
+}
+.avia-content-slider-inner {
+  overflow: visible;
+}
+
+
+///
 // Contenitore UL dei Prodotti
 ///
 .content ul.products {
@@ -248,6 +259,46 @@ h2.woocommerce-loop-product__title {
     width: 100%;
     margin-right: 0;
     margin-bottom: $line-height;
+  }
+}
+
+/***************************************************************************
+** COLORI
+****************************************************************************/
+
+/*.avia-section.main_color,
+.avia-section.header_color {
+  .products .product {
+    .thumbnail_container {
+      border-top: 1px solid $grigio-chiaro;
+      border-left: 1px solid $grigio-chiaro;
+      border-right: 1px solid $grigio-chiaro;
+    }
+
+    .inner_product_header,
+    .product_on_sale .inner_product_header,
+    .avia_cart_buttons  {
+      border-left: 1px solid $grigio-chiaro;
+      border-right: 1px solid $grigio-chiaro;
+    }
+  }
+}*/
+
+#top .avia-section.socket_color,
+#top .avia-section.footer_color {
+
+  .sort-param > li > span, .socket_color .sort-param > li > a,
+  .socket_color .sort-param ul,
+  .sort-param  .current-param a,
+  .sort-param a,
+  .product-sorting strong {
+    color: $grigio;
+  }
+
+  .avia_cart_buttons .button.ajax_add_to_cart,
+  .avia_cart_buttons .button.product_type_variable.add_to_cart_button {
+    background: $verde-chiaro;
+    color: $grigio;
   }
 }
 

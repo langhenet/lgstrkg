@@ -11,6 +11,32 @@
   overflow: visible;
 }
 
+///
+// FIX IMMAGINE PRINCIPALE SU MOBILE
+///
+@include breakpoint-max(md) {
+  .woocommerce-product-gallery__wrapper {
+    //width: 100% !important;
+  }
+  .single-product div.product .woocommerce-product-gallery__image.flex-active-slide {
+  //  width: 100% !important;
+
+    a {
+      display: block;
+
+      img {
+        margin: 0 auto;
+        width: auto !important;
+        height: auto;
+      }
+    }
+
+    img {
+    //  width: auto !important;
+    //  height: auto !important;
+    }
+  }
+}
 
 .template-shop .single-product-main-image .images a.woocommerce-product-gallery__trigger {
   border: 0;
