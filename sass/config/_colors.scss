@@ -34,7 +34,7 @@ $arancio: #FF9800;
 $grigio-chiarissimo: #f5F5F5;
 $grigio-chiaro: #E0E0E0;
 $grigio: #616161;
-$rosa: #2196F3;
+$rosa: $verde;
 $rosa-chiaro: lighten($rosa, 42.5%);
 
 /*
@@ -105,9 +105,9 @@ $layout-colors: (
     link: $bianco,
     accent: $bianco,
     border: $bianco,
-    bg: $rosa,
+    bg: $verde,
     button-bg: $bianco,
-    button: $verde,
+    button: $bianco,
     ),
 
   sidebar: (
@@ -160,14 +160,14 @@ $colors: (
     body-sec:   $bianco,      //Secondario - blockquote o blog meta
     heading:   $bianco,      //Titoli 1 e 2
     link:       $bianco,      //Link
-    bg:         $rosa,      //Sfondo principale
+    bg:         $verde,      //Sfondo principale
     border:     $bianco,      //Bordi
 
     accent:     $bianco,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $grigio,      //body alternativo - testo in un form o in un box
     bg-alt:     $rosa-chiaro,      //sfondo alt - il bg di un form o di un box
-    accent-alt: $rosa,      //accento alt - il di un link nel form
+    accent-alt: $verde,      //accento alt - il di un link nel form
 
     form-body: $grigio,
     form-bg: $bianco,

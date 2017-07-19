@@ -1,0 +1,31 @@
+.html_modern-blog #top.single-post {
+
+  .post-title.entry-title {
+    @include font(h1, $mt: 0);
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 0;
+  }
+
+  .blog-categories  {
+    display: none;
+  }
+
+  .post-meta-infos {
+    padding: 0;
+    margin-top: $line-height;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .author-box {
+    display: inline-block;
+    padding: $line-height;
+
+    .author-title {
+      margin-top: 0;
+    }
+  }
+}

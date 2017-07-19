@@ -9,6 +9,13 @@
 //  }
 //}
 
+.main_color {
+  b,
+  strong {
+    color: $grigio;
+  }
+}
+
 /******************************************************************************/
 /* SPACING
 /******************************************************************************/
@@ -37,5 +44,5 @@
 .avia-section-huge .content,
 .avia-section-huge .sidebar {
   padding-top: $line-height * 7;
-  padding-bottom: $line-height * 7; 
+  padding-bottom: $line-height * 7;
 }

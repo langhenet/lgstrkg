@@ -25,7 +25,7 @@
 div .logo {
   top: 0.7em;
 
-  @at-root .header-scrolled-full #{&} {
+  @at-root .header-scrolled #{&} {
     top: 0.05em;
   }
 }

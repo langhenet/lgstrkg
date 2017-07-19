@@ -22,3 +22,17 @@
     color: main-colors(topbar, link);
   }
 }
+
+#header_meta .phone-info {
+  @include font(h5, $mt: 0, $fm: secondary, $wt: bold);
+  padding: 0;
+
+  .av-icon-char {
+    line-height: 13px !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: main-colors(topbar, link);
+  }
+}

@@ -264,6 +264,7 @@ h2.woocommerce-loop-product__title {
   @include font(p, $mb: 0);
   padding: $line-height / 2;
   text-decoration: none;
+  background: main-colors(main, bg);
 
   a {
     text-decoration: none;

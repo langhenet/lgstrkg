@@ -1,0 +1,55 @@
+.html_modern-blog #top.archive.category {
+/*  article {
+    padding: $line-height;
+    background: $grigio-chiarissimo;
+    margin-bottom: $line-height * 2;
+  }*/
+
+  article {
+    margin-bottom: $line-height;
+  }
+
+  .post-entry .post-title {
+    @include font(h2);
+    text-transform: none;
+    padding-bottom: 0;
+  }
+
+  .post-entry .blog-categories {
+    top: 0;
+    display: none;
+    @include font(h5, $mt: 0, $fm: primary, $wt: bold);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .big-preview.single-big {
+    margin-top: 0;
+  }
+
+  .entry-content {
+    p {
+      margin-bottom: 0;
+    }
+
+    .more-link {
+      margin: 0;
+      top: 0;
+      display: block;
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  .post-meta-infos {
+    padding: 0 $line-height / 2;
+    margin-top: $line-height;
+    background: $grigio-chiarissimo;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
