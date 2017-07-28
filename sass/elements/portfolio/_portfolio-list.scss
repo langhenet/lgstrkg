@@ -56,6 +56,10 @@
   .portfolio_container {
     flex-direction: column;
     justify-content: space-around;
+
+    .image_styled {
+      margin-bottom: 0;
+    }
   }
 }
 
