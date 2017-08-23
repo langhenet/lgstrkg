@@ -528,7 +528,7 @@
   position: relative;
 
   &::before {
-    @include color-overlay($palette: fheader, $grade: 0.65);
+    @include color-overlay($palette: fheader, $grade: 0.30);
   }
 
   .et_pb_module {

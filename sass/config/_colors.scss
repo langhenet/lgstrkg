@@ -61,7 +61,7 @@ $layout-colors: (
     accent: $bianco,
     border: $oro,
     bg: $grigio-scuro,
-    overlay: $grigio-scuro,
+    overlay: $nero-vero,
     button-bg: $bianco,
     button: $grigio-scuro,
   ),
@@ -220,3 +220,7 @@ $button-shadow: 0 0.07em 0.085em 0 rgba(0, 0, 0, 0.26);
 ///
 //$overlay--alt: linear-gradient(110deg, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 45%,rgba(65,65,60,0.74) 55%,rgba(65,65,60,0.3) 75%,rgba(65,65,60,0.3) 100%);
 $overlay--alt: linear-gradient(to right, rgba(65,65,60,1) 0%,rgba(65,65,60,1) 40%,rgba(65,65,60,0.75) 60%,rgba(65,65,60,0.3) 70%,rgba(65,65,60,0.3) 100%);
+
+$overlay--alt: linear-gradient(to right, rgba(1,1,1,1) 0%,rgba(1,1,1,1) 40%,rgba(1,1,1,0.75) 60%,rgba(1,1,1,0.3) 70%,rgba(1,1,1,0.3) 100%);
+
+$overlay--alt: linear-gradient(to right, rgba(darken($grigio-scuro,15%),1) 0%,rgba(darken($grigio-scuro,15%),1) 40%,rgba(darken($grigio-scuro,15%),0.75) 60%,rgba(darken($grigio-scuro,15%),0.3) 70%,rgba(darken($grigio-scuro,15%),0.3) 100%);
