@@ -46,7 +46,7 @@
 // Overlay della sezione introduttiva
 ///
 #intro::before {
-  @include color-overlay(fheader, 0.6);
+  @include color-overlay(fheader, 0.3);
 }
 
 #intro.overlay--alt::before {

@@ -41,7 +41,7 @@
 // Overlay della sezione introduttiva
 ///
 #feature::before {
-  @include color-overlay(fheader, 0.5);
+  @include color-overlay(fheader, 0.3);
   background: $overlay--alt;
 }
 
