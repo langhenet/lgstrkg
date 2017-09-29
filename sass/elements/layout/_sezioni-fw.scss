@@ -78,8 +78,9 @@
 .et_divi_builder #et_builder_outer_content .et_pb_section {
   padding: 0;
 
+
   @include respond-to(divi-2) {
-    padding: 0;
+    padding: 0 !important;
   }
   @include respond-to(divi-1) {
     padding: 0;
