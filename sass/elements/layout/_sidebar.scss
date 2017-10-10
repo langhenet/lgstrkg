@@ -3,7 +3,7 @@
   .sidebar {
     border-right: 0;
   }
-  
+
   .content {
     border-left: 0;
   }
@@ -94,4 +94,8 @@
 }
 .sidebar p a {
   text-decoration: underline;
+}
+
+.sidebar_left.sidebar .widget_product_categories {
+  text-align: left;
 }

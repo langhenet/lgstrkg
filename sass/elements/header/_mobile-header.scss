@@ -46,7 +46,7 @@
   }
 
   .responsive #top .cart_dropdown {
-    top: 40%;
+    top: 35%;
     margin: 0;
   }
 
@@ -62,5 +62,17 @@
   #header_main {
     min-height: $line-height * 3;
     padding-top: $line-height / 2;
+  }
+}
+
+
+/*
+ * Hamburger
+ */
+.html_visible_cart .av-burger-menu-main {
+  padding-right: $line-height * 2;
+
+  @include breakpoint-max(sm) {
+    padding-right: $line-height;
   }
 }

@@ -12,6 +12,10 @@
     min-height: $line-height * 2;
     box-shadow: $card-shadow;
   }
+
+  @include breakpoint-max(lg) {
+    min-height: auto;
+  }
 }
 
 .html_header_top.html_header_sticky.html_large .av_minimal_header #header_main .container {
@@ -23,7 +27,7 @@
 // Logo
 ////
 div .logo {
-  top: 0.7em;
+  top: 0.35em;
 
   @at-root .header-scrolled #{&} {
     top: 0.05em;
