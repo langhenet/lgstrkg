@@ -31,3 +31,11 @@
     }
   }
 }
+
+img.alignright {
+  @include breakpoint-max(sm) {
+    float: none;
+    text-align: center;
+    margin-bottom: $line-height !important;
+  }
+}

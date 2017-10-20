@@ -47,6 +47,7 @@
   ///
   #logo,
   #logo_text {
+
     @include breakpoint-max(sm) {
       width: 100% !important;
     }
@@ -121,7 +122,7 @@
  */
 #logo,
 #logo_text {
-  bottom: $line-height / 2;
+  bottom: $line-height / -6;
   transition: all 250ms linear;
   display: block;
   position: relative;

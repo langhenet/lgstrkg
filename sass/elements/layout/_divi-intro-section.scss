@@ -8,9 +8,18 @@
 // Contenitore Featured Header costruito con DIVI
 ///
 .et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
-  padding-top: $line-height * 8;
+  padding-top: $line-height * 5;
 
-  @include breakpoint-max(sm) { //contenitore a 5XX px
+  @include breakpoint-max(md) { //contenitore a 5XX px
+    padding-top: $line-height * 7;
+  }
+}
+
+.et_divi_builder #et_builder_outer_content #intro div.et_pb_row:last-of-type {
+  padding-bottom: $line-height * 2;
+
+  @include breakpoint-max(md) {
+    padding-bottom: $line-height;
   }
 }
 
@@ -28,7 +37,7 @@
 
   #intro {
     @include breakpoint-max(xs) {
-      padding-top: $line-height * 5 !important;
+      padding-top: $line-height * 6 !important;
     }
   }
 

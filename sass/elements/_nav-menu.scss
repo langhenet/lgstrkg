@@ -1,7 +1,10 @@
 .et_divi_builder #et_builder_outer_content .et_pb_fullwidth_menu {
   margin-bottom: 0;
   background: $oro !important;
-
+  transition: all 250ms;
+  .fullwidth-menu-nav {
+    transition: all 250ms;
+  }
   .fullwidth-menu-nav > ul.nav {
     margin-left: auto;
     margin-right: auto;
@@ -25,6 +28,61 @@
       &.lg-button {
         background: $verde;
       }
+    }
+  }
+}
+
+
+.et_pb_fullwidth_menu_fullwidth.lg-sticky {
+  height: $line-height * 2;
+  transition: all 250ms;
+
+  .fullwidth-menu-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background: $oro !important;
+    transition: all 250ms;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+}
+
+//***********************************************************************
+//* MOBILE
+//*********************************************************************
+
+.et_divi_builder #et_builder_outer_content .et_pb_fullwidth_menu_fullwidth {
+  @include breakpoint-max(divi-lg) {
+
+    .et_pb_row  {
+      min-height: auto !important;
+    }
+
+    .fullwidth-menu-nav {
+      display: block !important;
+      padding: 0;
+
+      ul.fullwidth-menu.nav {
+        flex-wrap: wrap;
+
+        li {
+          @include breakpoint-max(md) {
+            @include font(h5, $mt:0);
+
+            &:last-child {
+              @include breakpoint-max(xs) {
+                margin-right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .et_mobile_nav_menu {
+      display: none !important;
     }
   }
 }

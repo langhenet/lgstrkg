@@ -23,5 +23,27 @@
       border-right: 0;
       padding-right: 0;
     }
+
+    @include breakpoint-max(divi-lg) {
+      &:nth-child(3) {
+        padding-left: 0;
+      }
+      &:nth-child(2) {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+
+    @include breakpoint-max(sm) {
+      width: 100% !important;
+      padding: $line-height 0;
+      border-right: 0 !important;
+      border-bottom: 2px solid $oro;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-bottom: $line-height;
+      }
+    }
   }
 }

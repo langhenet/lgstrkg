@@ -44,7 +44,8 @@
     @include breakpoint-max(sm) {
       display: block;
       width: 58%;
-      float: left;
+      float: none;
+      margin: $line-height / 2 auto 0 auto;
     }
   }
 

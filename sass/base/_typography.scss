@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   @include font(h1);
 
-  @include breakpoint-max(lg) {
+  @include breakpoint-max(xl) {
     @include m-size(h1);
   }
 }
@@ -87,7 +87,7 @@ h1 {
 h2 {
   @include font(h2);
 
-  @include breakpoint-max(lg) {
+  @include breakpoint-max(xl) {
     @include m-size(h2);
   }
 }
@@ -95,7 +95,7 @@ h2 {
 h3 {
   @include font(h3);
 
-  @include breakpoint-max(lg) {
+  @include breakpoint-max(xl) {
     @include m-size(h3);
   }
 }
