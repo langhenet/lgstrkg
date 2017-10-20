@@ -89,7 +89,7 @@
   padding: 0;
 
   @include breakpoint-max(divi-lg) {
-    padding: 0;
+    padding: 0 !important;
   }
   @include breakpoint-min(divi-lg) {
     padding: 0;
