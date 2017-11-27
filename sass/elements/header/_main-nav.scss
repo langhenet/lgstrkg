@@ -64,7 +64,14 @@
   padding: ($line-height / 2) 15px ($line-height / 4) 13px;
   font-family: $ff-secondary;
   text-transform: uppercase;
-  margin-bottom: ($line-height / 4)
+  margin-bottom: ($line-height / 4);
+
+
+  @include breakpoint-max(xl) {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0.85em;
+  }
 }
 
 

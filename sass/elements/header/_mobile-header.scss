@@ -11,6 +11,18 @@
   }
 }
 
+@include breakpoint-max(lg) {
+  #header .inner {
+    max-width: 900px;
+  }
+}
+
+@include breakpoint-max(md) {
+  #header .inner {
+    max-width: 770px;
+  }
+}
+
 ///
 // logo
 ///
@@ -134,7 +146,7 @@
 // Fix navigazione che copre tutto
 ///
 .responsive #navigation {
-  @include breakpoint-max(lg) {
+  @include breakpoint-max(divi-lg-2) {
     display: inline-block;
     width: 100%;
     flex-basis: auto;
