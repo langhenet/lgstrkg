@@ -158,3 +158,20 @@
   padding: 0;
   border: 0;
 }
+
+/////
+// IMAGE widget
+/////
+#header .widget.widget_media_image {
+  position: absolute;
+  margin-right: 0;
+  right: 0;
+  top: $line-height * 2.15;
+  display: none;
+  @include breakpoint-min(xxl) {
+    right: -14.5vw;
+  }
+  @include breakpoint-min(xl) {
+    display: block;
+  }
+}
