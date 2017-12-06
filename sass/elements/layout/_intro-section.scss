@@ -40,7 +40,7 @@
 
   &.et_divi_builder #et_builder_outer_content #intro .et_pb_row:first-of-type {
     @include respond-to(step-4) {
-      padding-top: $line-height * 3 !important;
+      padding-top: $line-height * 7 !important;
     }
   }
 }
