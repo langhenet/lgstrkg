@@ -5,8 +5,7 @@
 //*                                                                     *//
 //***********************************************************************//
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+
 
 //***********************************************************************//
 //              PARTE PRINCIPALE - BODY - P - TITOLI
@@ -169,7 +168,7 @@ h5 {
   @include respond-to(divi-2) {
     @include size(p);
   }
-  
+
   @include respond-to(step-3) {
     @include size(p);
   }
