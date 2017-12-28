@@ -22,6 +22,10 @@
       margin-bottom: 0;
       text-transform: uppercase;
 
+      @include respond-to(step-4) {
+        font-size: 0.9em;
+      }
+
       a {
         padding-bottom: 0;
       }
