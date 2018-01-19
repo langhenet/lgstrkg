@@ -1,267 +1,143 @@
-#footer #text-4,
-#footer #text_icl-9,
-#footer #text_icl-10 {
-  background: $bordeaux;
-  position: fixed;
-  bottom: 0;
-  right: 0vw;
-  padding: $line-height;
-  max-width: 330px;
-  z-index: 9999;
-  box-shadow: -2px -2px 2px rgba($nero, 0.5);
-  box-sizing: border-box;
-
-
-  //FORM
-  .widget-solutyon-booking-engine {
-    width: 100%;
-    font-size: 0.8em;
-
-
-    .prenotazione_title {
-      @include font(p, $wt: bold, $mt: 0, $mb: $line-height / 2);
-      text-transform: uppercase;
-      color: $bianco;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    //TABELLA
-    table {
-      width: 100%;
-    }
-    tr {
-      //display: block;
-      margin: 0 auto ($line-height / 2) auto;
-
-    }
-    td {
-      //display: block;
-      width: auto;
-      margin: 0 auto;
-    //  text-align: center;
-      padding-top: $line-height / 2;
-
-      &:last-child {
-        width: 40%;
-      }
-    }
-
-    //INPUT
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
-    input[type="file"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="date"],
-    input[type="month"],
-    input[type="time"],
-    input[type="week"],
-    input[type="number"],
-    input[type="url"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="color"],
-    textarea {
-      color: $nero;
-      font-size: 1em;
-    }
-
-    input[type="number"] {
-      padding: 0 0 0 ($line-height / 2)  !important;
-      width: 100px;
-    }
-
-    .button__container {
-      text-align: center;
-    }
-
-    input[type="button"] {
-      @extend %button;
-      @include button(p, 4, half);
-      @include button-color(none, color--dark);
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
-
-  //*********MOBILE
-  //****************
-  @include breakpoint-min(xxl) {
-    .booking-trigger {
-      display: none;
-    }
-
-    label[for="booking-trigger"] {
-      display: none;
-    }
-  }
-
-/*  @include breakpoint-max(uxl) {
-    width: 100%;
-    max-width: 1700px;
-    left: 0;
-
-    .widget-solutyon-booking-engine {
-      width: 100%;
-      max-width: 1700px;
-      font-size: 1em;
-
-
-      form {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-      .prenotazione_title {
-        flex-basis: 100%;
-        flex-shrink: 0;
-        text-align: left;
-      }
-      table {
-        display: block;
-        flex-basis: 75%;
-        margin-bottom: 0;
-
-        tbody {
-          display: flex;
-          flex-flow: row;
-          flex-wrap: nowrap;
-          justify-content: flex-start;
-        }
-        tr {
-          display: flex;
-          flex-flow: row;
-          flex-basis: 25%;
-          width: 25%;
-          flex-grow: 0;
-          margin: 0;
-          padding: 0 $line-height;
-        }
-
-        td {
-          display: block;
-          flex-basis: 50%;
-          padding-top: 0;
-        }
-      }
-    }
-  }*/
-
-  @include breakpoint-max(xxl) {
-    position: relative;
-    background: transparent;
-    padding: 0;
-    right: 0;
-
-    .widget-solutyon-booking-engine {
-      padding: $line-height;
-      width: 100%;
-      height: auto;
-      position: fixed;
-      bottom: -100%;
-      right: 0;
-      z-index: 0;
-      background: $bordeaux;
-      transition: all 500ms;
-      box-sizing: border-box;
-      max-width: 330px;
-      box-shadow: -2px -2px 10px rgba($nero-vero, 0.5);
-
-      table {
-        max-width: 400px;
-        margin: 0 auto $line-height auto;
-      }
-    }
-
-    .booking-trigger {
-      position: fixed;
-      bottom: 0;
-      clip: rect(0, 0, 0, 0);
-      z-index: 99999999;
-    //  box-shadow: -2px -2px 10px rgba($nero-vero, 0.5);
-    }
-
-
-
-    label[for="booking-trigger"] {
-      position: fixed;
-      //left: 15px;
-      z-index: 2;
-      color: $bianco;
-      bottom: 0;
-      box-shadow: -2px -2px 10px rgba($nero-vero, 0.5);
-
-
-      right: 0;
-      background: $verde;
-//      width: 100%;
-      padding: ($line-height / 2) $line-height;
-      text-align: right;
-      box-sizing: border-box;
-      transition: all 500ms;
-      font-weight: bold;
-      text-transform: uppercase;
-
-      &::after {
-        content: "Prenota Adesso";
-      }
-    }
-
-    .booking-trigger:checked + label {
-      color: $bianco;
-      background: transparent;
-      transition: all 500ms;
-      box-shadow: none !important;
-
-      &::after {
-        content: "Chiudi";
-      }
-    }
-
-    .booking-trigger:checked ~ .widget-solutyon-booking-engine {
-      bottom: 0;
-      transition: all 500ms;
-    }
-  }
-
-  @include breakpoint-max(xxl) {
-    .widget-solutyon-booking-engine {
-      height: 50%;
-    }
-  }
-
-  @include breakpoint-max(md) {
-    .widget-solutyon-booking-engine {
-      height: 60%;
-    }
-  }
-
-  @include breakpoint-max(sm) {
-    .widget-solutyon-booking-engine {
-      height: 70%;
-    }
-  }
-
-  @include breakpoint-max(xs) {
-    .widget-solutyon-booking-engine {
-      font-size: 0.8em;
-      height: 80%;
-    }
-  }
+#widgetContainer {
+  background-color: rgba($bianco-vero, 1) !important;
 }
-
-@include breakpoint-max(xxl) {
-  .current-language-english #footer #text-4,
-  .current-language-english #footer #text_icl-9,
-  .current-language-english #footer #text_icl-10 {
-     label[for="booking-trigger"]::after {
-      content: "Book Now";
+#rsvit_btn {
+    transform: initial;
+    padding: 10px 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #F49E4C;
+    color: #fff;
+    border: 0;
+    top: 335px;
+    bottom: initial;
+    cursor: pointer;
+    right: 0;
+    position : fixed;
+    z-index: 999999;
+    display: none;
+}
+#iframeReservitBestPriceWidget {
+    margin: auto;
+    border: none;
+    max-width: initial;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+}
+#btn_bed_ico {
+    font-size: 1.3em;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 2px 3px 2px 3px;
+    margin-right: 5px;
+}
+#rsvit_btn>span {
+    font-weight: normal;
+}
+#ReservitBestPriceWidgetbox {
+    border: 0;
+    position: relative;
+    z-index: 999998;
+    background-color : transparent;
+    -webkit-box-shadow: -5px 5px 20px 0 rgba(0,0,0,0.64);
+    -moz-box-shadow: -5px 5px 20px 0 rgba(0,0,0,0.64);
+    box-shadow: initial;
+    text-align: center;
+    overflow: hidden;
+    width: 250px;
+    height: 100%;
+}
+#ReservitBestPriceWidget {
+    position: fixed;
+    top: 85vh;
+    right: 0;
+    display: none;
+    text-align: center;
+    width: 250px;
+    height: 450px;
+    right: 0;
+    transform: translateX(0);
+    transform: translateY(-50%);
+    left: initial;
+    z-index: 9999;
+}
+#box_btn_close::before {
+  // content: "X";
+  // position: absolute;
+  // line-height: inherit;
+  // text-align: center;
+  // width: 100%;
+  // font-family: Arial;
+  // font-style: normal;
+  top: -0.2em;
+  position: relative;
+  // font-size: 70%;
+}
+#box_btn_close {
+    font-size: 20px;
+    color: black;
+    transition: transform 0.5s ease;
+    margin: auto;
+}
+#box_btn_close:hover {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#box_btn {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    vertical-align: middle;
+    top: -15px;
+    left: -15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding-top: 3px;
+    text-align: center;
+    border-style: solid;
+    cursor: pointer;
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 4.9px 0 rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 1px 4.9px 0 rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 4.9px 0 rgba(0,0,0,0.4);
+    z-index: 1000000;
+}
+/* DEBUT RESPONSIVE */
+@media (max-width: 790px) {
+    #rsvit_btn {
+        width: 92%;
+        left: 4%;
+        bottom: 0;
+        top: initial;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+        background-color: rgba(244,158,76,0.9);
     }
+    #ReservitBestPriceWidget {
+        // left: 50%;
+        right: 0;
+        margin-left: 0;
 
-    .booking-trigger:checked + label::after {
-      content: "Close";
     }
-  }
+}
+@media screen and (max-width:450px) and (orientation:portrait) {
+    #ReservitBestPriceWidget {
+        width: 250px;
+        height: 90%;
+        bottom: 0;
+        top: 100%;
+    }
+}
+@media screen and (max-width:750px) and (orientation:landscape) {
+    #ReservitBestPriceWidget {
+        width: 250px;
+        height: 90%;
+    }
 }
