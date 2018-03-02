@@ -1,5 +1,13 @@
 #widgetContainer {
   background-color: rgba($bianco-vero, 1) !important;
+
+
+}
+
+#ReservitBestPriceWidget {
+  @include breakpoint-max(sm) {
+    display: none !important;
+  }
 }
 #rsvit_btn {
     transform: initial;
@@ -18,13 +26,13 @@
     display: none;
 }
 #iframeReservitBestPriceWidget {
-    margin: auto;
-    border: none;
-    max-width: initial;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 5px;
+  margin: auto;
+  border: none;
+  max-width: initial;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
 }
 #btn_bed_ico {
     font-size: 1.3em;
@@ -140,4 +148,32 @@
         width: 250px;
         height: 90%;
     }
+}
+
+.button--booking {
+  @include font(p);
+  position: fixed;
+  display: table;
+  right: 2vw;
+  bottom: 2vw;
+  padding: $line-height / 2;
+  width: $line-height * 2;
+  height: $line-height * 2;
+  text-align: center;
+  background: $verde;
+  border-radius: 100%;
+  line-height: $line-height * 0.75;
+  box-shadow: $card-shadow;
+  text-decoration: none !important;
+  vertical-align: middle;
+  z-index: 99999;
+
+  span {
+    padding-top: $line-height / 3.5;
+    display: block;
+  }
+
+  @include breakpoint-min(sm) {
+    display: none;
+  }
 }
