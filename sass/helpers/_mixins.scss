@@ -156,7 +156,8 @@
     padding-top: bpad($bw, $size);
     padding-bottom: bpad($bw, $size);
   }
-
+  padding-left: $line-height / 2;
+  padding-right: $line-height / 2;
   border-bottom-width: $bw * 1px;
   border-top-width: $bw * 1px;
   border-left-width: $bw * 1px;
