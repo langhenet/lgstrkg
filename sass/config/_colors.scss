@@ -77,8 +77,8 @@ $layout-colors: (
     accent:     $oro,      //Accento - sfondo lista icone / grassetti / icone
 
     body-alt:   $grigio-scuro,      //body alternativo - testo in un form o in un box
-    bg-alt:     rgba($oro, 0.55),      //sfondo alt - il bg di un form o di un box
-    accent-alt: $bianco,      //accento alt - il di un link nel form
+    bg-alt:     rgba($oro, 0.15),      //sfondo alt - il bg di un form o di un box
+    accent-alt: $oro,      //accento alt - il di un link nel form
 
     form-body: $grigio-scuro,
     form-bg: mix($oro, $bianco, 35%),
@@ -180,7 +180,7 @@ $colors: (
   color--dark-alt: (
     body:       $bianco,      //Corpo - testo
     body-sec:   $bianco,      //Secondario - blockquote o blog meta
-    heading:    $oro,      //Titoli 1 e 2
+    heading:    $bianco,      //Titoli 1 e 2
     link:       $bianco,      //Link
     bg:         $grigio-scuro,      //Sfondo principale
     border:     $bianco,      //Bordi
