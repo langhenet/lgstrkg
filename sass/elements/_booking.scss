@@ -139,3 +139,23 @@ $booking_bp: 'xxl';
 
 
 }
+
+// ui-datepicker-next
+.ui-datepicker-next {
+  color: $bianco-vero;
+  line-height: 30px !important;
+  padding-right: 6px;
+
+  span {
+    line-height: 0 !important;
+  }
+}
+.ui-datepicker-prev {
+  color: $bianco-vero;
+  line-height: 30px !important;
+  padding-left: 6px;
+
+  span {
+    line-height: 0 !important;
+  }
+}
