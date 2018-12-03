@@ -1,0 +1,76 @@
+
+<!-- Populate the values for HotelID and LanguageID below. -->
+<p class="booking-form__openbutton js-booking-button">
+	<span class="booking-form__open-text">Prenota Adesso</span>
+</p>
+
+<div class="booking-form js-booking-form">
+  <p class="booking-form__closebutton js-booking-button">
+    X
+  </p>
+  <form class="booking-form__container" action="https://reservations.travelclick.com/107441" method="get" name="resform" id="resform" target="_blank">
+    <input type="hidden" name="HotelID" value="107441" />
+    <input type="hidden" name="LanguageID" value="8" />
+    <input type="hidden" name="Rooms" value="1" />
+    <div class="booking-form__dates">
+      <div class="booking-form__date">
+  	    Check-In:
+        <input name="DateIn" type="text" />
+        <a href="javascript:openCalendar('DateIn')"><img src="/wp-content/uploads/sites/8/calendar.gif" width="20" height="20" border="0" /></a>
+  	  </div>
+      <div class="booking-form__nights">
+    	  Notti:
+        <select name="Length">
+          <option value="1" selected="selected">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="10">11</option>
+          <option value="10">12</option>
+          <option value="10">13</option>
+          <option value="10">14</option>
+        </select>
+    	</div>
+    </div>
+  	<div class="booking-form__people">
+  		<div class="booking-form__adults">
+  			Adulti:
+        <select name="Adults">
+          <option value="1" selected="selected">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+  		</div>
+  		<div class="booking-form__child">
+  			Bambini:
+        <select name="Children">
+          <option value="0" selected="selected">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+  		</div>
+  	</div>
+    <input class="booking-form__button" type="submit" value="Prenota" />
+  </form>
+</div>
+
+
+<!-- This javascript code populates the Check-In Date field with today's date. It must be located after the form close tag. -->
+
+<script type="text/javascript" language="javascript">
+  function getDateStr() {
+  	var today = new Date();
+  	var todayStr = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();;
+  	document.resform.DateIn.value = todayStr;
+  }
+  getDateStr();
+</script>

@@ -50,6 +50,10 @@
       @include font(p);
     }
   }
+
+  * {
+    color: $bianco-vero !important;
+  }
 }
 
 
