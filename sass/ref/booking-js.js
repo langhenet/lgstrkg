@@ -10,12 +10,4 @@
 
     jQuery( '#datepicker' ).datepicker();
   });
-
-  // function openCalendar(FormElement){
-  //   var calendarwindow;
-  //   // var left   = "left=" + screen.width - 300;
-  //   url = "/wp-content/uploads/sites/8/calendar.html?formname=resform&formelement=" + FormElement;
-  //   calendarwindow = window.open(url,"calendar","toolbar=no,width=200,height=144,top=200%,left=1200%,status=no,scrollbars=no,resize=no,menubar=no");
-  //   calendarwindow.focus();
-  // };
 </script>
