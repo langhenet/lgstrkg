@@ -21,23 +21,23 @@
  */
 
  .archive.category #feature {
-   background-image: url(http://cascinavaleggia.it/files/2013/02/news.jpg);
+   background-image: url(https://cascinavaleggia.it/files/2013/02/news.jpg);
    background-position: top center;
  }
 
  .single-post #feature {
-   background-image: url(http://cascinavaleggia.it/files/2013/02/news.jpg);
+   background-image: url(https://cascinavaleggia.it/files/2013/02/news.jpg);
    background-position: top center;
  }
 
 
 .category-reviews #feature,
 .category-critica #feature {
-  background-image: url(http://cascinavaleggia.it/files/2017/01/critica.jpg);
+  background-image: url(https://cascinavaleggia.it/files/2017/01/critica.jpg);
   background-position: bottom center;
 
   @at-root .single-post #{&} {
-    background-image: url(http://cascinavaleggia.it/files/2017/01/critica.jpg);
+    background-image: url(https://cascinavaleggia.it/files/2017/01/critica.jpg);
     background-position: bottom center;
   }
 }
@@ -45,12 +45,12 @@
 
 .category-news #feature,
 .category-news-en #feature {
-  background-image: url(http://cascinavaleggia.it/files/2013/02/news.jpg);
+  background-image: url(https://cascinavaleggia.it/files/2013/02/news.jpg);
   background-position: top center;
 
 
   @at-root .single-post #{&} {
-    background-image: url(http://cascinavaleggia.it/files/2013/02/news.jpg);
+    background-image: url(https://cascinavaleggia.it/files/2013/02/news.jpg);
     background-position: top center;
   }
 }
