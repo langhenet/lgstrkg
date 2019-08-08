@@ -98,6 +98,15 @@ select {
   }
 }
 
+.ginput_container_date {
+  position: relative;
+}
+.ui-datepicker-trigger {
+  position: absolute;
+  right: $line-height;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 //****************************************************************************//
 //                 CAMPI HTML & SECTION di GRAVITY FORMS
