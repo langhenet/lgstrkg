@@ -85,6 +85,12 @@ select {
 
   @include respond-to(step-2) {
     width: 49%;
+    display: inline-block;
+
+    &:last-child {
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 
   @include respond-to(step-4) {
