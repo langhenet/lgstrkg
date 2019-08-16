@@ -4,7 +4,7 @@ $booking_bp: 'xxl';
   position: fixed;
   max-width: 250px;
   width: 100%;
-  right: 0vw;
+  left: 0vw;
   bottom: 0;
   padding: $line-height;
   z-index: 999;
@@ -41,7 +41,7 @@ $booking_bp: 'xxl';
     position: fixed;
     box-shadow: $card-shadow;
     text-transform: uppercase;
-    right: 1vw;
+    left: 1vw;
     bottom: 0;
     z-index: 99;
     background: $verde;
@@ -158,4 +158,20 @@ $booking_bp: 'xxl';
   span {
     line-height: 0 !important;
   }
+}
+
+/**************
+ *Back to top
+ **********************/
+#back-to-top {
+  // background-image: none !important;
+  // background-color: $grigio;
+  bottom: $line-height / 2 !important;
+  right: $line-height / 2 !important;
+  opacity: 0.6;
+  z-index: 9999999999 !important;
+  //
+  // &::after {
+  //   content: 'ciccio';
+  // }
 }
