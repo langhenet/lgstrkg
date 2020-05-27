@@ -71,9 +71,9 @@ select {
 /*
  * Correzione padding campi complessi
  */
-.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first,
-.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last,
-.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle {
+.gform_wrapper ul.gform_fields li.gfield span.name_first,
+.gform_wrapper ul.gform_fields li.gfield span.name_last,
+.gform_wrapper ul.gform_fields li.gfield span.name_middle {
   padding-top: 0;
 }
 
