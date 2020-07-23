@@ -27,12 +27,12 @@
 //***********************************************************************//
 //                              BOTTONI DIVI BUILDER - Dimensioni
 //***********************************************************************//
-.et_divi_builder #et_builder_outer_content {
+#et_builder_outer_content {
   /*
    * Bottone Piccolo
    */
   .et_pb_button.size-small,
-  .et_pb_module a.button.small {
+   a.button.small {
     @extend %button;
     @include button(small, 1);
 
@@ -66,7 +66,7 @@
    */
   .et_pb_button.size-medium,
   body a.big-button,
-  .et_pb_module a.button.medium { //TOCHK ultima dichiarazione per bottone merda nel blurb
+   a.button.medium { //TOCHK ultima dichiarazione per bottone merda nel blurb
     @extend %button;
     @include button(p, 4, half);
 
@@ -102,9 +102,9 @@
    * Bottone Grande
    */
   .et_pb_button.size-large,
-  .et_pb_module a.button.large {
+   a.button.large {
     @extend %button;
-    @include button(h3, 4)
+    @include button(h3, 4);
 
     font-weight: inherit; //TODO
     text-transform: uppercase;
@@ -184,7 +184,7 @@ a.et_pb_more_button:after {
 /*
  * Bottoni in szeioni di Base
  */
-.et_divi_builder #et_builder_outer_content .et_pb_bg_layout_light.et_pb_module.et_pb_button,
+.et-boc #et_builder_outer_content .et_pb_button,
 a.button.primary {
   @include button-color(none, main);
 
@@ -199,8 +199,8 @@ a.button.primary {
  */
 
 @each $palette, $bg in $colors {
-  .et_divi_builder #et_builder_outer_content .#{$palette} .et_pb_module.et_pb_button,
-  .et_divi_builder #et_builder_outer_content .#{$palette} a.button.primary {
+  .et-boc #et_builder_outer_content .#{$palette} .et_pb_button,
+  .et-boc #et_builder_outer_content .#{$palette} a.button.primary {
 
     @include button-color(none, $palette);
 
@@ -222,8 +222,8 @@ a.button.primary {
  */
 
  @each $palette, $bg in $colors {
-   .et_divi_builder #et_builder_outer_content .#{$palette} .et_pb_bg_layout_light.et_pb_module.et_pb_button.subtle-color,
-   .et_divi_builder #et_builder_outer_content .#{$palette} a.button.primary.subtle-color {
+   .et-boc #et_builder_outer_content .#{$palette} .et_pb_bg_layout_light.et_pb_button.subtle-color,
+   .et-boc #et_builder_outer_content .#{$palette} a.button.primary.subtle-color {
 
      @include button-color-subtle(none, $palette);
 
