@@ -167,7 +167,7 @@ a.et_pb_more_button:after {
 /*
  * Bottoni in szeioni di Base
  */
-.et_divi_builder #et_builder_outer_content .et_pb_bg_layout_light.et_pb_module.et_pb_button {
+.et_divi_builder #et_builder_outer_content .et_pb_bg_layout_light.et_pb_button {
   @include button-color(none, main);
 
   &:hover {
@@ -181,7 +181,7 @@ a.et_pb_more_button:after {
  */
 
 @each $palette, $bg in $colors {
-  .et_divi_builder #et_builder_outer_content .#{$palette} .et_pb_module.et_pb_button {
+  .et_divi_builder #et_builder_outer_content .#{$palette} .et_pb_button {
 
     @include button-color(none, $palette);
 
@@ -198,7 +198,7 @@ a.et_pb_more_button:after {
 //                  ho cambiato la dichiarazione nel mixin dei bottoni per fare i bordi -
 //****************************************************************************//
 
-.et_divi_builder #et_builder_outer_content  .et_pb_bg_layout_light.et_pb_module.et_pb_button.skeleton--light {
+.et_divi_builder #et_builder_outer_content  .et_pb_bg_layout_light.et_pb_button.skeleton--light {
 
   color: #fff;
   background-color: transparent;
