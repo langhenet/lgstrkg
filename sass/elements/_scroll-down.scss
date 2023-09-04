@@ -14,8 +14,8 @@
 }
 
 .et_divi_builder #et_builder_outer_content .et_pb_fullwidth_header .et_pb_fullwidth_header_scroll {
-  position: relative;
-  padding: 0;
+  position: relative !important;
+  padding: 0 !important;
 }
 
 .et_divi_builder #et_builder_outer_content .et_pb_fullwidth_header .et_pb_fullwidth_header_scroll a .et-pb-icon  {
