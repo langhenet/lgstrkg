@@ -17,7 +17,12 @@ input[type=url],
 textarea,
 textarea.textarea,
 select {
-  background: #fff;
+  background: #fff !important;
+}
+
+@function colwidth($cols: 4, $gutter: 0.5rem) {
+  $width: calc( (100% / #{$cols}) - ( ( (#{$cols} - 1) / #{$cols} )  * #{$gutter} ) );
+  @return $width;
 }
 
 
@@ -40,6 +45,7 @@ select {
     max-width: 120% !important;
     margin-left: -10% !important;
     width: 120% !important;
+    padding: $line-height * 0.75;
   }
 }
 
@@ -49,6 +55,39 @@ select {
   }
 }
 
+.gform_fields {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  &> li {
+    flex-basis: 100%;
+    width: 100%;
+    input {
+      max-width: 100%;
+    }
+    &.gf_left_half,
+    &.gf_right_half {
+      flex-basis: colwidth(2) !important;
+      width: colwidth(2) !important;
+    }
+  }
+
+  .gfield--type-name {
+    // flex-basis: 100%;
+  
+    .ginput_complex {
+      display: flex;
+      // flex-wrap: wrap;
+      gap: 0.5rem;
+      span {
+        flex-basis: colwidth(2);
+      }
+    }
+  }
+}
+
+
 
 /*
  * il LI che contiene i campi
@@ -57,7 +96,7 @@ select {
 .gform_wrapper li,
 .gform_wrapper .top_label li.gfield.gf_left_half,
 .gform_wrapper .top_label li.gfield.gf_right_half {
-  margin-bottom: $line-height * 1.5;
+  margin-bottom: $line-height;
 }
 .gform_wrapper ul.gform_fields li.gfield,
 .gform_wrapper .top_label li.gfield.gf_right_half {
@@ -77,26 +116,26 @@ select {
   padding-top: 0;
 }
 
-.gform_wrapper .top_label li.gfield.gf_left_half,
-.gform_wrapper .top_label li.gfield.gf_right_half {
-  @include respond-to(step-0) {
-    width: 100%;
-  }
+// .gform_wrapper .top_label li.gfield.gf_left_half,
+// .gform_wrapper .top_label li.gfield.gf_right_half {
+//   @include respond-to(step-0) {
+//     width: 100%;
+//   }
 
-  @include respond-to(step-2) {
-    width: 49%;
-    display: inline-block;
+//   @include respond-to(step-2) {
+//     width: 49%;
+//     display: inline-block;
 
-    &:last-child {
-      margin-left: auto;
-      margin-right: 0;
-    }
-  }
+//     &:last-child {
+//       margin-left: auto;
+//       margin-right: 0;
+//     }
+//   }
 
-  @include respond-to(step-4) {
-    width: 100%;
-  }
-}
+//   @include respond-to(step-4) {
+//     width: 100%;
+//   }
+// }
 
 .ginput_container_date {
   position: relative;
